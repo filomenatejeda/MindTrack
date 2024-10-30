@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+// pages/index.js
+import { useRouter } from 'next/router';
+
+import Link from 'next/link';
+>>>>>>> e34879f308e3258c9a76b67804ea56c0b0229634
 import Navbar from '../components/Navbar';
 import EmotionLog from '/components/EmotionLog';
 import Relaxation from '../components/Relaxation';
@@ -11,9 +18,37 @@ import EmotionTracker from '../components/EmotionTracker';
 export default function HomePage() {
   return (
     <>
+<<<<<<< HEAD
       <Navbar />
       <main className="container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-6 text-center">Bienvenido a MindTrack</h1>
+=======
+      <div>
+        <title>Inicio</title> {/* Título de la página */}
+        <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
+      </div>
+      <div>
+      <Navbar />
+      <main className="flex flex-col items-center justify-center py-20">
+        <h1 className="text-4xl font-bold text-center text-blue-900">
+          Bienvenido a MindTrack
+          <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
+        </h1>
+        <p className="text-gray-700 mt-4 text-center max-w-xl">
+          Una plataforma para mejorar tu bienestar emocional y mental a través de seguimiento diario, hábitos saludables y conexión con profesionales.
+        </p>
+        <Link href="/login.js">
+          <button className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-lg">
+            Iniciar Sesión
+          </button>
+        </Link>
+      </main>
+      <Footer />
+    </div>
+    </>
+  );
+}
+>>>>>>> e34879f308e3258c9a76b67804ea56c0b0229634
 
         {/* Registro Diario de Emociones */}
         <section id="emotion-log" className="mb-12">
