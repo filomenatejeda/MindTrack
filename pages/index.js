@@ -2,9 +2,11 @@
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import RootLayout from './layout';
 
 export default function Home() {
   return (
+    <RootLayout >
     <div className="min-h-screen bg-gray-100">
       <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
       <Navbar />
@@ -23,5 +25,6 @@ export default function Home() {
       </main>
       <Footer />
     </div>
+    </RootLayout>
   );
 }
