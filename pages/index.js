@@ -1,15 +1,23 @@
 // pages/index.js
+import { useRouter } from 'next/router';
+
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <>
+      <div>
+        <title>Inicio</title> {/* Título de la página */}
+        <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
+      </div>
+      <div>
       <Navbar />
       <main className="flex flex-col items-center justify-center py-20">
         <h1 className="text-4xl font-bold text-center text-blue-900">
           Bienvenido a MindTrack
+          <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
         </h1>
         <p className="text-gray-700 mt-4 text-center max-w-xl">
           Una plataforma para mejorar tu bienestar emocional y mental a través de seguimiento diario, hábitos saludables y conexión con profesionales.
@@ -22,6 +30,7 @@ export default function Home() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }
 
