@@ -20,14 +20,19 @@ i18next
         translation: {
           home: "Home",
           login: "Login",
-          welcome: "Welcome",
+          welcome: "Welcome to MindTrack",
+          description: "A platform to improve your emotional and mental well-being through daily monitoring, healthy habits and connection with professionals.",
+          footer: "2024 MindTrack. All rights reserved."
+        
         },
       },
       es: {
         translation: {
           home: "Inicio",
           login: "Iniciar Sesión",
-          welcome: "Bienvenido",
+          welcome: "Bienvenido a MindTrack",
+          description: "Una plataforma para mejorar tu bienestar emocional y mental a través de seguimiento diario, hábitos saludables y conexión con profesionales.",
+          footer: "2024 MindTrack. Todos los derechos reservados."
         },
       },
     },

@@ -9,19 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "i18next": "^23.16.4",
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "^19.0.0-rc-02c0e824-20241028",
-    "react-i18next": "^15.1.0"
-=======
+    "react-i18next": "^15.1.0",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.3",
-    "next": "15.0.2",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
->>>>>>> 0c88df9726fbffb86aa32785ecd41e0c6996d475
+    "mongoose": "^8.7.3"
   }
 }
+

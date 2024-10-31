@@ -1,19 +1,25 @@
-// context/LanguageContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import i18next from '../utils/i18n'; // Asegúrate de importar i18next
+import i18next from '../utils/i18n';
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en'); // Carga el idioma de localStorage o usa 'en' por defecto
+  const [language, setLanguage] = useState(() => {
+    // Verifica si estamos en el navegador antes de acceder a localStorage
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('language') || 'en';
+    }
+    return 'en'; // Idioma por defecto en el servidor
+  });
 
   const changeLanguage = (lng) => {
     setLanguage(lng);
-    localStorage.setItem('language', lng); // Guarda el idioma en localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', lng); // Guarda el idioma en localStorage
+    }
     i18next.changeLanguage(lng); // Cambia el idioma de i18next
   };
 
-  // Sincroniza i18next con el idioma actual
   useEffect(() => {
     i18next.changeLanguage(language);
   }, [language]);
@@ -32,8 +38,4 @@ export const useLanguage = () => {
   }
   return context;
 };
-
-
-
-
 
