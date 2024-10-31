@@ -33,6 +33,12 @@
     "firstName": "qq",
     "lastName": "qq",
     "email": "qq@q"
+  },
+  {
+    "username": "Natty",
+    "password": "$2a$10$NbKOBlRW.Men.0vxXYsuHumdxGzGaxb6jr26kUZ8r631zKT1G7Bqa",
+    "firstName": "Natalia",
+    "lastName": "Sepulveda",
+    "email": "nsepulveda@gmail.com"
   }
-  
 ]
