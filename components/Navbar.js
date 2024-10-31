@@ -14,7 +14,7 @@ function Navbar() {
         <Link href="/" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t('home')} {/* Usa traducción para "Inicio" */}
         </Link>
-        <Link href="/login" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+        <Link href="loginQ/login" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t('login')} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
         
