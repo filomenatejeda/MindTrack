@@ -4,9 +4,11 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Navbar from '/components/Navbar';
 import Footer from '/components/Footer';
+import { useTranslation } from 'react-i18next';
 
 export default function Login() {
   const router = useRouter();
+  const { t } = useTranslation();
 
   // Estados para los campos del formulario
   const [username, setUsername] = useState('');
@@ -42,16 +44,21 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen justify-between bg-gray-100">
+      {/* Navbar fija en la parte superior */}
       <div className="w-full fixed top-0 z-50">
         <Navbar />
       </div>
-      <div className="mt-40 w-full flex justify-center">
+  
+      {/* Contenedor central con margen superior ajustado */}
+      <div className="flex-grow mt-16 w-full flex justify-center items-center">
         <form onSubmit={handleSubmit} className="p-6 bg-green-100 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-center text-green-800">Iniciar Sesión</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-green-800">
+            {t('login')}
+          </h2>
           <input
             type="text"
-            placeholder="Nombre de usuario"
+            placeholder={t('user')}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
@@ -59,24 +66,26 @@ export default function Login() {
           />
           <input
             type="password"
-            placeholder="Contraseña"
+            placeholder={t('password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
             required
           />
           <button type="submit" className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
-            Entrar
+            {t('enter')}
           </button>
           {error && <p className="text-red-600 mt-2 text-center">{error}</p>}
           <div className="mt-4 text-center">
             <Link href="/register/create-user" className="text-green-600">
-              Crear una cuenta
+              {t('register')}
             </Link>
           </div>
         </form>
       </div>
+  
+      {/* Footer al final */}
       <Footer />
     </div>
-  );
+  );  
 }
