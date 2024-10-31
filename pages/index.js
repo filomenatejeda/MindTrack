@@ -12,21 +12,21 @@ export default function Home() {
   return (
     <RootLayout>
       
-      <div className="min-h-screen bg-green-100"> {/* Fondo verde claro */}
+      <div className="min-h-screen bg-green-100 pt-16"> {/* Fondo verde claro */}
         <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
         <Navbar />
-<div> {/* Carrusel de imágenes: Representación visual */}
+<div className='mt-4'> {/* Carrusel de imágenes: Representación visual */}
 <ImageCarousel /></div>
 
         {/* Hero section: Nombre y Objetivo del Proyecto */}
-        <main className="flex flex-col items-center justify-center py-20">
+        <main className="flex flex-col items-center justify-center py-4">
           <h1 className="text-4xl font-bold text-teal-500 text-center">{t('MindTrack')}</h1>
-          <p className="text-gray-700 mt-4 text-center max-w-xl">
-            {t('MindTrack ayuda a los usuarios a monitorear y mejorar su salud mental mediante el seguimiento de emociones, prácticas saludables y la conexión con profesionales de salud mental.')}
+          <p className="text-gray-700 mt-4 text-center px-60">
+            {t('description')}
           </p>
-          <Link href="/register">
+          <Link href="/register/create-user">
             <button className="mt-8 px-6 py-2 bg-emerald-200 text-green-700 rounded-lg hover:bg-emerald-300"> {/* Botón CTA */}
-              {t('Comienza Ahora')}
+              {t('begin')}
             </button>
           </Link>
         </main>
@@ -34,20 +34,20 @@ export default function Home() {
        
 
         {/* Funcionalidades Clave */}
-        <section className="mt-10 px-6 text-center">
-          <h2 className="text-3xl font-semibold text-teal-600">{t('Funcionalidades Principales')}</h2>
+        <section id="features" className="mt-10 px-6 text-center">
+          <h2  className="text-3xl font-semibold text-teal-600">{t('features')}</h2>
           <div className="flex flex-wrap justify-center mt-6">
             <div className="m-4 p-4 bg-white rounded-lg shadow-md w-72">
-              <h3 className="text-xl font-bold text-green-700">{t('Registro Diario de Emociones')}</h3>
-              <p className="text-gray-600">{t('Registra tus emociones diariamente, detecta patrones y escribe reflexiones personales para entenderte mejor.')}</p>
+              <h3 className="text-xl font-bold text-green-700">{t('dailyemotions')}</h3>
+              <p className="text-gray-600">{t('descriptionemotion')}</p>
             </div>
             <div className="m-4 p-4 bg-white rounded-lg shadow-md w-72">
-              <h3 className="text-xl font-bold text-green-700">{t('Ejercicios de Relajación')}</h3>
-              <p className="text-gray-600">{t('Practica técnicas de respiración y meditación con recordatorios para cuidar tu bienestar.')}</p>
+              <h3 className="text-xl font-bold text-green-700">{t('exercises')}</h3>
+              <p className="text-gray-600">{t('descriptionexercises')}</p>
             </div>
             <div className="m-4 p-4 bg-white rounded-lg shadow-md w-72">
-              <h3 className="text-xl font-bold text-green-700">{t('Hábitos Saludables')}</h3>
-              <p className="text-gray-600">{t('Crea y sigue hábitos saludables que promuevan tu bienestar mental y físico.')}</p>
+              <h3 className="text-xl font-bold text-green-700">{t('habits')}</h3>
+              <p className="text-gray-600">{t('descriptionhabits')}</p>
             </div>
             <div className="m-4 p-4 bg-white rounded-lg shadow-md w-72">
               <h3 className="text-xl font-bold text-green-700">{t('Conexión con Profesionales')}</h3>
@@ -65,8 +65,8 @@ export default function Home() {
           </Link>
         </div>
 
-        <section className="mt-10 px-6 text-center">
-  <h2 className="text-3xl font-semibold text-teal-600">{t('Recursos Educativos')}</h2>
+        <section id="resources"className="mt-10 px-6 text-center">
+  <h2  className="text-3xl font-semibold text-teal-600">{t('Recursos Educativos')}</h2>
   <p className="text-gray-700 mt-4 max-w-xl mx-auto">
     {t('Descubre artículos, videos y podcasts sobre salud mental y recibe recomendaciones personalizadas basadas en tus registros emocionales.')}
   </p>
@@ -128,15 +128,15 @@ export default function Home() {
 </section>
 
         {/* Módulo de Inteligencia Artificial */}
-        <section className="mt-10 px-6 text-center">
-          <h2 className="text-3xl font-semibold text-teal-600">{t('Módulo de Inteligencia Artificial')}</h2>
+        <section id="ai"className="mt-10 px-6 text-center">
+          <h2  className="text-3xl font-semibold text-teal-600">{t('Módulo de Inteligencia Artificial')}</h2>
           <p className="text-gray-700 mt-4 max-w-xl mx-auto">
             {t('Nuestro sistema de IA detecta patrones emocionales y te sugiere contenido personalizado, como artículos o ejercicios, basado en tus necesidades.')}
           </p>
         </section>
 
         {/* Impacto en el ODS 3 */}
-        <section className="mt-10 px-6 text-center bg-emerald-50 py-6">
+        <section id="impact"className="mt-10 px-6 text-center bg-emerald-50 py-6">
           <h2 className="text-3xl font-semibold text-teal-600">{t('Impacto en el ODS 3')}</h2>
           <p className="text-gray-700 mt-4 max-w-xl mx-auto">
             {t('MindTrack contribuye al ODS 3, proporcionando una herramienta asequible para mejorar la salud mental y el bienestar general.')}
