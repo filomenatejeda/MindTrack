@@ -1,16 +1,15 @@
 // pages/home.js
 'use client'
-import React, { useState, useEffect } from 'react'; // Asegúrate de importar React y useState
+import React, { useState, useEffect } from 'react';
 import MoodSelector from '../components/MoodSelector';
-import Notes from '../components/Notes';
 import ButtonContainer from '../components/ButtonContainer';
-import Link from 'next/link'; // Importa Link de Next.js
+import Link from 'next/link';
+import NavbarH from '../components/NavbarH';
 
 export default function Home() {
   const [selectedMood, setSelectedMood] = useState('');
-  const [notes, setNotes] = useState([]); // Para almacenar las notas
+  const [notes, setNotes] = useState([]);
 
-  // Cargar notas desde localStorage cuando el componente se monta
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
     setNotes(savedNotes);
@@ -23,16 +22,16 @@ export default function Home() {
 
   const handleAddNote = (newNote) => {
     setNotes((prevNotes) => {
-      const updatedNotes = [newNote, ...prevNotes].slice(0, 5); // Mantener solo las últimas 5 notas
-      localStorage.setItem('notes', JSON.stringify(updatedNotes)); // Actualizar localStorage
+      const updatedNotes = [newNote, ...prevNotes].slice(0, 3); // Cambia a 3 para mostrar solo 3 notas
+      localStorage.setItem('notes', JSON.stringify(updatedNotes));
       return updatedNotes;
     });
   };
 
   const handleDeleteNote = (index) => {
     setNotes((prevNotes) => {
-      const updatedNotes = prevNotes.filter((_, i) => i !== index).slice(0, 5); // Mantener solo las últimas 5 notas
-      localStorage.setItem('notes', JSON.stringify(updatedNotes)); // Actualizar localStorage
+      const updatedNotes = prevNotes.filter((_, i) => i !== index).slice(0, 3); // Cambia a 3 para mostrar solo 3 notas
+      localStorage.setItem('notes', JSON.stringify(updatedNotes));
       return updatedNotes;
     });
   };
@@ -42,52 +41,61 @@ export default function Home() {
       const updatedNotes = prevNotes.map((note, i) =>
         i === index ? updatedNote : note
       );
-      localStorage.setItem('notes', JSON.stringify(updatedNotes)); // Actualizar localStorage
+      localStorage.setItem('notes', JSON.stringify(updatedNotes));
       return updatedNotes;
     });
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <script src="https://cdn.tailwindcss.com"></script> {/* Carga Tailwind CSS */}
-      <h1 className="text-4xl font-bold text-teal-500 text-center">Bienvenido a Home</h1>
-      <p className="mt-4 text-gray-700">¡Disfruta de tu experiencia en MindTrack!</p>
-      <div className="App">
-        <h1>Selecciona tu estado de ánimo</h1>
-        <MoodSelector onMoodSelect={handleMoodSelect} />
+    <div className="min-h-screen bg-gray-100">
+      <div className="w-full fixed top-0 z-50">
+        <NavbarH />
       </div>
-       {/* Botón para ir a la página de estado de animo */}
-       <div className="mt-4">
-          <Link href="/notas">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-              Días Anteriores
-            </button>
-          </Link>
-        </div>
       
-      <div className="mt-8">
-        <h2 className="text-xl font-bold">Notas Recientes</h2>
-        <div className="flex space-x-4 overflow-x-auto">
-          {notes.map((note, index) => (
-            <div key={index} className="bg-white shadow-md rounded p-4 w-64 flex-shrink-0">
-              <p>{note}</p>
-              <div className="text-sm text-gray-500">Nota {index + 1}</div>
+      <div className="pt-20 p-8">
+        {/* Título con fondo teal-500 y texto blanco */}
+        <h1 className="text-4xl font-bold bg-teal-500 text-white p-4 rounded-lg">Bienvenido a Home</h1>
+
+        {/* Descripción sin flex */}
+        <p className="mt-4 text-teal-500 text-lg p-2"> {/* Color hueso */}
+          En MindTrack, tu bienestar es nuestra prioridad. Este es un lugar seguro para desahogarte y buscar ayuda. 
+          Explora nuestras herramientas y recuerda, no estás solo; estamos aquí para apoyarte.
+        </p>
+        
+        <div className="flex justify-between mt-6 bg-white p-6 rounded-lg shadow-lg transition-shadow hover:shadow-xl">
+          <div className="flex flex-col">
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">Selecciona tu estado de ánimo</h2>
+            <MoodSelector onMoodSelect={handleMoodSelect} />
+            <Link href="/notas">
+              <button className="bg-emerald-200 text-green-700 py-2 px-4 rounded-full hover:bg-green-500 mt-4 transition-colors duration-200">
+                Días Anteriores
+              </button>
+            </Link>
+          </div>
+
+          <div className="flex flex-col justify-center items-center bg-green-50 p-4 rounded-lg shadow-md transition-shadow hover:shadow-lg">
+            <h2 className="text-xl font-bold text-green-600">Notas Recientes</h2>
+            <div className="flex space-x-4 overflow-x-auto py-4">
+              {notes.slice(0, 3).map((note, index) => ( // Muestra solo las primeras 3 notas
+                <div key={index} className="bg-white shadow-md rounded p-4 w-64 flex-shrink-0">
+                  <p>{note}</p>
+                  <div className="text-sm text-gray-500">Nota {index + 1}</div>
+                </div>
+              ))}
             </div>
-          ))}
+            <Link href="/notas">
+              <button className="bg-green-400 text-white py-2 px-4 rounded hover:bg-green-500 mt-4 transition-colors duration-200">
+                Ir a Notas
+              </button>
+            </Link>
+          </div>
         </div>
-         {/* Botón para ir a la página de notas */}
-         <div className="mt-4">
-          <Link href="/notas">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-              Ir a Notas
-            </button>
-          </Link>
+
+        {/* Espacio adicional entre las secciones */}
+        <div className="mt-8">
+          <ButtonContainer />
         </div>
-        <ButtonContainer/>
       </div>
     </div>
-    
   );
 }
-
-
