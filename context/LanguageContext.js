@@ -1,11 +1,13 @@
 // context/LanguageContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import i18next from '../utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(null); // Inicialmente null
+  const { t } = useTranslation(); // Usa useTranslation para obtener 't'
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -25,7 +27,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, changeLanguage }}>
+    <LanguageContext.Provider value={{ language, changeLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -38,5 +40,6 @@ export const useLanguage = () => {
   }
   return context;
 };
+
 
 
