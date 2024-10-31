@@ -8,6 +8,14 @@ import Footer from '../components/Footer'; // Asegúrate de importar tu Footer
 
 function RootLayout({ children }) {
   return (
+    <html lang="en">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
     <LanguageProvider>
       <I18nextProvider i18n={i18next}>
         <div className="min-h-screen flex flex-col">
@@ -17,8 +25,10 @@ function RootLayout({ children }) {
           </main>
           {/* <Footer /> Pie de página */}
         </div>
-      </I18nextProvider>
-    </LanguageProvider>
+            </I18nextProvider>
+        </LanguageProvider>
+        </body>
+    </html>
   );
 }
 
