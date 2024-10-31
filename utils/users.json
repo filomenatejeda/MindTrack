@@ -1,0 +1,37 @@
+[
+  {
+    "username": "usuario1",
+    "password": "$2a$10$e0N0W4fQX3x18Xjci9Lo6.kgF5ccVhKmht9VGykmKlG8KkRLRPZ6i",
+    "firstName": "Juan",
+    "lastName": "Pérez",
+    "email": "juan.perez@example.com"
+  },
+  {
+    "username": "usuario2",
+    "password": "$2a$10$e0N0W4fQX3x18Xjci9Lo6.kgF5ccVhKmht9VGykmKlG8KkRLRPZ6i",
+    "firstName": "Ana",
+    "lastName": "García",
+    "email": "ana.garcia@example.com"
+  },
+  {
+    "username": "a",
+    "password": "$2a$10$vWaT7SWw3n0SNCeqt6MF6e1veJzC7ORgjvWe7.t6y9k4IcYAeK3Lu",
+    "firstName": "vale",
+    "lastName": "a",
+    "email": "a@a"
+  },
+  {
+    "username": "tvalw",
+    "password": "$2a$10$9VacZJdVjrFXAmwEQo6lrOY8SZcPXWzGzdMsugMOS5NinMf/31JCW",
+    "firstName": "Vale",
+    "lastName": "Meyer",
+    "email": "v@gmail.com"
+  },
+  {
+    "username": "qq",
+    "password": "$2a$10$XVQ.njyt0JhmPrbh51CAIOw0B2QeoSe11W307P9yHsCUO725eiafW",
+    "firstName": "qq",
+    "lastName": "qq",
+    "email": "qq@q"
+  }
+]
