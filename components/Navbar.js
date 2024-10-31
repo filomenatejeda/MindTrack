@@ -19,7 +19,7 @@ function Navbar() {
         {t('login')} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
         <button onClick={() => changeLanguage('es')} className="text-white">Español</button>
-      <button onClick={() => changeLanguage('en')} className="text-white">English</button>
+      <button onClick={() => changeLanguage('en')} className="text-white"> English</button>
       </div>
     </nav>
   );

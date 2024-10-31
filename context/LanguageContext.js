@@ -1,28 +1,28 @@
+// context/LanguageContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import i18next from '../utils/i18n';
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(() => {
-    // Verifica si estamos en el navegador antes de acceder a localStorage
+  const [language, setLanguage] = useState(null); // Inicialmente null
+
+  useEffect(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('language') || 'en';
+      const storedLanguage = localStorage.getItem('language');
+      const lang = storedLanguage || 'en'; // Fallback a 'en' si no hay ninguno
+      setLanguage(lang);
+      i18next.changeLanguage(lang);
     }
-    return 'en'; // Idioma por defecto en el servidor
-  });
+  }, []);
 
   const changeLanguage = (lng) => {
     setLanguage(lng);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('language', lng); // Guarda el idioma en localStorage
+      localStorage.setItem('language', lng); // Guarda el idioma solo en el cliente
     }
-    i18next.changeLanguage(lng); // Cambia el idioma de i18next
+    i18next.changeLanguage(lng);
   };
-
-  useEffect(() => {
-    i18next.changeLanguage(language);
-  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage }}>
@@ -38,4 +38,5 @@ export const useLanguage = () => {
   }
   return context;
 };
+
 
