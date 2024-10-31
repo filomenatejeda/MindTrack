@@ -1,4 +1,5 @@
 // components/Navbar.js
+'use client'
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
@@ -13,7 +14,7 @@ function Navbar() {
         <Link href="/" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t('home')} {/* Usa traducción para "Inicio" */}
         </Link>
-        <Link href="/log/login" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+        <Link href="/login" className="text-green-700 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t('login')} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
         
