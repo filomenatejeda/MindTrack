@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'; // Asegúrate de importar React y useState
 import MoodSelector from '../components/MoodSelector';
 import Notes from '../components/Notes';
+import ButtonContainer from '../components/ButtonContainer';
 import Link from 'next/link'; // Importa Link de Next.js
 
 export default function Home() {
@@ -54,17 +55,15 @@ export default function Home() {
       <div className="App">
         <h1>Selecciona tu estado de ánimo</h1>
         <MoodSelector onMoodSelect={handleMoodSelect} />
-        {selectedMood && <p>Tu estado de ánimo es: {selectedMood}</p>}
-        
-        {/* Botón para ir a la página de notas */}
-        <div className="mt-4">
+      </div>
+       {/* Botón para ir a la página de estado de animo */}
+       <div className="mt-4">
           <Link href="/notas">
             <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-              Ir a Notas
+              Días Anteriores
             </button>
           </Link>
         </div>
-      </div>
       
       <div className="mt-8">
         <h2 className="text-xl font-bold">Notas Recientes</h2>
@@ -76,8 +75,18 @@ export default function Home() {
             </div>
           ))}
         </div>
+         {/* Botón para ir a la página de notas */}
+         <div className="mt-4">
+          <Link href="/notas">
+            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+              Ir a Notas
+            </button>
+          </Link>
+        </div>
+        <ButtonContainer/>
       </div>
     </div>
+    
   );
 }
 
