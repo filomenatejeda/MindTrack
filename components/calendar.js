@@ -1,4 +1,4 @@
-// components/MoodSelector.js
+// components/EmojiIcons.js
 import React from 'react';
 
 const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
@@ -15,15 +15,16 @@ const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
             {emojis.map((emoji, index) => (
                 <svg
                     key={index}
-                    onClick={() => onEmojiSelect(index)} // Verifica que esta línea esté aquí
+                    onClick={() => onEmojiSelect(index)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="70" height="70"
                     viewBox="0 0 100 100"
-                    className={`transition-transform duration-200 ${selectedEmoji === index ? 'scale-110' : ''}`}
+                    className={`transition-transform duration-200 cursor-pointer ${selectedEmoji === index ? 'scale-110' : ''}`}
                 >
                     <circle cx="50" cy="50" r="40" fill={selectedEmoji === index ? emoji.color : '#d3d3d3'} stroke="black" strokeWidth="2" />
                     <circle cx="35" cy="40" r="5" fill="black" />
                     <circle cx="65" cy="40" r="5" fill="black" />
+                    {/* Cambia las expresiones según el emoji */}
                     {index === 0 && <path d="M30 65 Q50 90 70 65" fill="none" stroke="black" strokeWidth="2" />} {/* Muy feliz */}
                     {index === 1 && <path d="M30 60 Q50 80 70 60" fill="none" stroke="black" strokeWidth="2" />} {/* Feliz */}
                     {index === 2 && <line x1="30" y1="65" x2="70" y2="65" stroke="black" strokeWidth="2" />} {/* Neutral */}
@@ -36,6 +37,4 @@ const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
 };
 
 export default EmojiIcons;
-
-
 

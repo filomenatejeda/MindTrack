@@ -9,11 +9,13 @@ function Navbar() {
 
   return (
     <nav className="bg-emerald-200 p-4 flex justify-between items-center fixed w-full top-0 z-50 shadow-lg">
-  <div className="text-green-700 font-bold text-lg">MindTrack</div>
+  <Link href="/"> {/* Cambiar a la ruta de tu página deseada */}
+          <div className="text-green-700 font-bold text-lg cursor-pointer">
+            MindTrack
+          </div>
+        </Link> {/* Texto en verde oscuro */}
   <div className="flex space-x-4 items-center">
-    <Link href="/" className="text-green-700 hover:text-green-900">
-      {t('home')}
-    </Link>
+  
     <Link href="#features" className="text-green-700 hover:text-green-900"> {/* Enlace a funcionalidades */}
       {t('features')}
     </Link>
