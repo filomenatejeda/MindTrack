@@ -68,6 +68,11 @@ i18next
           gonotes: "Go to Notes",
           professionals: "Professionals",
           techniques: "Relaxation exercises and techniques",
+          note: "Note",
+          hide: "Hide",
+          logout: "Log out",
+          notess: "Notes",
+          calendar:"Calendar"
 
 
         
@@ -118,13 +123,18 @@ i18next
           ods: "ODS 3",
           descriptionods: "MindTrack contribuye al ODS 3, proporcionando una herramienta asequible para mejorar la salud mental y el bienestar general.",
           ai:"IA",
-          homadescription: "En MindTrack, tu bienestar es nuestra prioridad. Este es un lugar seguro para desahogarte y buscar ayuda. Explora nuestras herramientas y recuerda, no estás solo; estamos aquí para apoyarte.",
+          homedescription: "En MindTrack, tu bienestar es nuestra prioridad. Este es un lugar seguro para desahogarte y buscar ayuda. Explora nuestras herramientas y recuerda, no estás solo; estamos aquí para apoyarte.",
           feeling: "¿Como estas el dia de hoy?",
           days: "Días Anteriores",
           notes: "Notas Recientes",
           gonotes:"Ir a Notas",
           professionals: "Profesionales",
-          techniques: "Ejercicios y Técnicas de Relajación"
+          techniques: "Ejercicios y Técnicas de Relajación",
+          note: "Nota",
+          hide: "Esconder",
+          logout: "Cerrar Sesion",
+          notess: "Notas",
+          calendar:"Calendario"
 
 
 
