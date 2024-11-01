@@ -19,11 +19,18 @@ export default function Home() {
     useEffect(() => {
         const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
         setNotes(savedNotes);
+
+        // Cargar emoji seleccionado del localStorage
+        const savedEmoji = localStorage.getItem('selectedEmoji');
+        if (savedEmoji) {
+            setSelectedEmoji(JSON.parse(savedEmoji)); // Guardar emoji en el estado
+        }
     }, []);
 
     // Manejar selección de estado de ánimo
     const handleEmojiSelect = (emojiIndex) => {
         setSelectedEmoji(emojiIndex); // Actualiza el estado al seleccionar un emoji
+        localStorage.setItem('selectedEmoji', JSON.stringify(emojiIndex)); // Guardar emoji seleccionado en localStorage
         console.log(`Emoji seleccionado: ${emojiIndex}`);
     };
 
@@ -110,3 +117,4 @@ export default function Home() {
         </div>
     );
 }
+
