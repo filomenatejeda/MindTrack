@@ -18,13 +18,13 @@ function Navbar() {
       {t('features')}
     </Link>
     <Link href="#resources" className="text-green-700 hover:text-green-900"> {/* Enlace a recursos */}
-      {t('Recursos Educativos')}
+      {t('resourses')}
     </Link>
     <Link href="#ai" className="text-green-700 hover:text-green-900"> {/* Enlace al módulo de IA */}
-      {t('Inteligencia Artificial')}
+      {t('ai')}
     </Link>
     <Link href="#impact" className="text-green-700 hover:text-green-900"> {/* Enlace al impacto ODS 3 */}
-      {t('ODS 3')}
+      {t('ods')}
     </Link>
     <Link href="/loginQ/login" className="text-green-700 hover:text-green-900">
       {t('login')}

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 const ButtonContainer = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex space-x-4">
       <button className="relative w-72 h-72 rounded shadow-lg overflow-hidden"> {/* Aumentado de 60 a 72 */}
@@ -12,7 +15,7 @@ const ButtonContainer = () => {
           }}
         ></div>
         <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
-          Ejercicios y Técnicas de Relajación
+          {t('techniques')}
         </span>
       </button>
 
@@ -25,7 +28,7 @@ const ButtonContainer = () => {
           }}
         ></div>
         <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
-          Hábitos Saludables
+          {t('habits')}
         </span>
       </button>
 
@@ -38,7 +41,7 @@ const ButtonContainer = () => {
           }}
         ></div>
         <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
-          Profesionales
+          {t('professionals')}
         </span>
       </button>
 
@@ -51,7 +54,7 @@ const ButtonContainer = () => {
           }}
         ></div>
         <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
-          Recursos Educativos
+          {t('resourses')}
         </span>
       </button>
 
