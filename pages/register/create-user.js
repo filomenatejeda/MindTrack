@@ -10,7 +10,6 @@ export default function CreateUser() {
   const router = useRouter();
   const { t } = useTranslation();
   
-  // Definir estados para cada campo del formulario
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [username, setUsername] = useState('');
@@ -27,7 +26,7 @@ export default function CreateUser() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ username, password, firstName, lastName,  email }),
+      body: JSON.stringify({ username, password, firstName, lastName, email }),
     });
 
     if (response.ok) {
@@ -35,21 +34,25 @@ export default function CreateUser() {
       router.push('/loginQ/login'); // Redirigir a la página de inicio de sesión
     } else {
       const data = await response.json();
-      setError(data.message); // Mostrar el mensaje de error en caso de fallo
+      setError(data.message);
     }
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen bg-gray-100 relative">
+       <div className="absolute inset-0 bg-[url('https://img.freepik.com/vector-gratis/fondo-plano-dia-mundial-salud-mental_23-2149671209.jpg')] bg-cover bg-center opacity-30"></div>
       {/* Navbar fija en la parte superior */}
       <div className="w-full fixed top-0 z-50">
         <Navbar />
       </div>
   
       {/* Contenedor central con el formulario ajustado */}
-      <div className="flex-grow mt-28 w-full flex justify-center items-start">
-        <form onSubmit={handleSubmit} className="p-6 bg-green-100 rounded-lg shadow-lg max-w-md w-full">
-          <h2 className="text-2xl font-bold mb-6 text-center text-green-800">
+      <div className="flex-grow mt-28 w-full flex justify-center items-start relative">
+        {/* Imagen de fondo sutil */}
+       
+        
+        <form onSubmit={handleSubmit} className="relative p-8 bg-white rounded-lg shadow-lg max-w-md w-full z-10 transition-transform duration-300 transform hover:scale-105">
+          <h2 className="text-3xl font-bold mb-6 text-center text-green-800">
             {t('register')}
           </h2>
           <input
@@ -57,7 +60,7 @@ export default function CreateUser() {
             placeholder={t('user')}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
           <input
@@ -65,7 +68,7 @@ export default function CreateUser() {
             placeholder={t('password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
           <input
@@ -73,7 +76,7 @@ export default function CreateUser() {
             placeholder={t('name')}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
           <input
@@ -81,7 +84,7 @@ export default function CreateUser() {
             placeholder={t('lastname')}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
           <input
@@ -89,15 +92,15 @@ export default function CreateUser() {
             placeholder={t('email')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
-          <button type="submit" className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+          <button type="submit" className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">
             {t('register')}
           </button>
           {error && <p className="text-red-600 mt-2 text-center">{error}</p>}
           <div className="mt-4 text-center">
-            <Link href="/loginQ/login" className="text-green-600">
+            <Link href="/loginQ/login" className="text-green-600 hover:underline transition duration-300">
               {t('haveanaccount')}
             </Link>
           </div>
@@ -108,7 +111,8 @@ export default function CreateUser() {
       <Footer />
     </div>
   );  
-}  
+}
+
 
 
 
