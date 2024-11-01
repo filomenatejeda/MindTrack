@@ -1,0 +1,5 @@
+/* styles/globals.css o en el CSS específico */
+.highlight {
+    background-color: #FFD700 !important; /* Cambia esto al color que desees */
+    border-radius: 50%;
+}

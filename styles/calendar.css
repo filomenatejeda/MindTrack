@@ -1,0 +1,29 @@
+/* styles/calendar.css */
+.react-calendar {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.react-calendar__tile {
+    max-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.react-calendar__tile--now {
+    background: #80deea; /* Color suave para hoy */
+}
+
+.react-calendar__tile--active {
+    background: #00796b; /* Color para el día activo */
+    color: white;
+}
+
+.react-calendar__tile--active:hover {
+    background: #004d40; /* Color oscuro al pasar el mouse */
+}
+
+.react-calendar__tile:hover {
+    background: rgba(0, 121, 107, 0.2); /* Color suave al pasar el mouse */
+}
