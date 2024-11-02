@@ -1,21 +1,21 @@
-// components/MoodSelector.js
 import React from 'react';
 
-const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
-    const emojis = [
-        { color: '#FFD700', expression: 'Muy feliz' },
-        { color: '#FFEB3B', expression: 'Feliz' },
-        { color: '#B0C4DE', expression: 'Neutral' },
-        { color: '#6495ED', expression: 'Llorando' },
-        { color: '#87CEFA', expression: 'Triste' }
-    ];
+// Definición de los emojis
+const emojis = [
+    { color: '#FFD700', expression: 'Muy feliz' },
+    { color: '#FFEB3B', expression: 'Feliz' },
+    { color: '#B0C4DE', expression: 'Neutral' },
+    { color: '#6495ED', expression: 'Llorando' },
+    { color: '#87CEFA', expression: 'Triste' }
+];
 
+const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
     return (
         <div className="flex space-x-2">
             {emojis.map((emoji, index) => (
                 <svg
                     key={index}
-                    onClick={() => onEmojiSelect(index)} // Verifica que esta línea esté aquí
+                    onClick={() => onEmojiSelect(index)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="70" height="70"
                     viewBox="0 0 100 100"
@@ -35,7 +35,7 @@ const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
     );
 };
 
+// Exportar los emojis para usarlos en otro componente
+export { emojis };
+
 export default EmojiIcons;
-
-
-
