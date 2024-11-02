@@ -97,8 +97,9 @@ export default function Home() {
                         </button>
                     </Link>
                 </div>
+                <div className="mt-10"> 
                 <ButtonContainer onAddNote={handleAddNote} />
-                
+                </div>
             </div>
             <Footer />
         </div>
