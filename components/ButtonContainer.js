@@ -21,7 +21,7 @@ const ButtonContainer = () => {
         </button>
       </Link>
 
-      <Link href="pages/habits" passHref>
+      <Link href="/habits" passHref>
         <button className="relative w-80 h-80 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-lg shadow-lg overflow-hidden mb-2"> {/* Responsivo */}
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -36,7 +36,7 @@ const ButtonContainer = () => {
         </button>
       </Link>
 
-      <Link href="pages/profesionales" passHref>
+      <Link href="/profesionales" passHref>
         <button className="relative w-80 h-80 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-lg shadow-lg overflow-hidden mb-2"> {/* Responsivo */}
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -51,7 +51,7 @@ const ButtonContainer = () => {
         </button>
       </Link>
 
-      <Link href="pages/recursos" passHref>
+      <Link href="/recursos" passHref>
         <button className="relative w-80 h-80 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-lg shadow-lg overflow-hidden mb-4"> {/* Responsivo */}
           <div
             className="absolute inset-0 bg-cover bg-center"
