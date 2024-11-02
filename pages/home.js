@@ -8,6 +8,7 @@ import { useAuth } from '../context/AuthContext';
 import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns-tz'; // Asegúrate de tener esta importación
 import { useEmojiContext } from '../context/EmojiContext';
+import Footer from '../components/Footer';
 
 export default function Home() {
     const { user } = useAuth();
@@ -97,7 +98,9 @@ export default function Home() {
                     </Link>
                 </div>
                 <ButtonContainer onAddNote={handleAddNote} />
+                
             </div>
+            <Footer />
         </div>
     );
 }
