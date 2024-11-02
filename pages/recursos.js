@@ -13,8 +13,8 @@ const EducationResourcesPage = () => {
     const articles = [
         { title: 'Los trastornos de Ansiedad', link: '/articulos/ansiedad' },
         { title: 'Guía de Gestión del Estrés', link: '/articulos/estres' },
-        { title: 'Importancia de la salud mental', link: '/articulos/salud-mental' },
-        { title: 'Cómo mejorar la autoestima', link: '/articulos/mejorar-autoestima' },
+        { title: '¿Qué es la salud mental y por qué es importante?', link: '/articulos/salud' },
+        { title: 'Guía Práctica para Mejorar la Autoestima ', link: '/articulos/autoestima' },
     ];
 
     const videos = [
@@ -24,7 +24,7 @@ const EducationResourcesPage = () => {
     ];
 
     const podcasts = [
-        { title: 'Podcast sobre autoestima', link: '/podcasts/autoestima' },
+        { title: 'Cómo Conseguir una Autoestima Sana', link: '/podcasts/autoestima' },
         { title: 'Salud mental y bienestar', link: '/podcasts/salud-mental' },
         { title: 'Cómo enfrentar la depresión', link: '/podcasts/enfrentar-depresion' },
     ];
@@ -85,7 +85,7 @@ const EducationResourcesPage = () => {
 
                 {/* Sección de Podcasts */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('podcasts')}</h2>
+                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Podcasts')}</h2>
                     <div className="flex flex-col space-y-4">
                         {podcasts.slice(0, showMorePodcasts ? podcasts.length : 2).map((podcast, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
