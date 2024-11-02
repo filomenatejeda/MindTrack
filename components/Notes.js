@@ -1,6 +1,6 @@
 // components/Notes.js
 import React, { useState, useEffect } from 'react';
-import { PlusIcon, TrashIcon, PencilIcon } from '@heroicons/react/solid';
+import { PlusIcon, TrashIcon, PencilIcon } from '@heroicons/react/24/solid';
 
 const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
   const [notes, setNotes] = useState([]);
@@ -47,19 +47,19 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-2xl font-bold mb-4 text-blue-700">Notas</h2>
+    <div className="bg-white shadow-lg rounded-xl p-6 border border-green-200">
+      <h2 className="text-2xl font-bold mb-4 text-green-700 text-center">Notas de Bienestar</h2>
       <form onSubmit={handleAddNote} className="mb-6">
         <textarea
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+          className="w-full p-3 border border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150"
           rows="4"
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-          placeholder="Escribe tu nota aquí..."
+          placeholder="Escribe aquí una nueva nota de bienestar..."
         />
         <button
           type="submit"
-          className="mt-3 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 flex items-center"
+          className="mt-4 bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition duration-150 flex items-center justify-center w-full"
         >
           <PlusIcon className="h-5 w-5 mr-2" />
           {editingIndex !== null ? 'Actualizar Nota' : 'Agregar Nota'}
@@ -67,18 +67,21 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
       </form>
       <ul className="space-y-4">
         {notes.map((note, index) => (
-          <li key={index} className="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition duration-200">
-            <span className="text-gray-800">{note}</span>
+          <li
+            key={index}
+            className="flex justify-between items-center bg-green-50 p-4 rounded-lg shadow hover:shadow-lg transition duration-150 border border-green-200"
+          >
+            <span className="text-gray-800 font-medium">{note}</span>
             <div className="flex space-x-2">
               <button
                 onClick={() => handleEditNote(index)}
-                className="text-yellow-500 hover:text-yellow-700 transition duration-200"
+                className="text-yellow-500 hover:text-yellow-700 transition duration-150"
               >
                 <PencilIcon className="h-5 w-5" />
               </button>
               <button
                 onClick={() => handleDeleteNote(index)}
-                className="text-red-500 hover:text-red-700 transition duration-200"
+                className="text-red-500 hover:text-red-700 transition duration-150"
               >
                 <TrashIcon className="h-5 w-5" />
               </button>
@@ -91,6 +94,7 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
 };
 
 export default Notes;
+
 
 
 

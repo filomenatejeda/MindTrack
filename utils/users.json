@@ -40,5 +40,12 @@
     "firstName": "Natalia",
     "lastName": "Sepulveda",
     "email": "nsepulveda@gmail.com"
+  },
+  {
+    "username": "luniwisss",
+    "password": "$2a$10$9Cjy8wLiKr4RcExnIuaCueMiayZZ/OThfhUyOqZiq/smY.ONFQ4Oe",
+    "firstName": "Luna",
+    "lastName": "Rodríguez",
+    "email": "lunarodriguezsepulveda@gmail.com"
   }
 ]
