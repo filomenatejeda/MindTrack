@@ -1,4 +1,3 @@
-// context/EmojiContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const EmojiContext = createContext();
@@ -21,8 +20,17 @@ export const EmojiProvider = ({ children }) => {
         });
     };
 
+    const removeEmoji = (date) => {
+        setEmojiData(prevData => {
+            const newData = { ...prevData };
+            delete newData[date]; // Elimina el emoji del objeto
+            localStorage.setItem('emojiData', JSON.stringify(newData)); // Actualiza el almacenamiento local
+            return newData;
+        });
+    };
+
     return (
-        <EmojiContext.Provider value={{ emojiData, addEmoji }}>
+        <EmojiContext.Provider value={{ emojiData, addEmoji, removeEmoji }}>
             {children}
         </EmojiContext.Provider>
     );

@@ -11,10 +11,9 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.react-calendar__tile--now {
-    background: #80deea; /* Color suave para hoy */
-}
 
+
+/* Estilo para el día seleccionado (activo) */
 .react-calendar__tile--active {
     background: #00796b; /* Color para el día activo */
     color: white;
@@ -26,4 +25,18 @@
 
 .react-calendar__tile:hover {
     background: rgba(0, 121, 107, 0.2); /* Color suave al pasar el mouse */
+}
+
+
+
+.bg-gray-300 {
+    background-color: #d1d5db; /* Color para fechas futuras */
+}
+
+.bg-yellow-200 {
+    background-color: #fefcbf; /* Color para días con emoji */
+}
+
+.text-gray-400 {
+    color: #9ca3af; /* Color gris claro */
 }
