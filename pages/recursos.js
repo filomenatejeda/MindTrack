@@ -11,8 +11,8 @@ const EducationResourcesPage = () => {
     const [showMorePodcasts, setShowMorePodcasts] = useState(false);
 
     const articles = [
-        { title: 'Artículos sobre ansiedad', link: '/articulos/ansiedad' },
-        { title: 'Guía de manejo del estrés', link: '/articulos/manejo-estres' },
+        { title: 'Los trastornos de Ansiedad', link: '/articulos/ansiedad' },
+        { title: 'Guía de Gestión del Estrés', link: '/articulos/estres' },
         { title: 'Importancia de la salud mental', link: '/articulos/salud-mental' },
         { title: 'Cómo mejorar la autoestima', link: '/articulos/mejorar-autoestima' },
     ];
