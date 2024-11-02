@@ -1,6 +1,6 @@
 // components/Notes.js
 import React, { useState, useEffect } from 'react';
-import { PencilIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/solid'; // Importar desde la ruta correcta
+import { PlusIcon, TrashIcon, PencilIcon } from '@heroicons/react/solid';
 
 const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
   const [notes, setNotes] = useState([]);
@@ -27,7 +27,6 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
         onUpdateNote(editingIndex, noteText);
         setEditingIndex(null);
       } else {
-        // Agregar nueva nota sin límite en el número de notas
         const newNotes = [...notes, noteText];
         setNotes(newNotes);
         onAddNote(noteText);
@@ -48,11 +47,11 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
   };
 
   return (
-    <div className="bg-green-50 shadow-md rounded-lg p-6">
-      <h2 className="text-2xl font-bold mb-4 text-green-700">Notas personales</h2>
+    <div className="bg-white shadow-md rounded-lg p-6">
+      <h2 className="text-2xl font-bold mb-4 text-blue-700">Notas</h2>
       <form onSubmit={handleAddNote} className="mb-6">
         <textarea
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-green-200"
+          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
           rows="4"
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
@@ -60,26 +59,26 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
         />
         <button
           type="submit"
-          className="mt-3 flex items-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200"
+          className="mt-3 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 flex items-center"
         >
-          <PlusIcon className="h-5 w-5 mr-1" />
+          <PlusIcon className="h-5 w-5 mr-2" />
           {editingIndex !== null ? 'Actualizar Nota' : 'Agregar Nota'}
         </button>
       </form>
       <ul className="space-y-4">
         {notes.map((note, index) => (
-          <li key={index} className="flex justify-between items-center bg-white p-4 rounded-lg shadow hover:shadow-md transition duration-200">
+          <li key={index} className="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition duration-200">
             <span className="text-gray-800">{note}</span>
             <div className="flex space-x-2">
               <button
                 onClick={() => handleEditNote(index)}
-                className="text-green-500 hover:text-green-700 transition duration-200"
+                className="text-yellow-500 hover:text-yellow-700 transition duration-200"
               >
                 <PencilIcon className="h-5 w-5" />
               </button>
               <button
                 onClick={() => handleDeleteNote(index)}
-                className="text-blue-400 hover:text-red-700 transition duration-200"
+                className="text-red-500 hover:text-red-700 transition duration-200"
               >
                 <TrashIcon className="h-5 w-5" />
               </button>

@@ -15,6 +15,12 @@ function NavbarH() {
           </div>
         </Link> {/* Texto en verde oscuro */}
       <div className="flex space-x-4 items-center">
+      <Link href="/techniques" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+          {t("habits")} {/* Usa traducción para "Iniciar Sesión" */}
+        </Link>
+      <Link href="/techniques" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+          {t("techniques")} {/* Usa traducción para "Iniciar Sesión" */}
+        </Link>
       <Link href="/calendar" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("calendar")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
