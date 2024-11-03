@@ -2,6 +2,7 @@ import React from 'react';
 import RelaxationCard from '../components/RelaxationCard';
 import NavbarH from '../components/NavbarH';
 import { useTranslation } from 'react-i18next';
+import Footer from '../components/Footer';
 
 const techniques = () => {
   const { t } = useTranslation();
@@ -61,6 +62,7 @@ const techniques = () => {
   return (
     <div>
         <NavbarH />
+        <script src="https://cdn.tailwindcss.com"></script>
     <div className="bg-gradient-to-b to-blue-200 from-teal-200 min-h-screen p-8">
      
       <h1 className="text-4xl font-bold text-center mb-6 text-teal-800">{t('techniques')}</h1>
@@ -70,6 +72,7 @@ const techniques = () => {
         ))}
       </div>
     </div>
+    <Footer />
     </div>
   );
 };
