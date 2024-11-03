@@ -5,8 +5,8 @@ const emojis = [
     { color: '#FFD700', expression: 'Muy feliz' },
     { color: '#FFEB3B', expression: 'Feliz' },
     { color: '#B0C4DE', expression: 'Neutral' },
-    { color: '#6495ED', expression: 'Llorando' },
-    { color: '#87CEFA', expression: 'Triste' }
+    { color: '#6495ED', expression: 'Triste' },
+    { color: '#87CEFA', expression: 'Llorando' }
 ];
 
 const EmojiIcons = ({ selectedEmoji, onEmojiSelect }) => {
