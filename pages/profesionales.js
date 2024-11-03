@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import NavbarH from '../components/NavbarH';
 import Link from 'next/link'; // Importa Link desde next/link
 import { useTranslation } from 'react-i18next';
@@ -26,7 +26,7 @@ export default function ContactProfessionals() {
                     Contacto con Profesionales
                 </h1>
                 <p className="mt-4 text-black text-lg p-2 text-center ">
-                Encontrarás una lista de profesionales de la salud mental disponibles para brindarte el apoyo que necesitas. Cada uno de ellos está especializado en diferentes áreas, desde psicología hasta terapia ocupacional, asegurando que puedas encontrar la ayuda adecuada para tus necesidades. No dudes en ponerte en contacto con ellos para recibir orientación, consejos y recursos que te acompañen en tu camino hacia el bienestar emocional.
+                    Encontrarás una lista de profesionales de la salud mental disponibles para brindarte el apoyo que necesitas. Cada uno de ellos está especializado en diferentes áreas, desde psicología hasta terapia ocupacional, asegurando que puedas encontrar la ayuda adecuada para tus necesidades. No dudes en ponerte en contacto con ellos para recibir orientación, consejos y recursos que te acompañen en tu camino hacia el bienestar emocional.
                 </p>
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {professionals.map(professional => (
@@ -35,10 +35,11 @@ export default function ContactProfessionals() {
                             <p className="text-lg text-gray-700">{professional.specialty}</p>
                             <p className="text-gray-600">{professional.contact}</p>
                             
-                            <Link href="mailto:profesional@ejemplo.com">
-                            <button className="mt-4 bg-gradient-to-r from-blue-400 to-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-500 transition duration-200 transform hover:scale-105">
-                                {t('contact')}
-                            </button>
+                            {/* Usamos el valor de contact para el enlace mailto */}
+                            <Link href={`mailto:${professional.contact}`}>
+                                <button className="mt-4 bg-gradient-to-r from-blue-400 to-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-500 transition duration-200 transform hover:scale-105">
+                                    {t('contact')}
+                                </button>
                             </Link>
                         </div>
                     ))}
@@ -48,3 +49,4 @@ export default function ContactProfessionals() {
         </div>
     );
 }
+
