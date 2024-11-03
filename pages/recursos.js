@@ -25,7 +25,7 @@ const EducationResourcesPage = () => {
 
     const podcasts = [
         { title: 'Cómo Conseguir una Autoestima Sana', link: '/podcasts/autoestima' },
-        { title: 'Salud mental y bienestar', link: '/podcasts/salud-mental' },
+        { title: 'Salud mental y bienestar', link: '/podcasts/salud' },
         { title: 'Cómo enfrentar la depresión', link: '/podcasts/enfrentar-depresion' },
     ];
 
