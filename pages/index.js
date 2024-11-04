@@ -24,7 +24,7 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-teal-600 text-center drop-shadow-md">{t('MindTrack')}</h1>
           <p className="text-gray-700 mt-4 text-center px-6 md:px-16">{t('description')}</p>
           <Link href="/register/create-user">
-            <button className="mt-8 px-6 py-2 bg-gradient-to-r from-teal-400 to-green-500 text-white rounded-lg shadow-lg hover:from-teal-500 hover:to-green-600 transition-transform transform hover:scale-105">
+            <button className="mt-4 px-6 py-2 bg-gradient-to-r from-teal-400 to-green-500 text-white rounded-lg shadow-lg hover:from-teal-500 hover:to-green-600 transition-transform transform hover:scale-105">
               {t('begin')}
             </button>
           </Link>
