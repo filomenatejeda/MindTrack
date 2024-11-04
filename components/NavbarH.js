@@ -3,9 +3,14 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
+import { useState, useEffect } from 'react'
 
 function NavbarH() { 
   const { t } = useTranslation();
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <nav className="bg-teal-500 p-4 flex justify-between items-center shadow-lg"> {/* Fondo verde esmeralda y sombra */}

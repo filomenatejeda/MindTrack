@@ -12,15 +12,18 @@ import "../styles/desktop.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <I18nextProvider i18n={i18next}>
+     <I18nextProvider i18n={i18next}>
       <LanguageProvider>
         <AuthProvider>
           <EmojiProvider>
-            <Component {...pageProps} />
+           
+              <Component {...pageProps} />
+           
           </EmojiProvider>
         </AuthProvider>
       </LanguageProvider>
     </I18nextProvider>
+   
   );
 }
 
