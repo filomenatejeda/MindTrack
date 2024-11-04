@@ -5,6 +5,12 @@ import i18next from '../utils/i18n'; // Importa la configuración de i18next
 import { AuthProvider } from '../context/AuthContext'; // Importa tu contexto de autenticación
 // import '../styles/globals.css'; // Importa tus estilos globales (opcional)
 import {EmojiProvider } from '../context/EmojiContext'
+import "../styles/mobile.css";
+import "../styles/tablet.css";
+import "../styles/desktop.css";
+
+
+
 function MyApp({ Component, pageProps }) {
   return (
     <LanguageProvider>
