@@ -16,12 +16,12 @@ export default function ContactProfessionals() {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="flex flex-col min-h-screen bg-gray-100">
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
-            <div className="pt-20 p-4">
+            <div className="flex-grow pt-20 p-4">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
                     Contacto con Profesionales
                 </h1>
@@ -49,4 +49,3 @@ export default function ContactProfessionals() {
         </div>
     );
 }
-
