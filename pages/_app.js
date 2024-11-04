@@ -12,17 +12,18 @@ import "../styles/desktop.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <LanguageProvider>
-      <I18nextProvider i18n={i18next}>
-        <AuthProvider> {/* Envuelve el componente con el AuthProvider */}
-        <EmojiProvider>
+    <I18nextProvider i18n={i18next}>
+      <LanguageProvider>
+        <AuthProvider>
+          <EmojiProvider>
             <Component {...pageProps} />
-        </EmojiProvider>
+          </EmojiProvider>
         </AuthProvider>
-      </I18nextProvider>
-    </LanguageProvider>
+      </LanguageProvider>
+    </I18nextProvider>
   );
 }
 
 export default MyApp;
+
 
