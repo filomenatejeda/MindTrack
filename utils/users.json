@@ -47,5 +47,12 @@
     "firstName": "Luna",
     "lastName": "Rodríguez",
     "email": "lunarodriguezsepulveda@gmail.com"
+  },
+  {
+    "username": "vale",
+    "password": "$2a$10$cR0ANPmJpOKicbMWsKkXJe33K5mmwfkWjzzDj5wY3t6ls6MDaGwS2",
+    "firstName": "vale",
+    "lastName": "Meyer",
+    "email": "vmeyer@alumnos.uai.cl"
   }
 ]
