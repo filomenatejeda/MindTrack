@@ -3,12 +3,14 @@ import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 const getInitialLanguage = () => {
-  // Comprobación para asegurarse de que estamos en el cliente
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('language') || 'en'; // Carga el idioma de localStorage o usa 'en' por defecto
+  if (typeof window === 'undefined') {
+    // Obtener el idioma preferido desde las cabeceras del navegador o usa 'es' por defecto
+    return 'es'; 
+  } else {
+    return localStorage.getItem('language') || 'es';
   }
-  return 'en'; // Fallback en el servidor
 };
+
 
 i18next
   .use(initReactI18next)
