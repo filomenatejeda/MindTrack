@@ -10,7 +10,7 @@ function NavbarH() {
   return (
     <nav className="bg-teal-500 p-4 flex justify-between items-center shadow-lg"> {/* Fondo verde esmeralda y sombra */}
  <Link href="/home"> {/* Cambiar a la ruta de tu página deseada */}
-          <div className="text-green-100 font-bold text-lg cursor-pointer">
+          <div className="text-green-100 font-bold text-lg cursor-pointer pr-4">
             MindTrack
           </div>
         </Link> {/* Texto en verde oscuro */}
