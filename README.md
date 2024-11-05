@@ -5,8 +5,9 @@ MindTrack es una aplicación diseñada para ayudar a los usuarios a monitorear y
 ## Instalación
 
 1. Clona este repositorio.
-2. Ejecuta `npm install` para instalar las dependencias.
-3. Ejecuta `npm run dev` para iniciar la aplicación.
+2. Crear archivo .env: `JWT_SECRET=" "`
+3. Ejecuta `npm install` para instalar las dependencias.
+4. Ejecuta `npm run dev` para iniciar la aplicación.
 
 
 ## Funcionalidades
