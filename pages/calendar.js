@@ -21,13 +21,13 @@ const CalendarPage = () => {
         setSelectedDate(today);
 
         // Intenta recuperar el emoji guardado
-        const savedEmoji = localStorage.getItem('selectedEmoji');
-        if (savedEmoji) {
-            setSelectedEmoji(JSON.parse(savedEmoji));
+        const todayEmoji = emojiData[todayString];
+        if (todayEmoji || todayEmoji ==0) {
+            setSelectedEmoji(JSON.parse(todayEmoji ));
         }
 
         // Si no hay emoji para hoy, lo añade
-        if (!emojiData[todayString]) {
+        if (emojiData[todayString]== null) {
             addEmoji(todayString, selectedEmoji);
         }
     }, []);
@@ -38,7 +38,7 @@ const CalendarPage = () => {
 
         if (dateString <= todayString) {
             setSelectedDate(date);
-            setSelectedEmoji(emojiData[dateString] || null);
+            setSelectedEmoji(emojiData[dateString] || emojiData[dateString]==0? emojiData[dateString]: null);
         }
     };
 
@@ -79,6 +79,7 @@ const CalendarPage = () => {
     return (
         <div className="min-h-screen flex flex-col bg-gradient-to-r from-green-300 to-blue-300">
             <NavbarH />
+            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex flex-row items-start justify-center flex-grow p-6">
                 <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
                     <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">Calendario de Emociones</h1>
@@ -95,7 +96,7 @@ const CalendarPage = () => {
 
                             if (isToday) return 'bg-blue-300';
                             if (isFutureDate) return 'bg-gray-300';
-                            return emojiData[dateString] ? 'bg-yellow-200' : '';
+                            return emojiData[dateString]|| emojiData[dateString]== 0 ? 'bg-yellow-200' : '';
                         }}
                     />
 
