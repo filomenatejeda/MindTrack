@@ -20,23 +20,23 @@ function NavbarH() {
           </div>
         </Link> {/* Texto en verde oscuro */}
       <div className="flex space-x-4 items-center">
-      <Link href="/techniques" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+      <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("habits")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
-      <Link href="/techniques" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+      <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("techniques")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
-      <Link href="/calendar" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+      <Link href="/calendar" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("calendar")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
-      <Link href="/notas" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+      <Link href="/notas" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("notess")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
         
           {/* Componente de Selección de Idioma */}
         <LanguageSelector />
 
-        <Link href="/" className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+        <Link href="/" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("logout")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
         
