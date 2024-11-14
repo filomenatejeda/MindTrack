@@ -18,7 +18,7 @@ const Techniques = () => {
       title: 'Respiración Profunda',
       description: 'Ejercicios de respiración para relajar el cuerpo y disminuir la ansiedad.',
       image: 'https://png.pngtree.com/png-clipart/20230914/original/pngtree-deep-breathing-clipart-man-breathing-vector-illustration-on-isolated-background-cartoon-png-image_11244870.png',
-      link: '/deep-breathing', // URL de destino
+      link: '/ejercicios/respiracion', // URL de destino
     },
     {
       title: 'Yoga',
