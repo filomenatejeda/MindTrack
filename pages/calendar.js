@@ -6,12 +6,14 @@ import { format } from 'date-fns-tz';
 import 'react-calendar/dist/Calendar.css';
 import NavbarH from '../components/NavbarH';
 import Footer from '../components/Footer';
+import { useTranslation } from 'react-i18next';
+import { enUS } from 'date-fns/locale';
 
 const CalendarPage = () => {
     const { emojiData, addEmoji, removeEmoji } = useEmojiContext();
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedEmoji, setSelectedEmoji] = useState(null);
-
+    const { t } = useTranslation();
     
     useEffect(() => {
         const today = new Date();
@@ -27,14 +29,14 @@ const CalendarPage = () => {
         }
 
         // Si no hay emoji para hoy, lo añade
-        if (emojiData[todayString]== null) {
+        if (emojiData[todayString]=== null) {
             addEmoji(todayString, selectedEmoji);
         }
     }, []);
 
     const handleDateChange = (date) => {
-        const dateString = format(date, 'yyyy-MM-dd', { timeZone: 'America/Santiago' });
-        const todayString = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Santiago' });
+        const dateString = format(date, 'yyyy-MM-dd', { timeZone: 'America/Santiago' },{ locale: enUS });
+        const todayString = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Santiago' },{ locale: enUS });
 
         if (dateString <= todayString) {
             setSelectedDate(date);
@@ -43,7 +45,7 @@ const CalendarPage = () => {
     };
 
     const handleEmojiSelect = (index) => {
-        const dateString = format(selectedDate, 'yyyy-MM-dd', { timeZone: 'America/Santiago' });
+        const dateString = format(selectedDate, 'yyyy-MM-dd', { timeZone: 'America/Santiago' },{ locale: enUS });
     
         if (selectedEmoji === index) {
             setSelectedEmoji(null);
@@ -77,7 +79,7 @@ const CalendarPage = () => {
     const emojiStatistics = calculateEmojiStatistics();
 
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-r from-green-300 to-blue-300">
+        <div suppressHydrationWarning={true} className="min-h-screen flex flex-col bg-gradient-to-r from-green-300 to-blue-300">
             <NavbarH />
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex flex-row items-start justify-center flex-grow p-6">
@@ -86,6 +88,7 @@ const CalendarPage = () => {
                     <p className="text-center text-gray-600 mb-4">Monitorea tus emociones día a día</p>
                     
                     <Calendar
+                        locale="en-US"
                         onChange={handleDateChange}
                         value={selectedDate}
                         className="mb-4"
