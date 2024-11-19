@@ -1,0 +1,13 @@
+@media (min-width: 1024px) {
+    .header {
+        padding: 2rem;
+        font-size: 1.5rem;
+        background-color: var(--primary);
+    }
+
+    .card {
+        padding: 2rem;
+        margin: 1.5rem;
+        background-color: var(--secondary);
+    }
+}

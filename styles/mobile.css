@@ -1,0 +1,16 @@
+body {
+    font-size: 16px;
+    background-color: var(--background);
+    color: var(--textPrimary);
+}
+
+.header {
+    padding: 1rem;
+    background-color: var(--primary);
+}
+
+.card {
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: var(--secondary);
+}
