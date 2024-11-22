@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+    .header {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}

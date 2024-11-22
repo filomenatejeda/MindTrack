@@ -54,5 +54,12 @@
     "firstName": "vale",
     "lastName": "Meyer",
     "email": "vmeyer@alumnos.uai.cl"
+  },
+  {
+    "username": "m",
+    "password": "$2a$10$9Pood.aeTE61OY93VnwAgOjabsun4QW5JGr5h2WhprDaUTXzIbIfy",
+    "firstName": "m",
+    "lastName": "m",
+    "email": "i@gmail.com"
   }
 ]
