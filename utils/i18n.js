@@ -40,6 +40,7 @@ i18next
           exercises: "Relaxation exercises",
           descriptionexercises: "Practice breathing and meditation techniques with reminders to take care of your well-being.",
           habits: "Healthy Habits",
+          hhabits: "Habits",
           descriptionhabits: "Create and follow healthy habits that promote your mental and physical well-being.",
           conextion: "Connection with Professionals",
           descriptionconextion: "Connect with psychologists and therapists to get the professional support you need.",
@@ -70,6 +71,7 @@ i18next
           gonotes: "Go to Notes",
           professionals: "Professionals",
           techniques: "Relaxation exercises and techniques",
+          ttechniques:"Exercises",
           note: "Note",
           hide: "Hide",
           logout: "Log out",
@@ -149,7 +151,15 @@ i18next
           aromatherapy:"Aromatherapy",
           intoaromatherapy:"Use of essential oils to promote relaxation and emotional well-being.", 
 
-
+          //Profesionales
+          contact_professionals:"Contact with Professionals",
+          intocontact_professionals:"You'll find a list of mental health professionals available to provide you with the support you need. Each of them specializes in different areas, from psychology to occupational therapy, ensuring that you can find the right help for your needs. Don't hesitate to contact them for guidance, advice and resources to help you on your path to emotional wellness.",
+          psychology: "Psychology",
+          ana_descripcion:"Dr. Ana Perez has more than 15 years of experience helping patients overcome anxiety disorders, depression and emotional problems. She is a specialist in cognitive-behavioral therapy and is committed to the overall well-being of her patients.",
+          psychiatry:"Psychiatry",
+          juan_descripcion:"Juan López specializes in the treatment of severe mental disorders such as schizophrenia and bipolar disorder. With a humanistic approach and the use of the latest advances in psychiatry, he seeks to improve the quality of life of his patients.",
+          therapy_occupational:"Occupational Therapy",
+          maria_descripcion:"Dr. Maria Garcia is an expert in helping patients with physical or mental disabilities develop daily living skills. Her creative and personalized approach has made a difference in the lives of many families.",
           
         },
       },
@@ -175,6 +185,7 @@ i18next
           exercises: "Ejercicios de Relajación",
           descriptionexercises: "Practica técnicas de respiración y meditación con recordatorios para cuidar tu bienestar.",
           habits: "Hábitos Saludables",
+          hhabits: "Hábitos",
           descriptionhabits: "Crea y sigue hábitos saludables que promuevan tu bienestar mental y físico.",
           conextion: "Conexión con Profesionales",
           descriptionconextion: "Conéctate con psicólogos y terapeutas para obtener el apoyo profesional que necesitas.",
@@ -205,6 +216,7 @@ i18next
           gonotes:"Ir a Notas",
           professionals: "Profesionales",
           techniques: "Ejercicios y Técnicas de Relajación",
+          ttechniques:"Ejercicios",
           note: "Nota",
           hide: "Esconder",
           logout: "Cerrar Sesion",
@@ -289,6 +301,19 @@ i18next
 
           aromatherapy:"Aromaterapia",
           intoaromatherapy:"Uso de aceites esenciales para promover la relajación y el bienestar emocional.",
+
+          //Profesionales
+          contact_professionals:"Contacto con Profesionales",
+          intocontact_professionals:"Encontrarás una lista de profesionales de la salud mental disponibles para brindarte el apoyo que necesitas. Cada uno de ellos está especializado en diferentes áreas, desde psicología hasta terapia ocupacional, asegurando que puedas encontrar la ayuda adecuada para tus necesidades. No dudes en ponerte en contacto con ellos para recibir orientación, consejos y recursos que te acompañen en tu camino hacia el bienestar emocional.",
+          
+          psychology:"Psicología",
+          ana_descripcion:"La Dra. Ana Pérez cuenta con más de 15 años de experiencia ayudando a pacientes a superar trastornos de ansiedad, depresión y problemas emocionales. Es especialista en terapia cognitivo-conductual y está comprometida con el bienestar integral de sus pacientes.",
+
+          psychiatry:"Psiquiatría",
+          juan_descripcion:"El Lic. Juan López se especializa en el tratamiento de trastornos mentales graves como la esquizofrenia y el trastorno bipolar. Con un enfoque humanista y el uso de los últimos avances en psiquiatría, busca mejorar la calidad de vida de sus pacientes.",
+
+          therapy_occupational:"Terapia Ocupacional",
+          maria_descripcion:"La Dra. María García es experta en ayudar a pacientes con discapacidades físicas o mentales a desarrollar habilidades para la vida diaria. Su enfoque creativo y personalizado ha marcado una diferencia en la vida de muchas familias.",
 
         },
       },
