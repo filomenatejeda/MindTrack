@@ -76,12 +76,29 @@ i18next
           notess: "Notes",
           calendar:"Calendar",
 
+          //Emociones
+          veryhappy: "Very Happy",
+                happy: "Happy",
+                neutral: "Neutral",
+                sad: "Sad",
+                crying: "Crying",
+
+          //Calendario
+          emotions_calendar:"Calendar of Emotions",
+          intoemotions_calendar:"Monitor your emotions on a daily basis",
+          howdoyoufeel: "How do you feel?",
+          statistics_emotions:"Statistics Emotions",
+          insufficient_data:"There is insufficient data to show.",
+
           //Recursos educativos
           educational_resources:"Educational Resources",
           intoeducational_resources:"A collection of valuable resources to support your emotional and mental well-being. From informative articles to inspirational videos and podcasts, our goal is to provide you with tools and insights to help you better understand your mental health and develop strategies to improve it. Explore the resources available and choose those that resonate with you on your path to a more balanced and fulfilling life.",
+
           //Articulos
           anxietydisorders:"Anxiety disorders",
           intoanxiety:"This article provides an in-depth look at anxiety disorders, their prevalence and their impact on daily life.",
+          definition_anxiety:"Definition and Perception of Anxiety",
+          intodefinition_anxiety:"People often label anxiety sufferers with derogatory terms, which can lead to additional suffering. Anxiety is a normal feeling of fear, but it can become pathological when it occurs for no real reason.",
 
 
           stressmanagement:"Stress Management Guide",
@@ -182,6 +199,20 @@ i18next
           notess: "Notas",
           calendar:"Calendario",
 
+           //Emociones
+           veryhappy: "Muy feliz",
+           happy: "Feliz",
+           neutral: "Neutral",
+           sad: "Triste",
+           crying: "Llorando",
+
+          //Calendario
+          emotions_calendar:"Calendario de Emociones",
+          intoemotions_calendar:"Monitorea tus emociones día a día",
+          howdoyoufeel: "¿Cómo te sientes?:",
+          statistics_emotions:"Estadísticas Emociones",
+          insufficient_data:"No hay datos suficientes para mostrar.",
+
 
           //Recursos educativos
           educational_resources: "Recursos Educativos",
@@ -189,6 +220,8 @@ i18next
           //Articulos 
           anxietydisorders:"Los trastornos de Ansiedad",
           intoanxiety: "Este artículo proporciona una visión profunda sobre los trastornos de ansiedad, su prevalencia y su impacto en la vida diaria.",
+          definition_anxiety:"Definición y Percepción de la Ansiedad",
+          intodefinition_anxiety:"A menudo, las personas catalogan a quienes sufren de ansiedad con términos despectivos, lo que puede llevar a un sufrimiento adicional. La ansiedad es un sentimiento normal de temor, pero puede volverse patológica cuando ocurre sin un motivo real.",
 
           stressmanagement:"Guía de Gestión del Estrés",
 

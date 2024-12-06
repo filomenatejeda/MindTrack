@@ -60,6 +60,12 @@ const CalendarPage = () => {
     };
     
 
+    const translatedEmojis = emojis.map((emoji, index) => ({
+        ...emoji,
+        translatedExpression: t(emoji.expression),  // Traducción de la expresión
+        index  // Añadimos el índice para poder usarlo en el mapeo
+    }));
+
     const calculateEmojiStatistics = () => {
         const emojiCounts = {};
         const totalEntries = Object.keys(emojiData).length;
@@ -84,9 +90,9 @@ const CalendarPage = () => {
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex flex-row items-start justify-center flex-grow p-6">
                 <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
-                    <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">Calendario de Emociones</h1>
-                    <p className="text-center text-gray-600 mb-4">Monitorea tus emociones día a día</p>
-                    
+                    <h1 suppressHydrationWarning={true} className="text-3xl font-bold text-center text-gray-800 mb-4"> {t('emotions_calendar')} </h1>
+                    <p suppressHydrationWarning={true} className="text-center text-gray-600 mb-4"> {t('intoemotions_calendar')}</p>
+                    <div suppressHydrationWarning={true}>
                     <Calendar
                         locale="en-US"
                         onChange={handleDateChange}
@@ -102,6 +108,7 @@ const CalendarPage = () => {
                             return emojiData[dateString]|| emojiData[dateString]== 0 ? 'bg-yellow-200' : '';
                         }}
                     />
+                    </div>
 
                     <div className="flex justify-center mb-4">
                         {selectedDate && (
@@ -111,14 +118,14 @@ const CalendarPage = () => {
 
                     <div className="text-center">
                         {selectedEmoji !== null && (
-                            <p className="text-gray-600">¿Cómo te sientes?: {emojis[selectedEmoji].expression}</p>
+                            <p suppressHydrationWarning={true} className="text-gray-600"> <strong> {t('howdoyoufeel')} </strong> {translatedEmojis[selectedEmoji]?.translatedExpression}</p>
                         )}
                     </div>
                 </div>
 
                 {/* Sección para mostrar estadísticas de emojis */}
                 <div className="bg-white shadow-lg rounded-lg p-8 max-w-xs w-full ml-4">
-                    <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Estadísticas Emociones</h2>
+                    <h2 suppressHydrationWarning={true}  className="text-2xl font-bold text-center text-gray-800 mb-4"> {t('statistics_emotions')} </h2>
                     {emojiStatistics.length > 0 ? (
                         emojiStatistics.map(({ emoji, percentage }) => (
                             <div key={emoji} className="mb-4">
@@ -136,10 +143,13 @@ const CalendarPage = () => {
                                                     {emoji === 2 && <line x1="30" y1="65" x2="70" y2="65" stroke="black" strokeWidth="2" />} {/* Neutral */}
                                                     {emoji === 3 && <path d="M30 65 Q50 50 70 65" fill="none" stroke="black" strokeWidth="2" />} {/* Llorando */}
                                                     {emoji === 4 && <path d="M70 65 Q50 50 30 65" fill="none" stroke="black" strokeWidth="2" />} {/* Triste */}
+                                                
                                                 </svg>
                                             )}
                                         </span>
-                                        {emojis[emoji]?.expression} {/* Uso del operador opcional para evitar errores */}
+                                        <div suppressHydrationWarning={true} >
+                                        {translatedEmojis[emoji]?.translatedExpression} {/* Uso del operador opcional para evitar errores */}
+                                        </div>
                                     </span>
                                     <span>{percentage}%</span>
                                 </div>
@@ -149,7 +159,7 @@ const CalendarPage = () => {
                             </div>
                         ))
                     ) : (
-                        <p className="text-gray-600 text-center">No hay datos suficientes para mostrar.</p>
+                        <p suppressHydrationWarning={true} className="text-gray-600 text-center"> {t('insufficient_data')} </p>
                     )}
                 </div>
             </div>

@@ -35,10 +35,10 @@ const AnxietyAwarenessPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Definición y Percepción de la Ansiedad</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> 
+                        {t('definition_anxiety')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        A menudo, las personas catalogan a quienes sufren de ansiedad con términos despectivos, lo que puede llevar a un sufrimiento adicional. 
-                        La ansiedad es un sentimiento normal de temor, pero puede volverse patológica cuando ocurre sin un motivo real.
+                    {t('intodefinition_anxiety')}
                     </p>
                 </div>
 
@@ -84,7 +84,7 @@ const AnxietyAwarenessPage = () => {
                     </p>
                 </div>
 
-                <div suppressHydrationWarning={true} className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
+                <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
                     <Link suppressHydrationWarning={true}  href={"/recursos"} className="text-blue-500 hover:underline">
                     {t('educational_resources')} 
                     </Link>
