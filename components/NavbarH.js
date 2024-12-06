@@ -13,7 +13,7 @@ function NavbarH() {
   }, [])
 
   return (
-    <nav className="bg-teal-500 p-4 flex justify-between items-center shadow-lg"> {/* Fondo verde esmeralda y sombra */}
+    <nav className="bg-teal-500 h-16 p-4 flex justify-between items-center shadow-lg"> {/* Fondo verde esmeralda y sombra */}
  <Link href="/home"> {/* Cambiar a la ruta de tu página deseada */}
           <div className="text-green-100 font-bold text-lg cursor-pointer pr-4">
             MindTrack
@@ -21,10 +21,10 @@ function NavbarH() {
         </Link> {/* Texto en verde oscuro */}
       <div className="flex space-x-4 items-center">
       <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
-          {t("habits")} {/* Usa traducción para "Iniciar Sesión" */}
+          {t("hhabits")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
       <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
-          {t("techniques")} {/* Usa traducción para "Iniciar Sesión" */}
+          {t("ttechniques")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
       <Link href="/calendar" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("calendar")} {/* Usa traducción para "Iniciar Sesión" */}
