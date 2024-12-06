@@ -45,7 +45,7 @@ export default function ContactProfessionals() {
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
-            <div className="flex-grow p-4 pt-24 sm:pt-28 lg:pt-32 ">
+            <div className="flex-grow p-5 pt-24 sm:pt-28 lg:pt-22 ">
                 <h1
                     suppressHydrationWarning={true}
                     className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center"
