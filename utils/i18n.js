@@ -161,6 +161,35 @@ i18next
           therapy_occupational:"Occupational Therapy",
           maria_descripcion:"Dr. Maria Garcia is an expert in helping patients with physical or mental disabilities develop daily living skills. Her creative and personalized approach has made a difference in the lives of many families.",
           
+          //Habitos
+          into_habits:"Improve your daily well-being with healthy habits",
+          title_table:"Progress of the Week",
+
+          sleep: "Sleep",
+          into_sleep:"Make sure you get 7-8 hours of sleep every night to regain energy.",
+          meditation:"Meditation",
+          into_meditation:"Spend 10-15 minutes meditating to reduce stress and improve concentration.",
+          hydration:"Hydration",
+          into_hydration:"Drink at least 2 liters of water a day to stay hydrated.', 'Drink at least 2 liters of water a day to stay hydrated.",
+          exercise:"Exercise",
+          into_exercise:"Get at least 30 minutes of physical exercise every day to improve your health.",
+          reading:"Reading",
+          into_reading:"Read at least 20 minutes a day to keep your mind active and learn something new.",
+          planning:"Planning",
+          into_planning:"Spend time planning your day, setting goals and organizing your tasks.",
+
+
+
+          monday:"Monday",
+          tuesday:"Tuesday",
+          wednesday:"Wednesday",
+          thursday:"Thursday",
+          friday:"Friday",
+          saturday:"Saturday",
+          sunday:"Sunday",
+          task: "Tasks of",
+          completed:"Completed",
+          complete:"Complete",
         },
       },
       es: {
@@ -314,6 +343,34 @@ i18next
 
           therapy_occupational:"Terapia Ocupacional",
           maria_descripcion:"La Dra. María García es experta en ayudar a pacientes con discapacidades físicas o mentales a desarrollar habilidades para la vida diaria. Su enfoque creativo y personalizado ha marcado una diferencia en la vida de muchas familias.",
+
+          //Habitos
+          into_habits:"Mejora tu bienestar diario con hábitos saludables",
+          title_table:"Progreso de la Semana",
+
+          sleep: "Sueño",
+          into_sleep:"Asegúrate de dormir 7-8 horas cada noche para recuperar energía.",
+          meditation:"Meditación",
+          into_meditation:"Dedica 10-15 minutos a meditar para reducir el estrés y mejorar la concentración.",
+          hydration:"Hidratación",
+          into_hydration:"Bebe al menos 2 litros de agua al día para mantenerte hidratado.",
+          exercise:"Ejercicio",
+          into_exercise:"Realiza al menos 30 minutos de ejercicio físico cada día para mejorar tu salud.",
+          reading:"Lectura",
+          into_reading:"Lee al menos 20 minutos al día para mantener tu mente activa y aprender algo nuevo.",
+          planning:"Planificación",
+          into_planning:"Dedica tiempo para planificar tu día, establecer metas y organizar tus tareas.",
+
+          monday:"Lunes",
+          tuesday:"Martes",
+          wednesday:"Miércoles",
+          thursday:"Jueves",
+          friday:"Viernes",
+          saturday:"Sábado",
+          sunday:"Domingo",
+          task: "Tareas de",
+          completed:"Completado",
+          complete:"Completar",
 
         },
       },
