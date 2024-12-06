@@ -218,7 +218,7 @@ i18next
           //Calendario
           emotions_calendar:"Calendario de Emociones",
           intoemotions_calendar:"Monitorea tus emociones día a día",
-          howdoyoufeel: "¿Cómo te sientes?:",
+          howdoyoufeel: "¿Cómo te sientes?",
           statistics_emotions:"Estadísticas Emociones",
           insufficient_data:"No hay datos suficientes para mostrar.",
 

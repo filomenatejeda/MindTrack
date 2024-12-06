@@ -47,6 +47,7 @@ const ProgressChart = () => {
     return (
         <div style={{ textAlign: 'center' }}>
             <NavbarH />
+            <script src="https://cdn.tailwindcss.com"></script>
             <div className="container mx-auto p-4">
                 <header className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
                     <h1 className="text-4xl font-bold">Hábitos Saludables</h1>
