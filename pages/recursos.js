@@ -37,27 +37,30 @@ const EducationResourcesPage = () => {
             </div>
             <div className="pt-20 p-4">
                 <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+
                 {t('educational_resources')} 
                 </h1>
                 <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center ">
-                {t('intoeducational_resources')} Recopilación de recursos valiosos para apoyar tu bienestar emocional y mental. Desde artículos informativos hasta videos y podcasts inspiradores, nuestro objetivo es proporcionarte herramientas y conocimientos que te ayuden a comprender mejor tu salud mental y a desarrollar estrategias para mejorarla. Explora los recursos disponibles y elige aquellos que más resuenen contigo en tu camino hacia una vida más equilibrada y plena.
+
+                {t('intoeducational_resources')} 
+
                 </p>
 
                 {/* Sección de Artículos */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
                     <div className="flex flex-col space-y-4">
                         {articles.slice(0, showMoreArticles ? articles.length : 2).map((article, index) => (
-                            <div suppressHydrationWarning={true} key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
+                            <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{article.title}</h3>
-                                <Link href={article.link} className="text-blue-500 hover:underline">
+                                <Link suppressHydrationWarning={true} href={article.link} className="text-blue-500 hover:underline">
                                 {t('read_more')}
                                 </Link>
                             </div>
                         ))}
                     </div>
-                    <div suppressHydrationWarning={true} className="mt-4">
-                        <button onClick={() => setShowMoreArticles(!showMoreArticles)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                    <div className="mt-4">
+                        <button onClick={() => setShowMoreArticles(!showMoreArticles)} suppressHydrationWarning={true} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMoreArticles ? t('show_less') : t('view_more')}
                         </button>
                     </div>
@@ -65,7 +68,7 @@ const EducationResourcesPage = () => {
 
                 {/* Sección de Videos */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('videos')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('videos')}</h2>
                     <div className="flex flex-col space-y-4">
                         {videos.slice(0, showMoreVideos ? videos.length : 2).map((video, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
@@ -77,7 +80,7 @@ const EducationResourcesPage = () => {
                         ))}
                     </div>
                     <div className="mt-4">
-                        <button onClick={() => setShowMoreVideos(!showMoreVideos)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                        <button suppressHydrationWarning={true} onClick={() => setShowMoreVideos(!showMoreVideos)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMoreVideos ? t('show_less') : t('view_more')}
                         </button>
                     </div>
@@ -85,7 +88,7 @@ const EducationResourcesPage = () => {
 
                 {/* Sección de Podcasts */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Podcasts')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('Podcasts')}</h2>
                     <div className="flex flex-col space-y-4">
                         {podcasts.slice(0, showMorePodcasts ? podcasts.length : 2).map((podcast, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
@@ -97,7 +100,7 @@ const EducationResourcesPage = () => {
                         ))}
                     </div>
                     <div className="mt-4">
-                        <button onClick={() => setShowMorePodcasts(!showMorePodcasts)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                        <button suppressHydrationWarning={true} onClick={() => setShowMorePodcasts(!showMorePodcasts)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMorePodcasts ? t('show_less') : t('view_more')}
                         </button>
                     </div>
