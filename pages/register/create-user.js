@@ -44,6 +44,7 @@ export default function CreateUser() {
       {/* Navbar fija en la parte superior */}
       <div className="w-full fixed top-0 z-50">
         <Navbar />
+        <script src="https://cdn.tailwindcss.com"></script>
       </div>
   
       {/* Contenedor central con el formulario ajustado */}
@@ -52,11 +53,12 @@ export default function CreateUser() {
        
         
         <form onSubmit={handleSubmit} className="relative p-8 bg-white rounded-lg shadow-lg max-w-md w-full z-10 transition-transform duration-300 transform hover:scale-105">
-          <h2 className="text-3xl font-bold mb-6 text-center text-green-800">
+          <h2 suppressHydrationWarning={true} className="text-3xl font-bold mb-6 text-center text-green-800">
             {t('register')}
           </h2>
           <input
             type="text"
+            suppressHydrationWarning={true}
             placeholder={t('user')}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -65,6 +67,7 @@ export default function CreateUser() {
           />
           <input
             type="password"
+            suppressHydrationWarning={true}
             placeholder={t('password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -73,6 +76,7 @@ export default function CreateUser() {
           />
           <input
             type="text"
+            suppressHydrationWarning={true}
             placeholder={t('name')}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -81,6 +85,7 @@ export default function CreateUser() {
           />
           <input
             type="text"
+            suppressHydrationWarning={true}
             placeholder={t('lastname')}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -89,18 +94,19 @@ export default function CreateUser() {
           />
           <input
             type="email"
+            suppressHydrationWarning={true}
             placeholder={t('email')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full mb-4 px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-300"
             required
           />
-          <button type="submit" className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">
+          <button suppressHydrationWarning={true} type="submit" className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">
             {t('register')}
           </button>
           {error && <p className="text-red-600 mt-2 text-center">{error}</p>}
           <div className="mt-4 text-center">
-            <Link href="/loginQ/login" className="text-green-600 hover:underline transition duration-300">
+            <Link suppressHydrationWarning={true} href="/loginQ/login" className="text-green-600 hover:underline transition duration-300">
               {t('haveanaccount')}
             </Link>
           </div>

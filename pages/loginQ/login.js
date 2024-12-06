@@ -58,12 +58,13 @@ export default function Login() {
 
       <div className="flex-grow mt-16 w-full flex justify-center items-center">
         <form onSubmit={handleSubmit} className="relative p-8 bg-white rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 z-10">
-          <h2 className="text-3xl font-bold mb-6 text-center text-green-800">
+          <h2 suppressHydrationWarning={true} className="text-3xl font-bold mb-6 text-center text-green-800">
             {t('login')}
           </h2>
           <div className="relative mb-4">
             <FaUser className="absolute left-3 top-2 text-gray-400" />
             <input
+              suppressHydrationWarning={true}
               type="text"
               placeholder={t('user')}
               value={username}
@@ -75,6 +76,7 @@ export default function Login() {
           <div className="relative mb-4">
             <FaLock className="absolute left-3 top-2 text-gray-400" />
             <input
+              suppressHydrationWarning={true}
               type="password"
               placeholder={t('password')}
               value={password}
@@ -87,8 +89,9 @@ export default function Login() {
             type="submit" 
             className={`w-full py-2 rounded-lg ${loading ? 'bg-gray-400' : 'bg-green-600'} text-white hover:bg-green-700 transition duration-300`}
             disabled={loading}
+            suppressHydrationWarning={true}
           >
-            {loading ? 'Cargando...' : t('enter')}
+            {loading ? t('loading') : t('enter')}
           </button>
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4" role="alert">
@@ -97,7 +100,7 @@ export default function Login() {
             </div>
           )}
           <div className="mt-4 text-center">
-            <Link href="/register/create-user" className="text-green-600 hover:underline transition duration-300">
+            <Link suppressHydrationWarning={true} href="/register/create-user" className="text-green-600 hover:underline transition duration-300">
               {t('register')}
             </Link>
           </div>
