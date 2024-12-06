@@ -31,7 +31,7 @@ const MentalHealthPage = () => {
                         style={{ width: '300px', height: '400px', cursor: 'pointer' }}
                         className="mx-auto mb-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
                     />
-                    <p className="text-center">Haz clic en la portada para ver el PDF</p>
+                    <p suppressHydrationWarning={true} className="text-center"> {t('PDF')} </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
@@ -62,9 +62,9 @@ const MentalHealthPage = () => {
                     </p>
                 </div>
 
-                <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
+                <div suppressHydrationWarning={true} className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
                     <Link href={"/recursos"} className="text-blue-500 hover:underline">
-                        Recursos Educativos
+                    {t('educational_resources')} 
                     </Link>
                 </div>
             </div>

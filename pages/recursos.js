@@ -11,8 +11,8 @@ const EducationResourcesPage = () => {
     const [showMorePodcasts, setShowMorePodcasts] = useState(false);
 
     const articles = [
-        { title: 'Los trastornos de Ansiedad', link: '/articulos/ansiedad' },
-        { title: 'Guía de Gestión del Estrés', link: '/articulos/estres' },
+        { title: <h suppressHydrationWarning={true}> {t('anxietydisorders')} </h>, link: '/articulos/ansiedad' },
+        { title: <h suppressHydrationWarning={true}> {t('stressmanagement')} </h> , link: '/articulos/estres' },
         { title: '¿Qué es la salud mental y por qué es importante?', link: '/articulos/salud' },
         { title: 'Guía Práctica para Mejorar la Autoestima ', link: '/articulos/autoestima' },
     ];
@@ -36,11 +36,11 @@ const EducationResourcesPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                   Recursos Educativos
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                {t('educational_resources')} 
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center ">
-                Recopilación de recursos valiosos para apoyar tu bienestar emocional y mental. Desde artículos informativos hasta videos y podcasts inspiradores, nuestro objetivo es proporcionarte herramientas y conocimientos que te ayuden a comprender mejor tu salud mental y a desarrollar estrategias para mejorarla. Explora los recursos disponibles y elige aquellos que más resuenen contigo en tu camino hacia una vida más equilibrada y plena.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center ">
+                {t('intoeducational_resources')} Recopilación de recursos valiosos para apoyar tu bienestar emocional y mental. Desde artículos informativos hasta videos y podcasts inspiradores, nuestro objetivo es proporcionarte herramientas y conocimientos que te ayuden a comprender mejor tu salud mental y a desarrollar estrategias para mejorarla. Explora los recursos disponibles y elige aquellos que más resuenen contigo en tu camino hacia una vida más equilibrada y plena.
                 </p>
 
                 {/* Sección de Artículos */}
@@ -48,15 +48,15 @@ const EducationResourcesPage = () => {
                     <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
                     <div className="flex flex-col space-y-4">
                         {articles.slice(0, showMoreArticles ? articles.length : 2).map((article, index) => (
-                            <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
+                            <div suppressHydrationWarning={true} key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{article.title}</h3>
                                 <Link href={article.link} className="text-blue-500 hover:underline">
-                                    Leer más
+                                {t('read_more')}
                                 </Link>
                             </div>
                         ))}
                     </div>
-                    <div className="mt-4">
+                    <div suppressHydrationWarning={true} className="mt-4">
                         <button onClick={() => setShowMoreArticles(!showMoreArticles)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMoreArticles ? t('show_less') : t('view_more')}
                         </button>

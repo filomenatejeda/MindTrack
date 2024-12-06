@@ -15,7 +15,7 @@ const ButtonContainer = () => {
               filter: 'brightness(0.5)', // Controla el brillo de la imagen
             }}
           ></div>
-          <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
+          <span suppressHydrationWarning={true} className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
             {t('techniques')}
           </span>
         </button>
@@ -30,7 +30,7 @@ const ButtonContainer = () => {
               filter: 'brightness(0.5)', // Controla el brillo de la imagen
             }}
           ></div>
-          <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
+          <span suppressHydrationWarning={true} className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
             {t('habits')}
           </span>
         </button>
@@ -45,7 +45,7 @@ const ButtonContainer = () => {
               filter: 'brightness(0.5)', // Controla el brillo de la imagen
             }}
           ></div>
-          <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
+          <span suppressHydrationWarning={true} className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
             {t('professionals')}
           </span>
         </button>
@@ -60,7 +60,7 @@ const ButtonContainer = () => {
               filter: 'brightness(0.5)', // Controla el brillo de la imagen
             }}
           ></div>
-          <span className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
+          <span suppressHydrationWarning={true} className="flex items-center justify-center text-lg font-semibold text-white relative z-10">
             {t('resourses')}
           </span>
         </button>

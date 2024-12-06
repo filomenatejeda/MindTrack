@@ -51,7 +51,7 @@ export default function Login() {
     <div className="flex flex-col min-h-screen justify-between bg-gray-50 relative">
       {/* Imagen de fondo sutil */}
       <div className="absolute inset-0 bg-[url('https://img.freepik.com/vector-gratis/fondo-plano-dia-mundial-salud-mental_23-2149671209.jpg')] bg-cover bg-center opacity-30"></div>
-      
+      <script src="https://cdn.tailwindcss.com"></script>
       <div className="w-full fixed top-0 z-50">
         <Navbar />
       </div>

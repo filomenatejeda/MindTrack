@@ -74,10 +74,54 @@ i18next
           hide: "Hide",
           logout: "Log out",
           notess: "Notes",
-          calendar:"Calendar"
+          calendar:"Calendar",
+
+          //Recursos educativos
+          educational_resources:"Educational Resources",
+          intoeducational_resources:"A collection of valuable resources to support your emotional and mental well-being. From informative articles to inspirational videos and podcasts, our goal is to provide you with tools and insights to help you better understand your mental health and develop strategies to improve it. Explore the resources available and choose those that resonate with you on your path to a more balanced and fulfilling life.",
+          //Articulos
+          anxietydisorders:"Anxiety disorders",
+          intoanxiety:"This article provides an in-depth look at anxiety disorders, their prevalence and their impact on daily life.",
 
 
-        
+          stressmanagement:"Stress Management Guide",
+
+          read_more:"Read More",
+          PDF:"Click on the cover to view the PDF",
+
+          view_more:"View More",
+          show_less:"Show Less",
+
+          // Techniques
+          meditation: "Meditation",
+          intomeditation: "A technique that helps to calm the mind and reduce stress through mindfulness.",
+
+          deepbreathing: "Deep Breathing", 
+          intobreathing: "Breathing exercises to relax the body and reduce anxiety.",
+
+          intoyoga:"A practice that combines physical postures, breathing and meditation to improve well-being. ",
+
+          visualization:"Visualization",
+          intovisualization: "Technique that involves imagining a calm place or situation to promote relaxation.",
+
+          intomindfulness:"Practice of being present in the present moment, without judgment, to reduce anxiety and stress.",
+
+          muscleprogression:"Muscle Progression",
+          intomuscle: "Technique that consists of tensing and relaxing different muscle groups to release tension.",
+
+          musiclistening: "Music Listening",
+          intomusic:"Use relaxing music to improve mood and reduce stress.", 
+
+          naturewalk:"Nature Walk",
+          intowalk: "Go for a walk outdoors in a natural environment to relax the mind and body.",
+
+          relaxationtechnique:"Relaxation Technique 5-4-3-2-1", 
+          intorelaxation: "Method that uses the senses to reduce anxiety by identifying 5 things you see, 4 things you feel, 3 things you hear, 2 things you smell and 1 thing you can taste.",   
+          aromatherapy:"Aromatherapy",
+          intoaromatherapy:"Use of essential oils to promote relaxation and emotional well-being.", 
+
+
+          
         },
       },
       es: {
@@ -109,9 +153,9 @@ i18next
           descriptionresourses:"Descubre artículos, videos y podcasts sobre salud mental y recibe recomendaciones personalizadas basadas en tus registros emocionales.",
           articles: "Artículos",
           descriptionarticles: "Accede a una amplia variedad de artículos que abordan temas como la ansiedad, la depresión, el manejo del estrés y técnicas de autocompasión.",
-          videos: "Videos Educativos",
+          
           descriptionvideos:"Mira videos que explican conceptos de salud mental, ofrecen técnicas de relajación y comparten testimonios inspiradores.",
-          podcast: "Podcasts",
+  
           descriptionpodcast: "Escucha episodios sobre bienestar emocional, estrategias de superación y entrevistas con expertos en salud mental.",
           resoursesin: "Recursos Interactivos",
           descriptionresoursesin: "Utiliza herramientas interactivas como cuestionarios, ejercicios de reflexión y guías de autoayuda para mejorar tu bienestar.",
@@ -136,9 +180,58 @@ i18next
           hide: "Esconder",
           logout: "Cerrar Sesion",
           notess: "Notas",
-          calendar:"Calendario"
+          calendar:"Calendario",
 
 
+          //Recursos educativos
+          educational_resources: "Recursos Educativos",
+          intoeducational_resources:"Recopilación de recursos valiosos para apoyar tu bienestar emocional y mental. Desde artículos informativos hasta videos y podcasts inspiradores, nuestro objetivo es proporcionarte herramientas y conocimientos que te ayuden a comprender mejor tu salud mental y a desarrollar estrategias para mejorarla. Explora los recursos disponibles y elige aquellos que más resuenen contigo en tu camino hacia una vida más equilibrada y plena.",
+          //Articulos 
+          anxietydisorders:"Los trastornos de Ansiedad",
+          intoanxiety: "Este artículo proporciona una visión profunda sobre los trastornos de ansiedad, su prevalencia y su impacto en la vida diaria.",
+
+          stressmanagement:"Guía de Gestión del Estrés",
+
+
+          read_more:"Leer más",
+          PDF:"Haz clic en la portada para ver el PDF",
+
+          videos: "Videos Educativos",
+
+          podcast: "Podcasts",
+
+          view_more:"Ver más",
+          show_less:"Ver menos",
+
+
+          // Techniques
+          meditation: "Meditación",
+          meditationtechnique:"Una técnica que ayuda a calmar la mente y reducir el estrés a través de la atención plena.",
+
+          deepbreathing: "Respiración Profunda", 
+          breathingexercises: "Ejercicios de respiración para relajar el cuerpo y disminuir la ansiedad.",
+
+          practiceyoga:"Una práctica que combina posturas físicas, respiración y meditación para mejorar el bienestar.",
+
+          visualization:"Visualización",
+          visualizationtechnique: "Técnica que implica imaginar un lugar o situación tranquila para promover la relajación.",
+
+          practicemindfulness:"Práctica de estar presente en el momento actual, sin juicio, para reducir la ansiedad y el estrés.",
+
+          muscleprogression:"Progresión Muscular",
+          techniquemuscle:"Técnica que consiste en tensar y relajar diferentes grupos musculares para liberar tensión.",
+
+          musiclistening: "Escucha de Música",
+          usemusic:"Utilizar música relajante para mejorar el estado de ánimo y reducir el estrés.",
+
+          naturewalk:"Caminata en la Naturaleza",
+          walkoutdoors:"Salir a caminar al aire libre en un entorno natural para relajar la mente y el cuerpo.",
+
+          relaxationtechnique:"Técnica de Relajación de 5-4-3-2-1",
+          intorelaxation:"Método que utiliza los sentidos para reducir la ansiedad al identificar 5 cosas que ves, 4 que sientes, 3 que oyes, 2 que hueles y 1 que puedes saborear.",
+
+          aromatherapy:"Aromaterapia",
+          intoaromatherapy:"Uso de aceites esenciales para promover la relajación y el bienestar emocional.",
 
         },
       },
