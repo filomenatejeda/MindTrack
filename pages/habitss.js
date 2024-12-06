@@ -4,6 +4,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import { DateTime } from 'luxon'; // Importa Luxon para manejar zonas horarias
 import NavbarH from '../components/NavbarH';
 import Footer from '../components/Footer';
+import { useTranslation } from 'react-i18next';
 
 // Registramos los componentes de Chart.js
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -18,7 +19,7 @@ const ProgressChart = () => {
         Array(6).fill(0), // Sábado
         Array(6).fill(0), // Domingo
     ]);
-
+    const { t } = useTranslation();
     const [selectedDay, setSelectedDay] = useState(null);
 
     // Obtener la fecha y hora actual en la zona horaria de Santiago usando Luxon
@@ -44,15 +45,15 @@ const ProgressChart = () => {
         }
     };
 
-    const taskNames = ['Dormir', 'Meditación', 'Hidratación', 'Ejercicio Diario', 'Lectura', 'Planificación'];
+    const taskNames = [t('sleep') , t('meditation'), t('hydration'), t('exercise'), t('reading'), t('planning')];
 
     const taskDescriptions = [
-        'Asegúrate de dormir 7-8 horas cada noche para recuperar energía.',
-        'Dedica 10-15 minutos a meditar para reducir el estrés y mejorar la concentración.',
-        'Bebe al menos 2 litros de agua al día para mantenerte hidratado.',
-        'Realiza al menos 30 minutos de ejercicio físico cada día para mejorar tu salud.',
-        'Lee al menos 20 minutos al día para mantener tu mente activa y aprender algo nuevo.',
-        'Dedica tiempo para planificar tu día, establecer metas y organizar tus tareas.'
+        t('into_sleep') ,
+        t('into_meditation') ,
+        t('into_hydration'),
+        t('into_exercise'),
+        t('into_reading'),
+        t('into_planning'),
     ];
 
     const taskColors = [
@@ -65,7 +66,7 @@ const ProgressChart = () => {
     ];
 
     const data = {
-        labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'],
+        labels: [t('monday'), t('tuesday'), t('wednesday'), t('thursday'), t('friday'), t('saturday'), t('sunday')],
         datasets: taskNames.map((taskName, taskIndex) => ({
             label: taskName,
             data: completedTasks.map(day => day[taskIndex]),
@@ -80,11 +81,11 @@ const ProgressChart = () => {
             <main className="flex-grow">
                 <div className="container mx-auto p-4">
                     <header className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                        <h1 className="text-4xl font-bold">Hábitos Saludables</h1>
-                        <p className="mt-2 text-lg">Mejora tu bienestar diario con hábitos saludables</p>
+                        <h1 suppressHydrationWarning={true}   className="text-4xl font-bold"> {t('habits')} </h1>
+                        <p suppressHydrationWarning={true}  className="mt-2 text-lg">{t('into_habits')}</p>
                     </header>
                     <div className="pt-0 p-10">
-                        <div className="flex justify-center items-center w-full min-h-[250px] sm:h-auto">
+                        <div suppressHydrationWarning={true}  className="flex justify-center items-center w-full min-h-[250px] sm:h-auto">
                             <Bar
                                 data={data}
                                 options={{
@@ -93,7 +94,7 @@ const ProgressChart = () => {
                                     plugins: {
                                         title: {
                                             display: true,
-                                            text: 'Progreso de la Semana',
+                                            text: t('title_table'),
                                         },
                                     },
                                 }}
@@ -102,9 +103,10 @@ const ProgressChart = () => {
                         </div>
 
                         {/* Botones para seleccionar el día */}
-                        <div className="flex flex-wrap justify-center mt-6 gap-2">
-                            {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map((day, index) => (
+                        <div suppressHydrationWarning={true}  className="flex flex-wrap justify-center mt-6 gap-2">
+                            {[t('monday'), t('tuesday'), t('wednesday'), t('thursday'), t('friday'), t('saturday'), t('sunday')].map((day, index) => (
                                 <button
+                                    suppressHydrationWarning={true} 
                                     key={index}
                                     onClick={() => setSelectedDay(index)}
                                     disabled={index > todayIndex} // Deshabilitar días futuros
@@ -125,11 +127,11 @@ const ProgressChart = () => {
                         {/* Mostrar tareas del día seleccionado */}
                         {selectedDay !== null && (
                             <div style={{ marginTop: '20px' }}>
-                                <h3>
-                                    Tareas de{' '}
-                                    {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'][selectedDay]}
+                                <h3 suppressHydrationWarning={true} >
+                                    {t('task')} {' '}
+                                    {[t('monday'), t('tuesday'), t('wednesday'), t('thursday'), t('friday'), t('saturday'), t('sunday')][selectedDay]}
                                 </h3>
-                                <div className="grid grid-cols-3 gap-4 mt-6">
+                                <div suppressHydrationWarning={true}  className="grid grid-cols-3 gap-4 mt-6">
                                     {completedTasks[selectedDay].map((task, taskIndex) => (
                                         <div
                                             key={taskIndex}
@@ -143,9 +145,10 @@ const ProgressChart = () => {
                                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                                             }}
                                         >
-                                            <h4 className="text-lg font-bold">{taskNames[taskIndex]}</h4>
-                                            <p className="text-sm text-gray-600 mt-2">{taskDescriptions[taskIndex]}</p>
+                                            <h4 suppressHydrationWarning={true}  className="text-lg font-bold">{taskNames[taskIndex]}</h4>
+                                            <p suppressHydrationWarning={true}  className="text-sm text-gray-600 mt-2">{taskDescriptions[taskIndex]}</p>
                                             <button
+                                                suppressHydrationWarning={true} 
                                                 onClick={() => toggleTask(selectedDay, taskIndex)}
                                                 style={{
                                                     padding: '7px 20px',
@@ -157,7 +160,7 @@ const ProgressChart = () => {
                                                     marginTop: '20px',
                                                 }}
                                             >
-                                                {task === 1 ? 'Completado' : 'Completar'}
+                                                {task === 1 ? t('completed') : t('complete')}
                                             </button>
                                         </div>
                                     ))}
