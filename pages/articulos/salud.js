@@ -62,8 +62,8 @@ const MentalHealthPage = () => {
                     </p>
                 </div>
 
-                <div suppressHydrationWarning={true} className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
-                    <Link href={"/recursos"} className="text-blue-500 hover:underline">
+                <div  className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
+                    <Link suppressHydrationWarning={true}  href={"/recursos"} className="text-blue-500 hover:underline">
                     {t('educational_resources')} 
                     </Link>
                 </div>
