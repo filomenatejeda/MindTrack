@@ -90,6 +90,15 @@ i18next
           statistics_emotions:"Statistics Emotions",
           insufficient_data:"There is insufficient data to show.",
 
+          //Notas
+          writethoughts:"Write down your thoughts!",
+          intowritethoughts:"Use these notes as a tool to explore your emotions and foster personal growth.",
+          iintowritethoughts:"Remember, every word counts in your journey to wellness.",
+          wellness_notes: "Wellness Notes",
+          new_wellness:"Write a new wellness note here...",
+          update_note:"Update Note ",
+          add_note:"Add Note",
+
           //Recursos educativos
           educational_resources:"Educational Resources",
           intoeducational_resources:"A collection of valuable resources to support your emotional and mental well-being. From informative articles to inspirational videos and podcasts, our goal is to provide you with tools and insights to help you better understand your mental health and develop strategies to improve it. Explore the resources available and choose those that resonate with you on your path to a more balanced and fulfilling life.",
@@ -212,6 +221,15 @@ i18next
           howdoyoufeel: "¿Cómo te sientes?:",
           statistics_emotions:"Estadísticas Emociones",
           insufficient_data:"No hay datos suficientes para mostrar.",
+
+          //Notas
+          writethoughts:"¡Escribe tus pensamientos!",
+          intowritethoughts:"Utiliza estas notas como una herramienta para explorar tus emociones y fomentar tu crecimiento personal.",
+          iintowritethoughts:" Recuerda, cada palabra cuenta en tu viaje hacia el bienestar.",
+          wellness_notes:"Notas de Bienestar",
+          new_wellness:"Escribe aquí una nueva nota de bienestar...",
+          update_note:"Actualizar Nota",
+          add_note:"Agregar Nota",
 
 
           //Recursos educativos

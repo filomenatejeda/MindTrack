@@ -2,9 +2,12 @@
 import React, { useState } from 'react';
 import Notes from '../components/Notes';
 import NavbarH from '../components/NavbarH';
+import { useTranslation } from 'react-i18next';
+import Footer from '/components/Footer';
 
 const NotasPage = () => {
   const [notes, setNotes] = useState([]);
+  const { t } = useTranslation();
 
   const handleAddNote = (newNote) => {
     setNotes((prevNotes) => [newNote, ...prevNotes]);
@@ -23,21 +26,24 @@ const NotasPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-green-200">
       <NavbarH />
+      <script src="https://cdn.tailwindcss.com"></script>
       <div className="flex flex-col items-center py-10 px-4">
-        <h1 className="text-4xl font-bold text-teal-800 mb-2">
-          ¡Escribe tus pensamientos!
+        <h1 suppressHydrationWarning={true} className="text-4xl font-bold text-teal-800 mb-2">
+        {t('writethoughts')} 
         </h1>
-        <p className="text-lg text-gray-700  text-center mx-4">
-        Utiliza estas notas como una herramienta para explorar tus emociones y fomentar tu crecimiento personal.
+        <p suppressHydrationWarning={true} className="text-lg text-gray-700  text-center mx-4">
+        {t('intowritethoughts')} 
       </p>
-      <p className="text-lg text-gray-700 mb-8 text-center mx-4">
-      Recuerda, cada palabra cuenta en tu viaje hacia el bienestar.
+      <p suppressHydrationWarning={true} className="text-lg text-gray-700 mb-8 text-center mx-4">
+      {t('iintowritethoughts')}
       </p>
 
         <div className="w-full max-w-2xl p-6 bg-white shadow-lg rounded-md">
           <Notes onAddNote={handleAddNote} onDeleteNote={handleDeleteNote} onUpdateNote={handleUpdateNote} />
         </div>
+        
       </div>
+      <Footer />
     </div>
   );
 };

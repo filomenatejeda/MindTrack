@@ -1,8 +1,10 @@
 // components/Notes.js
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PlusIcon, TrashIcon, PencilIcon } from '@heroicons/react/24/solid';
 
 const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
+  const { t } = useTranslation();
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
@@ -48,21 +50,23 @@ const Notes = ({ onAddNote, onDeleteNote, onUpdateNote }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-xl p-6 border border-green-200">
-      <h2 className="text-2xl font-bold mb-4 text-green-700 text-center">Notas de Bienestar</h2>
+      <h2 suppressHydrationWarning={true} className="text-2xl font-bold mb-4 text-green-700 text-center"> {t('wellness_notes')} </h2>
       <form onSubmit={handleAddNote} className="mb-6">
         <textarea
           className="w-full p-3 border border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-150"
           rows="4"
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-          placeholder="Escribe aquí una nueva nota de bienestar..."
+          placeholder={t('new_wellness')}
+          suppressHydrationWarning={true} 
         />
         <button
           type="submit"
           className="mt-4 bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition duration-150 flex items-center justify-center w-full"
+          suppressHydrationWarning={true}
         >
-          <PlusIcon className="h-5 w-5 mr-2" />
-          {editingIndex !== null ? 'Actualizar Nota' : 'Agregar Nota'}
+          <PlusIcon suppressHydrationWarning={true}  className="h-5 w-5 mr-2" />
+          { editingIndex !== null ? t('update_note') : t('add_note')}
         </button>
       </form>
       <ul className="space-y-4">
