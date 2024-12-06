@@ -76,6 +76,9 @@ i18next
           notess: "Notes",
           calendar:"Calendar",
 
+          //Loading
+          loading:"Loading...",
+
           //Emociones
           veryhappy: "Very Happy",
                 happy: "Happy",
@@ -207,6 +210,9 @@ i18next
           logout: "Cerrar Sesion",
           notess: "Notas",
           calendar:"Calendario",
+
+          //Loading
+          loading:"Cargando...",
 
            //Emociones
            veryhappy: "Muy feliz",
