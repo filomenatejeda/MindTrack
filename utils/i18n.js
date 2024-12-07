@@ -145,6 +145,17 @@ i18next
             intomental_health:"This article explores the concept of mental health, its relevance in our lives and how it influences overall well-being.",
           what_is_mental:"What is Mental Health?",
            intowhat_is_mental:"Mental health is a state of well-being in which a person is aware of his or her capabilities, can cope with the normal stresses of life, work productively and contribute to his or her community.",
+          importance_mental:"Importance of Mental Health",
+            intoimportance_mental:"Mental health affects how we think, feel and act at every stage of our lives. Maintaining a balance in this area allows for proper personal, social and emotional development.",
+          factors_mental:"Factors Affecting Mental Health",
+            intofactors_mental:"There are a number of factors that can influence mental health, including biological factors such as genetics, life experiences such as trauma or abuse, and family history of mental health problems.",
+          promotion_mental:"Mental Health Promotion and Care",
+            intopromotion_mental:"Taking care of our mental health involves recognizing our emotions, seeking support in times of need and adopting healthy habits, such as meditation, regular exercise and adequate rest time.",
+          
+          self_esteem:"Practical Guide to Improve Self-Esteem",
+            intoself_esteem:"Explore how to improve self-esteem through healthy habits, self-confidence and self-worth.",
+          what_self:"What is self-esteem?",
+            intowhat_self:"Self-esteem is the perception and valuation that each person has of him/herself, influenced by self-confidence, self-respect and personal satisfaction.",
 
           read_more:"Read More",
           PDF:"Click on the cover to view the PDF",
@@ -344,9 +355,21 @@ i18next
           conclusion_stress:"Comprender el estrés y su impacto es vital para apoyar a los jóvenes en su desarrollo y promover su bienestar.",
 
           mental_health:"¿Qué es la salud mental y por qué es importante?",
-          intomental_health:"Este artículo explora el concepto de salud mental, su relevancia en nuestras vidas y cómo influye en el bienestar general.",
+            intomental_health:"Este artículo explora el concepto de salud mental, su relevancia en nuestras vidas y cómo influye en el bienestar general.",
           what_is_mental:"¿Qué es la Salud Mental?",
-          intowhat_is_mental:"La salud mental es un estado de bienestar en el cual la persona es consciente de sus capacidades, puede afrontar las tensiones normales de la vida, trabajar de forma productiva y contribuir a su comunidad.",
+            intowhat_is_mental:"La salud mental es un estado de bienestar en el cual la persona es consciente de sus capacidades, puede afrontar las tensiones normales de la vida, trabajar de forma productiva y contribuir a su comunidad.",
+          importance_mental:"Importancia de la Salud Mental",
+            intoimportance_mental:"La salud mental afecta cómo pensamos, sentimos y actuamos en cada etapa de nuestra vida. Mantener un equilibrio en esta área permite un desarrollo personal, social y emocional adecuado.",
+          factors_mental:"Factores que Afectan la Salud Mental",
+            intofactors_mental:"Existen diversos factores que pueden influir en la salud mental, incluyendo factores biológicos como la genética, experiencias de vida como trauma o abuso, y antecedentes familiares de problemas de salud mental.",
+          promotion_mental:"Promoción y Cuidado de la Salud Mental",
+            intopromotion_mental:"Cuidar nuestra salud mental implica reconocer nuestras emociones, buscar apoyo en momentos de necesidad y adoptar hábitos saludables, como la meditación, el ejercicio regular y el tiempo de descanso adecuado.",
+
+            //Autoestima
+          self_esteem:"Guía Práctica para Mejorar la Autoestima",
+          intoself_esteem:"Explora cómo mejorar la autoestima a través de hábitos saludables, autoconfianza y valoración personal.",
+          what_self:"¿Qué es la Autoestima?",
+          intowhat_self:"La autoestima es la percepción y valoración que cada persona tiene de sí misma, influenciada por la autoconfianza, el respeto propio y la satisfacción personal.",
 
           read_more:"Leer más",
           PDF:"Haz clic en la portada para ver el PDF",
