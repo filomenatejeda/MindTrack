@@ -16,11 +16,11 @@ const MentalHealthPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    ¿Qué es la salud mental y por qué es importante?
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                {t('mental_health')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    Este artículo explora el concepto de salud mental, su relevancia en nuestras vidas y cómo influye en el bienestar general.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                    {t('intomental_health')}
                 </p>
                 <div className="pdf-item mt-6" onClick={() => window.open(pdfUrl, '_blank')}>
                     <img
@@ -35,30 +35,30 @@ const MentalHealthPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">¿Qué es la Salud Mental?</h2>
-                    <p className="text-gray-700 mb-2">
-                        La salud mental es un estado de bienestar en el cual la persona es consciente de sus capacidades, puede afrontar las tensiones normales de la vida, trabajar de forma productiva y contribuir a su comunidad.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('what_is_mental')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intowhat_is_mental')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Importancia de la Salud Mental</h2>
-                    <p className="text-gray-700 mb-2">
-                        La salud mental afecta cómo pensamos, sentimos y actuamos en cada etapa de nuestra vida. Mantener un equilibrio en esta área permite un desarrollo personal, social y emocional adecuado.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('importance_mental')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intoimportance_mental')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Factores que Afectan la Salud Mental</h2>
-                    <p className="text-gray-700 mb-2">
-                        Existen diversos factores que pueden influir en la salud mental, incluyendo factores biológicos como la genética, experiencias de vida como trauma o abuso, y antecedentes familiares de problemas de salud mental.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('factors_mental')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intofactors_mental')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Promoción y Cuidado de la Salud Mental</h2>
-                    <p className="text-gray-700 mb-2">
-                        Cuidar nuestra salud mental implica reconocer nuestras emociones, buscar apoyo en momentos de necesidad y adoptar hábitos saludables, como la meditación, el ejercicio regular y el tiempo de descanso adecuado.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">  {t('promotion_mental')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intopromotion_mental')}
                     </p>
                 </div>
 

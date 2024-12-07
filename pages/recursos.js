@@ -14,7 +14,7 @@ const EducationResourcesPage = () => {
         { title: <h suppressHydrationWarning={true}> {t('anxietydisorders')} </h>, link: '/articulos/ansiedad' },
         { title: <h suppressHydrationWarning={true}> {t('stressmanagement')} </h> , link: '/articulos/estres' },
         { title: <h suppressHydrationWarning={true}>{t('mental_health')}</h>, link: '/articulos/salud' },
-        { title: 'Guía Práctica para Mejorar la Autoestima ', link: '/articulos/autoestima' },
+        { title: <h suppressHydrationWarning={true}>{t('self_esteem')}</h>, link: '/articulos/autoestima' },
     ];
 
     const videos = [

@@ -15,10 +15,10 @@ const AnxietyControlPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-lg shadow-lg text-center">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
                     5 Técnicas para Controlar la Ansiedad
                 </h1>
-                <p className="mt-4 text-indigo-500 text-lg p-2 text-center">
+                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
                     En este video, el psicólogo Gonzalo Ramírez explica cinco técnicas que puedes utilizar para calmar la ansiedad en tu día a día.
                 </p>
                 <div className="flex justify-center mt-10">
@@ -35,7 +35,7 @@ const AnxietyControlPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-indigo-500">Resumen de las Técnicas</h2>
+                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Resumen de las Técnicas</h2>
                     <ol className="list-decimal pl-6 space-y-4 text-gray-700">
                         <li>
                             <strong>Autoinstrucciones:</strong> Identificar pensamientos negativos y cambiarlos por afirmaciones positivas como "soy capaz" o "voy a hacerlo bien".
