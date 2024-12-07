@@ -15,11 +15,11 @@ const OvercomeDepressionPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Técnicas de Relajación
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                {t('relaxation_techniques')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    En este video, exploramos diferentes técnicas de relajación que pueden ayudarte a reducir el estrés y mejorar tu bienestar emocional.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                {t('intorelaxation_techniques')}
                 </p>
                 <div className="flex justify-center mt-10">
                     <iframe
@@ -35,43 +35,43 @@ const OvercomeDepressionPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Beneficios de las Técnicas de Relajación</h2>
-                    <p className="text-gray-700 mb-2">
-                        La relajación puede ayudarte a:
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('benefits_relaxation')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('relaxation_can_help_you')}
                     </p>
-                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                        <li>Reducir la ansiedad y el estrés.</li>
-                        <li>Mejorar la calidad del sueño.</li>
-                        <li>Aumentar la concentración y la claridad mental.</li>
-                        <li>Promover una sensación de bienestar y calma.</li>
-                        <li>Mejorar la respuesta del cuerpo ante situaciones estresantes.</li>
+                    <ul  className="list-disc pl-6 space-y-2 text-gray-700">
+                        <li suppressHydrationWarning={true}>{t('reduce_anxiety_and_stress')}</li>
+                        <li suppressHydrationWarning={true}>{t('improve_sleep_quality')}</li>
+                        <li suppressHydrationWarning={true}> {t('increase_concentration_mental')} </li>
+                        <li suppressHydrationWarning={true}>  {t('promote_sense_well')} </li>
+                        <li suppressHydrationWarning={true}>  {t('improve_response')} </li>
                     </ul>
                 </div>
-
-                <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Técnicas Sugeridas</h2>
+                
+                <div suppressHydrationWarning={true} className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('suggested_techniques')} </h2>
                     <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-                        <li>
-                            <strong>Respiración profunda:</strong> Practica inhalar profundamente por la nariz, sosteniendo el aire unos segundos y exhalando lentamente por la boca.
+                        <li suppressHydrationWarning={true}>
+                            <strong> {t('deep_breathing')} </strong> {t('practice_inhaling')}
                         </li>
-                        <li>
-                            <strong>Visualización guiada:</strong> Imagina un lugar tranquilo y relajante, como una playa o un bosque, y sumérgete en esa sensación de paz.
+                        <li suppressHydrationWarning={true}>
+                            <strong> {t('guided_visualization')} </strong> {t('imagine_quiet_relaxing')}
                         </li>
-                        <li>
-                            <strong>Yoga y estiramientos:</strong> Realiza posturas suaves que liberen tensión acumulada en el cuerpo y ayuden a calmar la mente.
+                        <li suppressHydrationWarning={true}>
+                            <strong> {t('yoga_stretching')} </strong> {t('perform_gentle_postures')}
                         </li>
-                        <li>
-                            <strong>Escucha música relajante:</strong> Selecciona melodías suaves que te ayuden a desconectar y a encontrar un estado de calma.
+                        <li suppressHydrationWarning={true}>
+                            <strong> {t('listen_relaxing')} </strong> {t('select_soft_melodies')}
                         </li>
-                        <li>
-                            <strong>Meditación:</strong> Dedica unos minutos al día para meditar y enfocar tu mente, permitiendo que los pensamientos fluyan sin juzgarlos.
+                        <li suppressHydrationWarning={true}>
+                            <strong>{t('meditation')}:</strong> {t('spend_few_minutes')}
                         </li>
                     </ol>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
-                    <Link href={"/recursos"}  className="text-blue-500 hover:underline">
-                        Recursos Educativos
+                    <Link suppressHydrationWarning={true} href={"/recursos"}  className="text-blue-500 hover:underline">
+                    {t('educational_resources')}
                     </Link>
                 </div>
             </div>
