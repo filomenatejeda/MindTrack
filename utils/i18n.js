@@ -127,6 +127,7 @@ i18next
           conclusion:"Conclusion",
             conclusion_anxiety:"It is vital to recognize anxiety disorders as mental health conditions that require attention and treatment.",
 
+            //estres
           stressmanagement:"Stress Management Guide",
           intostressmanagement:"This article provides an in-depth look at stress, its impact on adolescents and its effective management.",
           introduction_stress:"Introduction to Stress",
@@ -141,6 +142,7 @@ i18next
             intobjective_stress:"This guide seeks to strengthen prevention measures for stressful situations and to promote emotional well-being in schools and communities.",
           conclusion_stress:"Understanding stress and its impact is vital to support young people in their development and promote their well-being.",
 
+          //salud mental
           mental_health:"What is mental health and why is it important?",
             intomental_health:"This article explores the concept of mental health, its relevance in our lives and how it influences overall well-being.",
           what_is_mental:"What is Mental Health?",
@@ -152,10 +154,17 @@ i18next
           promotion_mental:"Mental Health Promotion and Care",
             intopromotion_mental:"Taking care of our mental health involves recognizing our emotions, seeking support in times of need and adopting healthy habits, such as meditation, regular exercise and adequate rest time.",
           
+            //autestima
           self_esteem:"Practical Guide to Improve Self-Esteem",
             intoself_esteem:"Explore how to improve self-esteem through healthy habits, self-confidence and self-worth.",
           what_self:"What is self-esteem?",
             intowhat_self:"Self-esteem is the perception and valuation that each person has of him/herself, influenced by self-confidence, self-respect and personal satisfaction.",
+          importance_self:"Importance of Self-Esteem",
+            intoimportance_self:"A healthy self-esteem allows us to face challenges, make confident decisions and have a better relationship with ourselves and others. Strengthening it improves our overall well-being.",
+          factors_self:"Factors Influencing Self-Esteem",
+            intofactors_self:"Factors such as personal experiences, upbringing, and social environment can influence how a person values himself or herself and perceives his or her own abilities.",
+          improve_self:"How to Improve Self-Esteem?",
+            intoimprove_self:"Improving self-esteem involves recognizing our strengths, accepting our weaknesses and cultivating positive thoughts. Practices such as gratitude and self-care can be beneficial.",
 
           read_more:"Read More",
           PDF:"Click on the cover to view the PDF",
@@ -367,9 +376,15 @@ i18next
 
             //Autoestima
           self_esteem:"Guía Práctica para Mejorar la Autoestima",
-          intoself_esteem:"Explora cómo mejorar la autoestima a través de hábitos saludables, autoconfianza y valoración personal.",
+            intoself_esteem:"Explora cómo mejorar la autoestima a través de hábitos saludables, autoconfianza y valoración personal.",
           what_self:"¿Qué es la Autoestima?",
-          intowhat_self:"La autoestima es la percepción y valoración que cada persona tiene de sí misma, influenciada por la autoconfianza, el respeto propio y la satisfacción personal.",
+            intowhat_self:"La autoestima es la percepción y valoración que cada persona tiene de sí misma, influenciada por la autoconfianza, el respeto propio y la satisfacción personal.",
+          importance_self:"Importancia de la Autoestima",
+            intoimportance_self:"Una autoestima sana permite enfrentar desafíos, tomar decisiones seguras y tener una mejor relación con uno mismo y con los demás. Fortalecerla mejora nuestro bienestar general.",
+          factors_self:"Factores que Influyen en la Autoestima",
+            intofactors_self:"Factores como las experiencias personales, la crianza y el entorno social pueden influir en cómo una persona se valora a sí misma y percibe sus propias capacidades.",
+          improve_self:"¿Cómo Mejorar la Autoestima?",
+          intoimprove_self:"Mejorar la autoestima implica reconocer nuestras fortalezas, aceptar nuestras debilidades y cultivar pensamientos positivos. Prácticas como la gratitud y el autocuidado pueden ser beneficiosas.",
 
           read_more:"Leer más",
           PDF:"Haz clic en la portada para ver el PDF",

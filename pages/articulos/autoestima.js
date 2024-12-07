@@ -16,11 +16,11 @@ const SelfEsteemPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Guía Práctica para Mejorar la Autoestima
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('self_esteem')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    Explora cómo mejorar la autoestima a través de hábitos saludables, autoconfianza y valoración personal.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                    {t('intoself_esteem')}
                 </p>
                 <div className="pdf-item mt-6" onClick={() => window.open(pdfUrl, '_blank')}>
                     <img
@@ -35,30 +35,30 @@ const SelfEsteemPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">¿Qué es la Autoestima?</h2>
-                    <p className="text-gray-700 mb-2">
-                        La autoestima es la percepción y valoración que cada persona tiene de sí misma, influenciada por la autoconfianza, el respeto propio y la satisfacción personal.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">  {t('what_self')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intowhat_self')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Importancia de la Autoestima</h2>
-                    <p className="text-gray-700 mb-2">
-                        Una autoestima sana permite enfrentar desafíos, tomar decisiones seguras y tener una mejor relación con uno mismo y con los demás. Fortalecerla mejora nuestro bienestar general.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('importance_self')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intoimportance_self')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Factores que Influyen en la Autoestima</h2>
-                    <p className="text-gray-700 mb-2">
-                        Factores como las experiencias personales, la crianza y el entorno social pueden influir en cómo una persona se valora a sí misma y percibe sus propias capacidades.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('factors_self')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intofactors_self')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Cómo Mejorar la Autoestima</h2>
-                    <p className="text-gray-700 mb-2">
-                        Mejorar la autoestima implica reconocer nuestras fortalezas, aceptar nuestras debilidades y cultivar pensamientos positivos. Prácticas como la gratitud y el autocuidado pueden ser beneficiosas.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('improve_self')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intoimprove_self')}
                     </p>
                 </div>
 
