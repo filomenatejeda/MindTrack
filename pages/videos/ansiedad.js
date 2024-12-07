@@ -15,11 +15,11 @@ const AnxietyControlPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    5 Técnicas para Controlar la Ansiedad
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                {t('control_anxiety_techniques')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    En este video, el psicólogo Gonzalo Ramírez explica cinco técnicas que puedes utilizar para calmar la ansiedad en tu día a día.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                    {t('intocontrol_anxiety_techniques')}
                 </p>
                 <div className="flex justify-center mt-10">
                     <iframe
@@ -35,31 +35,31 @@ const AnxietyControlPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Resumen de las Técnicas</h2>
+                    <h2 suppressHydrationWarning={true}className="text-2xl font-semibold mb-4 text-teal-500"> {t('summary_techniques')} </h2>
                     <ol className="list-decimal pl-6 space-y-4 text-gray-700">
-                        <li>
-                            <strong>Autoinstrucciones:</strong> Identificar pensamientos negativos y cambiarlos por afirmaciones positivas como "soy capaz" o "voy a hacerlo bien".
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}> {t('self_instructions')} </strong> {t('identifying_negative')}
                         </li>
-                        <li>
-                            <strong>Distracción Cognitiva:</strong> Centrar la mente en otra actividad, como contar objetos alrededor, para reducir los síntomas de ansiedad.
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}> {t('cognitive_distraction')} </strong> {t('focusing_another_activity')}
                         </li>
-                        <li>
-                            <strong>Control de la Respiración:</strong> Practicar respiraciones lentas y profundas para reducir síntomas como palpitaciones y nerviosismo.
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}> {t('breating_control')} </strong> {t('practing_show')}
                         </li>
-                        <li>
-                            <strong>Relajación Progresiva de Jacobson:</strong> Tensión y relajación de diferentes grupos musculares, combinada con respiración profunda.
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}> {t('jacob_progressive')} </strong> {t('tension_relaxation')}
                         </li>
-                        <li>
-                            <strong>Imaginación Guiada:</strong> Visualizar un lugar tranquilo y seguro para reducir el estrés y la ansiedad.
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}> {t('guided_imagery')} </strong> {t('visualizing_calm')}
                         </li>
                     </ol>
-                    <p className="text-gray-700 mt-4">
-                        Es importante recordar que estas técnicas no son un tratamiento completo para la ansiedad. Para casos intensos, considera acudir a un profesional de la salud.
+                    <p suppressHydrationWarning={true} className="text-gray-700 mt-4">
+                        {t('important_remember')}
                     </p>
                 </div>
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
-                    <Link href={"/recursos"} className="text-blue-500 hover:underline">
-                        Recursos Educativos
+                    <Link suppressHydrationWarning={true} href={"/recursos"} className="text-blue-500 hover:underline">
+                    {t('educational_resources')}
                     </Link>
                 </div>
             </div>

@@ -52,19 +52,19 @@ const OvercomeDepressionPage = () => {
                     <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('suggested_techniques')} </h2>
                     <ol className="list-decimal pl-6 space-y-2 text-gray-700">
                         <li suppressHydrationWarning={true}>
-                            <strong> {t('deep_breathing')} </strong> {t('practice_inhaling')}
+                            <strong suppressHydrationWarning={true}> {t('deep_breathing')} </strong> {t('practice_inhaling')}
                         </li>
                         <li suppressHydrationWarning={true}>
-                            <strong> {t('guided_visualization')} </strong> {t('imagine_quiet_relaxing')}
+                            <strong suppressHydrationWarning={true}> {t('guided_visualization')} </strong> {t('imagine_quiet_relaxing')}
                         </li>
                         <li suppressHydrationWarning={true}>
-                            <strong> {t('yoga_stretching')} </strong> {t('perform_gentle_postures')}
+                            <strong suppressHydrationWarning={true}> {t('yoga_stretching')} </strong> {t('perform_gentle_postures')}
                         </li>
                         <li suppressHydrationWarning={true}>
-                            <strong> {t('listen_relaxing')} </strong> {t('select_soft_melodies')}
+                            <strong suppressHydrationWarning={true}> {t('listen_relaxing')} </strong> {t('select_soft_melodies')}
                         </li>
                         <li suppressHydrationWarning={true}>
-                            <strong>{t('meditation')}:</strong> {t('spend_few_minutes')}
+                            <strong suppressHydrationWarning={true}>{t('meditation')}:</strong> {t('spend_few_minutes')}
                         </li>
                     </ol>
                 </div>
