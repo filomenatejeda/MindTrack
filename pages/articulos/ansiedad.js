@@ -43,44 +43,44 @@ const AnxietyAwarenessPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Prevalencia</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('prevalence')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        Los trastornos de ansiedad son comunes en México, afectando al 14.8% de la población, con mayor incidencia en mujeres y jóvenes.
+                    {t('intoprevalence')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Clasificación de los Trastornos de Ansiedad</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('anxiety_disorders')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        Los trastornos incluyen el trastorno de ansiedad generalizada, agorafobia, crisis de pánico, y fobias sociales y específicas.
+                    {t('intoanxiety_disorders')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Etiología y Fisiología</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('etiology')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        Se discuten causas hereditarias y disfunciones en neurotransmisores, así como la función del sistema nervioso autónomo.
+                    {t('intoetiology')} 
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Impacto en la Vida Cotidiana</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('daily_life')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        La ansiedad puede afectar la concentración y generar distorsiones que dificultan el funcionamiento diario.
+                    {t('intodaily_life')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Tipos Específicos de Trastornos</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('specific_types')} </h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        Se describen trastornos como la agorafobia y fobias sociales, donde las personas evitan interacciones por miedo a ser evaluadas.
+                    {t('intospecific_types')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">Conclusión y Necesidad de Comprensión</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('conclusion')}</h2>
                     <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
-                        Es vital reconocer los trastornos de ansiedad como condiciones de salud mental que requieren atención y tratamiento.
+                    {t('conclusion_anxiety')}
                     </p>
                 </div>
 

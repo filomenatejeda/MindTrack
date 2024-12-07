@@ -13,7 +13,7 @@ const EducationResourcesPage = () => {
     const articles = [
         { title: <h suppressHydrationWarning={true}> {t('anxietydisorders')} </h>, link: '/articulos/ansiedad' },
         { title: <h suppressHydrationWarning={true}> {t('stressmanagement')} </h> , link: '/articulos/estres' },
-        { title: '¿Qué es la salud mental y por qué es importante?', link: '/articulos/salud' },
+        { title: <h suppressHydrationWarning={true}>{t('mental_health')}</h>, link: '/articulos/salud' },
         { title: 'Guía Práctica para Mejorar la Autoestima ', link: '/articulos/autoestima' },
     ];
 

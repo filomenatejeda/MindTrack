@@ -16,11 +16,11 @@ const StressManagementPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Guía de Gestión del Estrés
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                {t('stressmanagement')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    Este artículo proporciona una visión profunda sobre el estrés, su impacto en los adolescentes y su gestión efectiva.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                {t('intostressmanagement')}
                 </p>
                 <div className="pdf-item mt-6" onClick={() => window.open(pdfUrl, '_blank')}>
                     <img
@@ -35,49 +35,44 @@ const StressManagementPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Introducción al Estrés</h2>
-                    <p className="text-gray-700 mb-2">
-                        El estrés es una reacción normal y fisiológica del cuerpo que nos permite adaptarnos a situaciones difíciles o amenazantes. 
-                        Durante la adolescencia, este puede intensificarse debido a cambios físicos, psicológicos y emocionales.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('introduction_stress')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intointroduction_stress')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">El Estrés en la Adolescencia</h2>
-                    <p className="text-gray-700 mb-2">
-                        Los cambios hormonales y la búsqueda de identidad pueden generar tensiones que resultan en estrés adaptativo, 
-                        afectando el bienestar de los jóvenes.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('stress_adolescence')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intostress_adolescence')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Reconocimiento del Estrés</h2>
-                    <p className="text-gray-700 mb-2">
-                        Es crucial identificar los elementos que contribuyen al estrés y detectar cuando se vuelve desadaptativo, 
-                        lo cual puede interferir con la vida cotidiana.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('stress_recognition')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intostress_recognition')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">¿Para Quién es Esta Guía?</h2>
-                    <p className="text-gray-700 mb-2">
-                        Dirigida a educadores, familiares y cualquier persona interesada en el bienestar de adolescentes y jóvenes, 
-                        buscando herramientas para gestionar el estrés en entornos escolares y comunitarios.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('guide_stress')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intoguide_stress')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Objetivo de la Guía</h2>
-                    <p className="text-gray-700 mb-2">
-                        Esta guía busca fortalecer las medidas de prevención ante situaciones de estrés y promover el bienestar emocional 
-                        en las escuelas y comunidades.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('objective_stress')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                    {t('intobjective_stress')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">Conclusión</h2>
-                    <p className="text-gray-700 mb-2">
-                        Comprender el estrés y su impacto es vital para apoyar a los jóvenes en su desarrollo y promover su bienestar.
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500"> {t('conclusion')} </h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                        {t('conclusion_stress')}
                     </p>
                 </div>
 
