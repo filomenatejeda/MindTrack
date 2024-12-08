@@ -15,11 +15,11 @@ const SelfEsteemPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    {t('Cómo Conseguir una Autoestima Sana')}
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('healthy_self_esteem')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    {t('En este podcast, explora técnicas y estrategias para desarrollar una autoestima sana y equilibrada.')}
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                {t('intohealthy_self_esteem')}
                 </p>
                 <div className="flex justify-center mt-10">
                     <iframe
@@ -34,43 +34,43 @@ const SelfEsteemPage = () => {
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('¿Qué es la Autoestima?')}</h2>
-                    <p className="text-gray-700 mb-2">
-                        {t('La autoestima es la valoración que cada persona tiene de sí misma. Es clave para el bienestar emocional, pues influye en cómo nos relacionamos con los demás y cómo enfrentamos los desafíos diarios.')}
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('what_self_esteem')}</h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                        {t('intowhat_self_esteem')}
                     </p>
                 </div>
 
-                <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Importancia de una Autoestima Sana')}</h2>
-                    <p className="text-gray-700 mb-2">
-                        {t('Una autoestima equilibrada nos permite aceptarnos tal y como somos, con nuestras fortalezas y debilidades. Nos ayuda a establecer límites, tener relaciones sanas y alcanzar nuestras metas.')}
+                <div suppressHydrationWarning={true} className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('importance_self_esteem')}</h2>
+                    <p suppressHydrationWarning={true} className="text-gray-700 mb-2">
+                        {t('intoimportance_self_esteem')}
                     </p>
                 </div>
-
+                
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Consejos para Fortalecer la Autoestima')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('tips_strengthening')}</h2>
                     <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-                        <li>
-                            <strong>{t('Practica la autocompasión:')}</strong> {t('Trátate con amabilidad y comprensión, especialmente cuando cometas errores.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('practice_self_compassion')}</strong> {t('treat_yourself_kidness')}
                         </li>
-                        <li>
-                            <strong>{t('Desarrolla habilidades personales:')}</strong> {t('Realiza actividades que disfrutes y en las que quieras mejorar.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('devolep_personal')}</strong> {t('engage_activities')}
                         </li>
-                        <li>
-                            <strong>{t('Evita compararte:')}</strong> {t('Recuerda que cada persona tiene un camino diferente.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('avoid_comparing')}</strong> {t('Rremember_everyones')}
                         </li>
-                        <li>
-                            <strong>{t('Establece metas alcanzables:')}</strong> {t('Definir metas realistas te ayudará a avanzar paso a paso.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('set_achievable')}</strong> {t('setting_realistic')}
                         </li>
-                        <li>
-                            <strong>{t('Rodéate de personas positivas:')}</strong> {t('Las relaciones saludables contribuyen a una buena autoestima.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('surround_yourself')}</strong> {t('healthy_relationships')}
                         </li>
                     </ol>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
-                    <Link href="/recursos" className="text-blue-500 hover:underline">
-                        {t('Recursos Educativos')}
+                    <Link suppressHydrationWarning={true} href="/recursos" className="text-blue-500 hover:underline">
+                        {t('educational_resources')}
                     </Link>
                 </div>
             </div>
