@@ -253,6 +253,31 @@ i18next
             setting_realistic:"Setting realistic goals will help you move forward one step at a time.",
           surround_yourself:"Surround yourself with positive people:",
             healthy_relationships:"Healthy relationships contribute to good self-esteem.",
+          
+          //salud mental
+          exhaustion_mental:"How to deal with emotional and mental exhaustion?",
+            intoexhaustion_mental:"In this video, we explore emotional and mental exhaustion, its causes and how to deal with it in a healthy way.",
+          emotional_exhaustion:"What is Emotional Exhaustion?",
+          intoemotional_exhaustion:"Emotional exhaustion is a feeling of being completely drained mentally and emotionally. It can be caused by constant stress, overwhelming responsibilities or difficult personal situations.",
+          signs_emotional:"Signs of Emotional Exhaustion",
+            feeling_constant:"Feeling of constant fatigue and lack of energy.",
+            difficulty_concentrating:"Difficulty concentrating and making decisions.",
+            feelings_demotivation:"Feelings of demotivation and hopelessness.",
+            irritability_frequent:"Irritability or frequent mood swings.",
+            tendency_isolation:"Tendency to isolation or desire to withdraw from others.",
+            tips_managing:"Tips for Managing Emotional Exhaustion",
+            practice_self_care:"Practice self-care:",
+            make_time:"Make time for activities you enjoy and relax.",
+            set_boundaries:"Set boundaries: ",
+            avoid_overcommitting:"Avoid overcommitting yourself and learn to say no when necessary.",
+            excercise:"Exercise:",
+            excercise_helps_reduce:"Exercise helps reduce stress and improve mood.",
+            connect_others:"Connect with others:",
+            talking_friends:"Talking to friends or family members can be a great source of emotional support.",
+            seek_professional:"Seek professional help:  ",
+            burnout_persists:"If burnout persists, consider talking to a therapist or counselor.",
+          
+          listen_more:"Listen more",
          
           PDF:"Click on the cover to view the PDF",
 
@@ -560,6 +585,30 @@ i18next
           surround_yourself:"Rodéate de personas positivas:",
             healthy_relationships:" Las relaciones saludables contribuyen a una buena autoestima.",
 
+          //salud mental
+          exhaustion_mental:"¿Cómo lidiar con el agotamiento emocional y mental?",
+          intoexhaustion_mental:"En este video, exploramos el agotamiento emocional y mental, sus causas y cómo abordarlo de manera saludable.",
+          emotional_exhaustion:"¿Qué es el Agotamiento Emocional?",
+          intoemotional_exhaustion:"El agotamiento emocional es una sensación de estar completamente exhausto en el aspecto mental y emocional. Puede ser causado por el estrés constante, las responsabilidades abrumadoras o situaciones personales difíciles.",
+          signs_emotional:"Signos de Agotamiento Emocional",
+            feeling_constant:"Sensación de fatiga constante y falta de energía.",
+            difficulty_concentrating:"Dificultad para concentrarse y tomar decisiones.",
+            feelings_demotivation:"Sentimientos de desmotivación y desesperanza.",
+            irritability_frequent:"Irritabilidad o cambios de humor frecuentes.",
+            tendency_isolation:"Tendencia al aislamiento o deseo de alejarse de los demás.",
+            tips_managing:"Consejos para Manejar el Agotamiento Emocional",
+            practice_self_care:"Practica el autocuidado: ",
+            make_time:"Dedica tiempo para actividades que disfrutes y te relajen.",
+            set_boundaries:"Establece límites: ",
+            avoid_overcommitting:"Evita comprometerte en exceso y aprende a decir no cuando sea necesario.",
+            excercise:"Realiza ejercicio físico:",
+            excercise_helps_reduce:" El ejercicio ayuda a reducir el estrés y a mejorar el estado de ánimo.",
+            connect_others:"Conéctate con los demás:",
+            talking_friends:" Hablar con amigos o familiares puede ser una gran fuente de apoyo emocional.",
+            seek_professional:"Busca ayuda profesional: ",
+            burnout_persists:"Si el agotamiento persiste, considera la posibilidad de hablar con un terapeuta o consejero.",
+
+          listen_more:"Escuchar más",
 
           PDF:"Haz clic en la portada para ver el PDF",
 

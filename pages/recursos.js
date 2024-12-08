@@ -18,16 +18,16 @@ const EducationResourcesPage = () => {
     ];
 
     const videos = [
-        { title: 'Técnicas de relajación', link: '/videos/relajacion' },
-        { title: 'Superar una Depresión', link: '/videos/depresion' },
-        { title: 'Manejo de ansiedad', link: '/videos/ansiedad' },
-    ];
+        { title: <h suppressHydrationWarning={true}> {t('relaxation_techniques')} </h>, link: '/videos/relajacion' },
+        { title: <h suppressHydrationWarning={true}> {t('overcoming_depression')} </h>, link: '/videos/depresion' },
+        { title: <h suppressHydrationWarning={true}> {t('control_anxiety_techniques')} </h>, link: '/videos/ansiedad' },
+    ]; 
 
     const podcasts = [
-        { title: 'Cómo Conseguir una Autoestima Sana', link: '/podcasts/autoestima' },
-        { title: 'Salud mental y bienestar', link: '/podcasts/salud' },
+        { title: <h suppressHydrationWarning={true}> {t('healthy_self_esteem')} </h>, link: '/podcasts/autoestima' },
+        { title: <h suppressHydrationWarning={true}> {t('exhaustion_mental')} </h>, link: '/podcasts/salud' },
         { title: 'Cómo enfrentar la depresión', link: '/podcasts/enfrentar-depresion' },
-    ];
+    ];  
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -73,8 +73,8 @@ const EducationResourcesPage = () => {
                         {videos.slice(0, showMoreVideos ? videos.length : 2).map((video, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{video.title}</h3>
-                                <Link href={video.link} className="text-blue-500 hover:underline">
-                                   Ver más
+                                <Link suppressHydrationWarning={true} href={video.link} className="text-blue-500 hover:underline">
+                                {t('see_more')}
                                 </Link>
                             </div>
                         ))}
@@ -93,8 +93,8 @@ const EducationResourcesPage = () => {
                         {podcasts.slice(0, showMorePodcasts ? podcasts.length : 2).map((podcast, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{podcast.title}</h3>
-                                <Link href={podcast.link} className="text-blue-500 hover:underline">
-                                    Escuchar más
+                                <Link suppressHydrationWarning={true} href={podcast.link} className="text-blue-500 hover:underline">
+                                    {t('listen_more')}
                                 </Link>
                             </div>
                         ))}
