@@ -1,8 +1,10 @@
 // /components/Chatbot.js
 import { useState } from "react";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 export default function Chatbot() {
+  const { t } = useTranslation();
   const [userMessage, setUserMessage] = useState(""); // Mensaje del usuario
   const [chatMessages, setChatMessages] = useState([]); // Historial de mensajes
 
@@ -53,17 +55,19 @@ export default function Chatbot() {
       </div>
       <div className="input-container flex items-center space-x-1 mt-4 w-left">
         <input
+        suppressHydrationWarning={true}
           type="text"
           value={userMessage}
           onChange={handleChange}
-          placeholder="Escribe tu mensaje..."
+          placeholder={t('write_your')}
           className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
         />
         <button
+        suppressHydrationWarning={true}
           onClick={handleSendMessage}
-          className="px-2 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 transition duration-300"
+          className="px-3 py-1 bg-teal-500 text-white rounded-md hover:bg-teal-600 transition duration-300"
         >
-          Enviar
+          {t('send_to')}
         </button>
       </div>
     </div>
