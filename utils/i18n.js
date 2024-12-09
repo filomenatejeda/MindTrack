@@ -384,6 +384,13 @@ i18next
           relaxingmusic:"Relaxing Music",
           playlist:"Playlist",
 
+          //chat bot
+          write_your:"Write your message...",
+          send_to:"Send to",
+          close_chat:"Close Chat",
+          open_chat:"Open Chat",
+          help_you:'How can I help you?',
+
         },
       },
       es: {
@@ -754,6 +761,13 @@ i18next
 
           relaxingmusic:"Música Relajante",
           playlist:"Lista de Reproducción",
+
+          //Chat bot
+          write_your:"Escribe tu mensaje...",
+          send_to:"Enviar",
+          close_chat:"Cerrar Chat",
+          open_chat:"Abrir Chat",
+          help_you:'¿En que te puedo ayudar?',
 
 
         },
