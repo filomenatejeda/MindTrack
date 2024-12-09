@@ -114,7 +114,7 @@ export default function Home() {
 
             {/* Contenedor del chatbot */}
             {isChatOpen && (
-                <div className="fixed bottom-16 right-4 w-80 h-96 bg-white shadow-lg rounded-lg p-4">
+                <div className="fixed bottom-16 right-4 w-80 h-96 bg-white shadow-lg rounded-lg p-4 z-50">
                     <h2  suppressHydrationWarning={true} className="text-lg font-bold"> {t('help_you')} </h2>
                     <div className="h-full overflow-y-auto">
                     <ChatBox />

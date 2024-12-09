@@ -46,21 +46,21 @@ export default function Chatbot() {
         {chatMessages.map((msg, index) => (
           <div
             key={index}
-            className={`message p-2 rounded-lg ${msg.role === "user" ? "bg-green-500 text-white self-end" : "bg-gray-300 text-black self-start"}`}
+            className={`message p-2 rounded-lg ${msg.role === "user" ? "bg-teal-500 text-white self-end" : "bg-gray-300 text-black self-start"}`}
           >
             <strong className="font-semibold">{msg.role === "user" ? "Tú" : "Bot"}:</strong>
             <p>{msg.content}</p>
           </div>
         ))}
       </div>
-      <div className="input-container flex items-center space-x-1 mt-4 w-left">
+      <div className="input-container flex items-center space-x-1 mt-4 ">
         <input
         suppressHydrationWarning={true}
           type="text"
           value={userMessage}
           onChange={handleChange}
           placeholder={t('write_your')}
-          className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+          className="flex-1 p-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
         />
         <button
         suppressHydrationWarning={true}
