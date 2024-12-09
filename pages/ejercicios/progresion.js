@@ -4,40 +4,36 @@ import NavbarH from '/components/NavbarH';
 import Footer from '/components/Footer';
 import { useTranslation } from 'react-i18next';
 
-export default function MeditationPage() {
+export default function ProgressiveMusclePage() {
     const { t } = useTranslation();
 
     const instructions = [
-        t('intruction_one_meditation'),
-        t('intruction_two_meditation'),
-        t('intruction_theer_meditation'),
-        t('intruction_four_meditation'),
-        t('intruction_five_meditation'),
-        t('intruction_six_meditation'),
-        t('intruction_conclusion_meditation')
+        "Instrucción 1: Encuentra un lugar cómodo y tranquilo donde puedas acostarte sin distracciones.",
+        "Instrucción 2: Comienza con los pies: Tensa los músculos de los pies durante 5 segundos, luego relájalos durante 10 segundos.",
+        "Instrucción 3: Continúa con las piernas: Tensa los músculos de las piernas durante 5 segundos, luego relájalos durante 10 segundos.",
+        "Instrucción 4: Tensa los músculos de los glúteos: Mantén la tensión durante 5 segundos, luego relájalos.",
+        "Instrucción 5: Sube por el cuerpo: Tensa los músculos de los abdominales, pecho, hombros y brazos, relajándolos después de cada uno.",
+        "Instrucción 6: Relaja tu cara: Tensa los músculos de la cara (fruncir el ceño, apretar los ojos) y luego relájalos.",
+        "Cierre de la sesión: Termina con una respiración profunda y siente cómo tu cuerpo se siente más relajado."
     ];
 
     const images = [
-        "https://www.podcastyradio.es/wp-content/uploads/2021/02/meditaciones-guiadas.png", 
-        "https://i.pinimg.com/736x/d2/31/7d/d2317d7f64419757126253e3f7c14465.jpg", 
-        "https://cflvdg.avoz.es/sc/d7f6L8pDUI4IuMotGXjiTEDx_30=/768x/2022/01/28/00121643373224399422404/Foto/respirarwaltr.png", 
-        "https://s3.tuespaciodeterapia.com/wp-content/uploads/2021/06/28181942/image-1-97-1024x683.gif", 
-        "https://www.respiraprana.com/wp-content/uploads/2024/02/breathing-7528400_1280-1.png", 
-        "https://img.lavdg.com/sc/TdNJTmCiL1lguTpP6hnE12t9x-E=/480x/2024/02/16/00121708098581505861289/Foto/respiraaaa.jpg", 
-        "https://img.freepik.com/vector-premium/persona-que-practica-ejercicios-respiracion-profunda-que-destacan-uso-tecnicas-relajacion-manejar_216520-14789.jpg"  
+        "https://www.example.com/relaxation-image1.jpg", 
+        "https://www.example.com/relaxation-image2.jpg", 
+        "https://www.example.com/relaxation-image3.jpg"
     ];
 
     const [currentInstructionIndex, setCurrentInstructionIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(60); // Tiempo en segundos
     const [isRunning, setIsRunning] = useState(false); // Estado del temporizador
-    const [meditationStarted, setMeditationStarted] = useState(false); // Estado de inicio de meditación
+    const [progressStarted, setProgressStarted] = useState(false); // Estado de inicio de progresión
     const [isPaused, setIsPaused] = useState(false); // Estado de pausa
 
     useEffect(() => {
         if (isRunning && timeLeft > 0) {
             const timer = setInterval(() => {
                 setTimeLeft((prevTime) => prevTime - 1);
-            }, 1000); 
+            }, 1000);
 
             return () => clearInterval(timer);
         } else if (timeLeft === 0) {
@@ -45,34 +41,33 @@ export default function MeditationPage() {
                 setCurrentInstructionIndex((prevIndex) => prevIndex + 1);
                 setTimeLeft(60); 
             } else {
-                // Detener la meditación si se ha llegado al final de las instrucciones
-                stopMeditation();
+                stopProgression();
             }
         }
     }, [isRunning, timeLeft, currentInstructionIndex]);
 
-    const startMeditation = () => {
+    const startProgression = () => {
         setIsRunning(true);
         setIsPaused(false); 
         setTimeLeft(60); 
-        setMeditationStarted(true); 
+        setProgressStarted(true); 
     };
 
-    const pauseMeditation = () => {
+    const pauseProgression = () => {
         setIsRunning(false); 
         setIsPaused(true); 
     };
 
-    const continueMeditation = () => {
+    const continueProgression = () => {
         setIsRunning(true); 
         setIsPaused(false); 
     };
 
-    const stopMeditation = () => {
+    const stopProgression = () => {
         setIsRunning(false); 
         setCurrentInstructionIndex(0); 
         setTimeLeft(60); 
-        setMeditationStarted(false); 
+        setProgressStarted(false); 
         setIsPaused(false); 
     };
 
@@ -84,7 +79,7 @@ export default function MeditationPage() {
                 return nextIndex;
             });
         } else {
-            stopMeditation(); // Detener si es la última instrucción
+            stopProgression(); 
         }
     };
 
@@ -94,28 +89,27 @@ export default function MeditationPage() {
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
-            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 suppressHydrationWarning={true}  className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    {t('meditation_relaxation')}
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    Progresión Muscular
                 </h1>
-                <p suppressHydrationWarning={true}  className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    {t('intomeditation_relaxation')}
+                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                    Técnica de relajación a través de la tensión y liberación muscular.
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
+                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('duration')}</strong> {t('start_meditation')}</li>
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('frequency')}</strong> {t('practicing_mindfulness:')}</li>
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('patience')}</strong> {t('get_distractes')}</li>
+                        <li><strong>Duración:</strong> Realiza la práctica entre 10 a 20 minutos, según tu disponibilidad.</li>
+                        <li><strong>Comodidad:</strong> Asegúrate de estar en un lugar cómodo y libre de distracciones.</li>
+                        <li><strong>Atención:</strong> Concéntrate en los cambios de tensión y relajación de cada grupo muscular.</li>
                     </ul>
 
-                    <h2 suppressHydrationWarning={true}  className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('mindfulness_guided')}</h2>
+                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Progresión Muscular Guiada</h2>
                     
-                    {meditationStarted ? (
+                    {progressStarted ? (
                         <>
-                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-2 text-center">{t('current')}</h3>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
@@ -125,49 +119,44 @@ export default function MeditationPage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
-                            <p suppressHydrationWarning={true}  className="text-center text-lg">{timeLeft} {t('seconds')}</p>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
+                            <p className="text-center text-lg">{timeLeft} segundos</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
-                                 suppressHydrationWarning={true} 
-                                    onClick={pauseMeditation} 
+                                    onClick={pauseProgression} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    {t('pause')}
+                                    Pausar
                                 </button>
                                 <button 
-                                suppressHydrationWarning={true} 
-                                    onClick={stopMeditation} 
+                                    onClick={stopProgression} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    {t('stop')}
+                                    Detener
                                 </button>
                                 <button 
-                                suppressHydrationWarning={true} 
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    {t('next')}
+                                    Siguiente
                                 </button>
                                 {isPaused && (
                                     <button 
-                                    suppressHydrationWarning={true} 
-                                        onClick={continueMeditation} 
+                                        onClick={continueProgression} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        {t('continue')}
+                                        Continuar
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button 
-                        suppressHydrationWarning={true} 
-                            onClick={startMeditation} 
+                            onClick={startProgression} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            {t('start')}
+                            Iniciar
                         </button>
                     )}
                 </div>

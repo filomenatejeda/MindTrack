@@ -11,23 +11,23 @@ const EducationResourcesPage = () => {
     const [showMorePodcasts, setShowMorePodcasts] = useState(false);
 
     const articles = [
-        { title: 'Los trastornos de Ansiedad', link: '/articulos/ansiedad' },
-        { title: 'Guía de Gestión del Estrés', link: '/articulos/estres' },
-        { title: '¿Qué es la salud mental y por qué es importante?', link: '/articulos/salud' },
-        { title: 'Guía Práctica para Mejorar la Autoestima ', link: '/articulos/autoestima' },
+        { title: <h suppressHydrationWarning={true}> {t('anxietydisorders')} </h>, link: '/articulos/ansiedad' },
+        { title: <h suppressHydrationWarning={true}> {t('stressmanagement')} </h> , link: '/articulos/estres' },
+        { title: <h suppressHydrationWarning={true}>{t('mental_health')}</h>, link: '/articulos/salud' },
+        { title: <h suppressHydrationWarning={true}>{t('self_esteem')}</h>, link: '/articulos/autoestima' },
     ];
 
     const videos = [
-        { title: 'Técnicas de relajación', link: '/videos/relajacion' },
-        { title: 'Superar una Depresión', link: '/videos/depresion' },
-        { title: 'Manejo de ansiedad', link: '/videos/ansiedad' },
-    ];
+        { title: <h suppressHydrationWarning={true}> {t('relaxation_techniques')} </h>, link: '/videos/relajacion' },
+        { title: <h suppressHydrationWarning={true}> {t('overcoming_depression')} </h>, link: '/videos/depresion' },
+        { title: <h suppressHydrationWarning={true}> {t('control_anxiety_techniques')} </h>, link: '/videos/ansiedad' },
+    ]; 
 
     const podcasts = [
-        { title: 'Cómo Conseguir una Autoestima Sana', link: '/podcasts/autoestima' },
-        { title: 'Salud mental y bienestar', link: '/podcasts/salud' },
-        { title: 'Cómo enfrentar la depresión', link: '/podcasts/enfrentar-depresion' },
-    ];
+        { title: <h suppressHydrationWarning={true}> {t('healthy_self_esteem')} </h>, link: '/podcasts/autoestima' },
+        { title: <h suppressHydrationWarning={true}> {t('exhaustion_mental')} </h>, link: '/podcasts/salud' },
+        { title: <h suppressHydrationWarning={true}> {t('dealing_depression')} </h>, link: '/podcasts/depresion' },
+    ];  
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -36,28 +36,31 @@ const EducationResourcesPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                   Recursos Educativos
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+
+                {t('educational_resources')} 
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center ">
-                Recopilación de recursos valiosos para apoyar tu bienestar emocional y mental. Desde artículos informativos hasta videos y podcasts inspiradores, nuestro objetivo es proporcionarte herramientas y conocimientos que te ayuden a comprender mejor tu salud mental y a desarrollar estrategias para mejorarla. Explora los recursos disponibles y elige aquellos que más resuenen contigo en tu camino hacia una vida más equilibrada y plena.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center ">
+
+                {t('intoeducational_resources')} 
+
                 </p>
 
                 {/* Sección de Artículos */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
                     <div className="flex flex-col space-y-4">
                         {articles.slice(0, showMoreArticles ? articles.length : 2).map((article, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{article.title}</h3>
-                                <Link href={article.link} className="text-blue-500 hover:underline">
-                                    Leer más
+                                <Link suppressHydrationWarning={true} href={article.link} className="text-blue-500 hover:underline">
+                                {t('read_more')}
                                 </Link>
                             </div>
                         ))}
                     </div>
                     <div className="mt-4">
-                        <button onClick={() => setShowMoreArticles(!showMoreArticles)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                        <button onClick={() => setShowMoreArticles(!showMoreArticles)} suppressHydrationWarning={true} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMoreArticles ? t('show_less') : t('view_more')}
                         </button>
                     </div>
@@ -65,19 +68,19 @@ const EducationResourcesPage = () => {
 
                 {/* Sección de Videos */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('videos')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('videos')}</h2>
                     <div className="flex flex-col space-y-4">
                         {videos.slice(0, showMoreVideos ? videos.length : 2).map((video, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{video.title}</h3>
-                                <Link href={video.link} className="text-blue-500 hover:underline">
-                                   Ver más
+                                <Link suppressHydrationWarning={true} href={video.link} className="text-blue-500 hover:underline">
+                                {t('see_more')}
                                 </Link>
                             </div>
                         ))}
                     </div>
                     <div className="mt-4">
-                        <button onClick={() => setShowMoreVideos(!showMoreVideos)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                        <button suppressHydrationWarning={true} onClick={() => setShowMoreVideos(!showMoreVideos)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMoreVideos ? t('show_less') : t('view_more')}
                         </button>
                     </div>
@@ -85,19 +88,19 @@ const EducationResourcesPage = () => {
 
                 {/* Sección de Podcasts */}
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Podcasts')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('Podcasts')}</h2>
                     <div className="flex flex-col space-y-4">
                         {podcasts.slice(0, showMorePodcasts ? podcasts.length : 2).map((podcast, index) => (
                             <div key={index} className="bg-emerald-200 p-4 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold text-green-600">{podcast.title}</h3>
-                                <Link href={podcast.link} className="text-blue-500 hover:underline">
-                                    Escuchar más
+                                <Link suppressHydrationWarning={true} href={podcast.link} className="text-blue-500 hover:underline">
+                                    {t('listen_more')}
                                 </Link>
                             </div>
                         ))}
                     </div>
                     <div className="mt-4">
-                        <button onClick={() => setShowMorePodcasts(!showMorePodcasts)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
+                        <button suppressHydrationWarning={true} onClick={() => setShowMorePodcasts(!showMorePodcasts)} className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition duration-200">
                             {showMorePodcasts ? t('show_less') : t('view_more')}
                         </button>
                     </div>

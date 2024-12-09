@@ -15,11 +15,11 @@ const EmotionalBurnoutPage = () => {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    {t('¿Cómo lidiar con el agotamiento emocional y mental?')}
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('exhaustion_mental')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center">
-                    {t('En este video, exploramos el agotamiento emocional y mental, sus causas y cómo abordarlo de manera saludable.')}
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center">
+                    {t('intoexhaustion_mental')}
                 </p>
                 <div className="flex justify-center mt-10">
                     <iframe
@@ -32,49 +32,49 @@ const EmotionalBurnoutPage = () => {
                         allowFullScreen
                     ></iframe>
                 </div>
-
+            
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('¿Qué es el Agotamiento Emocional?')}</h2>
-                    <p className="text-gray-700 mb-2">
-                        {t('El agotamiento emocional es una sensación de estar completamente exhausto en el aspecto mental y emocional. Puede ser causado por el estrés constante, las responsabilidades abrumadoras o situaciones personales difíciles.')}
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('emotional_exhaustion')}</h2>
+                    <p suppressHydrationWarning={true}className="text-gray-700 mb-2">
+                        {t('intoemotional_exhaustion')}
                     </p>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Signos de Agotamiento Emocional')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('signs_emotional')}</h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                        <li>{t('Sensación de fatiga constante y falta de energía.')}</li>
-                        <li>{t('Dificultad para concentrarse y tomar decisiones.')}</li>
-                        <li>{t('Sentimientos de desmotivación y desesperanza.')}</li>
-                        <li>{t('Irritabilidad o cambios de humor frecuentes.')}</li>
-                        <li>{t('Tendencia al aislamiento o deseo de alejarse de los demás.')}</li>
+                        <li suppressHydrationWarning={true}>{t('feeling_constant')}</li>
+                        <li suppressHydrationWarning={true}>{t('difficulty_concentrating')}</li>
+                        <li suppressHydrationWarning={true}>{t('feelings_demotivation')}</li>
+                        <li suppressHydrationWarning={true}>{t('irritability_frequent')}</li>
+                        <li suppressHydrationWarning={true} >{t('tendency_isolation')}</li>
                     </ul>
                 </div>
-
+            
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
-                    <h2 className="text-2xl font-semibold mb-4 text-teal-500">{t('Consejos para Manejar el Agotamiento Emocional')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('tips_managing')}</h2>
                     <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-                        <li>
-                            <strong>{t('Practica el autocuidado:')}</strong> {t('Dedica tiempo para actividades que disfrutes y te relajen.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('practice_self_care')}</strong> {t('make_time')}
                         </li>
-                        <li>
-                            <strong>{t('Establece límites:')}</strong> {t('Evita comprometerte en exceso y aprende a decir no cuando sea necesario.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('set_boundaries')}</strong> {t('avoid_overcommitting')}
                         </li>
-                        <li>
-                            <strong>{t('Realiza ejercicio físico:')}</strong> {t('El ejercicio ayuda a reducir el estrés y a mejorar el estado de ánimo.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('excercise')}</strong> {t('excercise_helps_reduce')}
                         </li>
-                        <li>
-                            <strong>{t('Conéctate con los demás:')}</strong> {t('Hablar con amigos o familiares puede ser una gran fuente de apoyo emocional.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('connect_others')}</strong> {t('talking_friends')}
                         </li>
-                        <li>
-                            <strong>{t('Busca ayuda profesional:')}</strong> {t('Si el agotamiento persiste, considera la posibilidad de hablar con un terapeuta o consejero.')}
+                        <li suppressHydrationWarning={true}>
+                            <strong suppressHydrationWarning={true}>{t('seek_professional')}</strong> {t('burnout_persists')}
                         </li>
                     </ol>
                 </div>
 
                 <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl text-center">
-                    <Link href="/recursos" className="text-blue-500 hover:underline">
-                        {t('Recursos Educativos')}
+                    <Link suppressHydrationWarning={true} href="/recursos" className="text-blue-500 hover:underline">
+                        {t('educational_resources')}
                     </Link>
                 </div>
             </div>

@@ -14,11 +14,16 @@ export const EmojiProvider = ({ children }) => {
 
     const addEmoji = (date, emojiIndex) => {
         setEmojiData(prevData => {
-            const newData = { ...prevData, [date]: emojiIndex };
-            localStorage.setItem('emojiData', JSON.stringify(newData));
-            return newData;
+            const newData = {
+                ...prevData,
+                [date]: emojiIndex, // Asegúrate de que se está guardando el índice correcto del emoji
+            };
+            localStorage.setItem('emojiData', JSON.stringify(newData)); // Guarda también en localStorage
+            return newData; // Retorna el nuevo estado
         });
     };
+    
+    
 
     const removeEmoji = (date) => {
         setEmojiData(prevData => {
