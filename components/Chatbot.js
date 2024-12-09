@@ -48,7 +48,7 @@ export default function Chatbot() {
             key={index}
             className={`message p-2 rounded-lg ${msg.role === "user" ? "bg-teal-500 text-white self-end" : "bg-gray-300 text-black self-start"}`}
           >
-            <strong className="font-semibold">{msg.role === "user" ? "Tú" : "Bot"}:</strong>
+            <strong className="font-semibold">{msg.role === "user" ? t('you') : "Bot"}:</strong>
             <p>{msg.content}</p>
           </div>
         ))}

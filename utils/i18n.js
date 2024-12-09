@@ -407,6 +407,7 @@ i18next
           close_chat:"Close Chat",
           open_chat:"Open Chat",
           help_you:'How can I help you?',
+          you: "You",
 
         },
       },
@@ -806,6 +807,7 @@ i18next
           close_chat:"Cerrar Chat",
           open_chat:"Abrir Chat",
           help_you:'¿En que te puedo ayudar?',
+          you: "Tú"
 
 
         },
