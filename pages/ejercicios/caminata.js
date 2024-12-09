@@ -4,40 +4,36 @@ import NavbarH from '/components/NavbarH';
 import Footer from '/components/Footer';
 import { useTranslation } from 'react-i18next';
 
-export default function MeditationPage() {
+export default function NatureWalkPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        t('intruction_one_meditation'),
-        t('intruction_two_meditation'),
-        t('intruction_theer_meditation'),
-        t('intruction_four_meditation'),
-        t('intruction_five_meditation'),
-        t('intruction_six_meditation'),
-        t('intruction_conclusion_meditation')
+        "Instrucción 1: Encuentra un lugar natural y tranquilo: Busca un parque, bosque o sendero donde puedas caminar libremente.",
+        "Instrucción 2: Respira profundamente: Inhala el aire fresco profundamente por la nariz y exhala por la boca, sintiendo cómo el aire entra y sale.",
+        "Instrucción 3: Siente la tierra bajo tus pies: Concédele atención a cada paso que das, siente el suelo, la hierba o las hojas bajo tus pies.",
+        "Instrucción 4: Conéctate con los sonidos: Escucha los sonidos de la naturaleza: pájaros cantando, hojas moviéndose, el viento. Mantén tu mente en estos sonidos.",
+        "Instrucción 5: Observa los detalles a tu alrededor: Fíjate en los árboles, flores, rocas o cualquier elemento natural. Aprecia los colores, texturas y formas.",
+        "Instrucción 6: Relájate en movimiento: Permítete caminar a un ritmo cómodo y tranquilo, sin presiones, solo disfrutando del momento.",
+        "Cierre de la sesión: Cuando termines, haz una pausa, cierra los ojos un momento y reflexiona sobre cómo te sientes. Respira profundamente una vez más."
     ];
 
     const images = [
-        "https://www.podcastyradio.es/wp-content/uploads/2021/02/meditaciones-guiadas.png", 
-        "https://i.pinimg.com/736x/d2/31/7d/d2317d7f64419757126253e3f7c14465.jpg", 
-        "https://cflvdg.avoz.es/sc/d7f6L8pDUI4IuMotGXjiTEDx_30=/768x/2022/01/28/00121643373224399422404/Foto/respirarwaltr.png", 
-        "https://s3.tuespaciodeterapia.com/wp-content/uploads/2021/06/28181942/image-1-97-1024x683.gif", 
-        "https://www.respiraprana.com/wp-content/uploads/2024/02/breathing-7528400_1280-1.png", 
-        "https://img.lavdg.com/sc/TdNJTmCiL1lguTpP6hnE12t9x-E=/480x/2024/02/16/00121708098581505861289/Foto/respiraaaa.jpg", 
-        "https://img.freepik.com/vector-premium/persona-que-practica-ejercicios-respiracion-profunda-que-destacan-uso-tecnicas-relajacion-manejar_216520-14789.jpg"  
+        "https://www.example.com/nature-walk1.jpg", 
+        "https://www.example.com/nature-walk2.jpg", 
+        "https://www.example.com/nature-walk3.jpg"
     ];
 
     const [currentInstructionIndex, setCurrentInstructionIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(60); // Tiempo en segundos
     const [isRunning, setIsRunning] = useState(false); // Estado del temporizador
-    const [meditationStarted, setMeditationStarted] = useState(false); // Estado de inicio de meditación
+    const [walkStarted, setWalkStarted] = useState(false); // Estado de inicio de caminata
     const [isPaused, setIsPaused] = useState(false); // Estado de pausa
 
     useEffect(() => {
         if (isRunning && timeLeft > 0) {
             const timer = setInterval(() => {
                 setTimeLeft((prevTime) => prevTime - 1);
-            }, 1000); 
+            }, 1000);
 
             return () => clearInterval(timer);
         } else if (timeLeft === 0) {
@@ -45,34 +41,33 @@ export default function MeditationPage() {
                 setCurrentInstructionIndex((prevIndex) => prevIndex + 1);
                 setTimeLeft(60); 
             } else {
-                // Detener la meditación si se ha llegado al final de las instrucciones
-                stopMeditation();
+                stopWalk();
             }
         }
     }, [isRunning, timeLeft, currentInstructionIndex]);
 
-    const startMeditation = () => {
+    const startWalk = () => {
         setIsRunning(true);
         setIsPaused(false); 
         setTimeLeft(60); 
-        setMeditationStarted(true); 
+        setWalkStarted(true); 
     };
 
-    const pauseMeditation = () => {
+    const pauseWalk = () => {
         setIsRunning(false); 
         setIsPaused(true); 
     };
 
-    const continueMeditation = () => {
+    const continueWalk = () => {
         setIsRunning(true); 
         setIsPaused(false); 
     };
 
-    const stopMeditation = () => {
+    const stopWalk = () => {
         setIsRunning(false); 
         setCurrentInstructionIndex(0); 
         setTimeLeft(60); 
-        setMeditationStarted(false); 
+        setWalkStarted(false); 
         setIsPaused(false); 
     };
 
@@ -84,7 +79,7 @@ export default function MeditationPage() {
                 return nextIndex;
             });
         } else {
-            stopMeditation(); // Detener si es la última instrucción
+            stopWalk(); 
         }
     };
 
@@ -94,28 +89,27 @@ export default function MeditationPage() {
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
-            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 suppressHydrationWarning={true}  className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    {t('meditation_relaxation')}
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    Caminata en la Naturaleza
                 </h1>
-                <p suppressHydrationWarning={true}  className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    {t('intomeditation_relaxation')}
+                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                    Sal a caminar y conecta con la naturaleza para relajar cuerpo y mente.
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
+                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('duration')}</strong> {t('start_meditation')}</li>
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('frequency')}</strong> {t('practicing_mindfulness:')}</li>
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('patience')}</strong> {t('get_distractes')}</li>
+                        <li><strong>Duración:</strong> Comienza con una caminata de 10 a 20 minutos y aumenta gradualmente.</li>
+                        <li><strong>Comodidad:</strong> Usa ropa y calzado cómodo para caminar sin molestias.</li>
+                        <li><strong>Atención plena:</strong> Concédele atención al momento presente, sin distracciones externas.</li>
                     </ul>
 
-                    <h2 suppressHydrationWarning={true}  className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('mindfulness_guided')}</h2>
+                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Caminata Guiada en la Naturaleza</h2>
                     
-                    {meditationStarted ? (
+                    {walkStarted ? (
                         <>
-                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-2 text-center">{t('current')}</h3>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
@@ -125,49 +119,44 @@ export default function MeditationPage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
-                            <p suppressHydrationWarning={true}  className="text-center text-lg">{timeLeft} {t('seconds')}</p>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
+                            <p className="text-center text-lg">{timeLeft} segundos</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
-                                 suppressHydrationWarning={true} 
-                                    onClick={pauseMeditation} 
+                                    onClick={pauseWalk} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    {t('pause')}
+                                    Pausar
                                 </button>
                                 <button 
-                                suppressHydrationWarning={true} 
-                                    onClick={stopMeditation} 
+                                    onClick={stopWalk} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    {t('stop')}
+                                    Detener
                                 </button>
                                 <button 
-                                suppressHydrationWarning={true} 
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    {t('next')}
+                                    Siguiente
                                 </button>
                                 {isPaused && (
                                     <button 
-                                    suppressHydrationWarning={true} 
-                                        onClick={continueMeditation} 
+                                        onClick={continueWalk} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        {t('continue')}
+                                        Continuar
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button 
-                        suppressHydrationWarning={true} 
-                            onClick={startMeditation} 
+                            onClick={startWalk} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            {t('start')}
+                            Iniciar
                         </button>
                     )}
                 </div>

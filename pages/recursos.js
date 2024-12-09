@@ -26,7 +26,7 @@ const EducationResourcesPage = () => {
     const podcasts = [
         { title: <h suppressHydrationWarning={true}> {t('healthy_self_esteem')} </h>, link: '/podcasts/autoestima' },
         { title: <h suppressHydrationWarning={true}> {t('exhaustion_mental')} </h>, link: '/podcasts/salud' },
-        { title: 'Cómo enfrentar la depresión', link: '/podcasts/enfrentar-depresion' },
+        { title: <h suppressHydrationWarning={true}> {t('dealing_depression')} </h>, link: '/podcasts/depresion' },
     ];  
 
     return (

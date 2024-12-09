@@ -4,40 +4,29 @@ import NavbarH from '/components/NavbarH';
 import Footer from '/components/Footer';
 import { useTranslation } from 'react-i18next';
 
-export default function BreathingPage() {
+export default function AromatherapyPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Siéntate en una postura cómoda, con la espalda recta y los pies en el suelo.",
-        "Instrucción 2: Respira por la nariz durante 4 segundos, llenando tus pulmones.",
-        "Instrucción 3: Sostén la respiración por 7 segundos, enfocándote en la calma.",
-        "Instrucción 4: Suelta el aire por la boca durante 8 segundos. Imagina que eliminas toda tensión.",
-        "Instrucción 5: Mantén un patrón constante de 4-7-8 y siente cómo se relaja tu cuerpo.",
-        "Instrucción 6: Mientras respiras, imagina una luz cálida recorriendo tu cuerpo, llenándote de paz.",
-        "Cierre de la sesión: Termina con tres respiraciones profundas y una sonrisa, sintiéndote renovado."
-    ];
-
-    const images = [
-        "https://img.freepik.com/vector-gratis/mujer-postura-comoda-meditar_74855-5302.jpg", 
-        "https://img.freepik.com/free-vector/breathing-exercise-concept-illustration_114360-8920.jpg", 
-        "https://s3.amazonaws.com/jm.files/2022-05/shutterstock_2016549191.jpg", 
-        "https://static.vecteezy.com/system/resources/thumbnails/007/411/186/small/woman-doing-breathing-exercise-woman-meditating-in-lotus-pose-world-yoga-day-mental-wellness-vector.jpg", 
-        "https://thumbs.dreamstime.com/b/breath-exercise-good-relaxation-breathe-out-breath-exercise-good-relaxation-breathe-out-relax-deep-131435880.jpg", 
-        "https://as1.ftcdn.net/v2/jpg/05/85/39/94/1000_F_585399499_3cBsmr9LN6CEeCyYRl7iNG3ztXM2LPjF.jpg", 
-        "https://img.freepik.com/premium-vector/three-people-engaged-meditation-outdoors-surrounded-by-vibrant-greenery-mountains-daylight-organic-flat-people-meditating_538213-148192.jpg" 
+        "Instrucción 1: Elige tu aceite esencial favorito. Los aceites como la lavanda, la menta o el eucalipto son perfectos para relajarte.",
+        "Instrucción 2: Prepara un difusor o un quemador de aceites. Si no tienes un difusor, puedes usar una vela que libere el aroma lentamente.",
+        "Instrucción 3: Respira profundamente mientras el aroma llena el aire. Inhala por la nariz, mantén el aire por unos segundos y exhala lentamente por la boca.",
+        "Instrucción 4: Cierra los ojos y visualiza un lugar tranquilo mientras sigues respirando. Deja que el aroma te relaje y libere cualquier tensión.",
+        "Instrucción 5: Disfruta del ambiente creado. Permítete un momento para relajarte, dejando que el aceite esencial calme tu mente y cuerpo.",
+        "Cierre de la sesión: Finaliza la sesión con unas respiraciones profundas y abre los ojos cuando te sientas listo."
     ];
 
     const [currentInstructionIndex, setCurrentInstructionIndex] = useState(0);
     const [timeLeft, setTimeLeft] = useState(60); // Tiempo en segundos
     const [isRunning, setIsRunning] = useState(false); // Estado del temporizador
-    const [meditationStarted, setMeditationStarted] = useState(false); // Estado de inicio de meditación
+    const [aromatherapyStarted, setAromatherapyStarted] = useState(false); // Estado de inicio de aromaterapia
     const [isPaused, setIsPaused] = useState(false); // Estado de pausa
 
     useEffect(() => {
         if (isRunning && timeLeft > 0) {
             const timer = setInterval(() => {
                 setTimeLeft((prevTime) => prevTime - 1);
-            }, 1000); 
+            }, 1000);
 
             return () => clearInterval(timer);
         } else if (timeLeft === 0) {
@@ -45,34 +34,33 @@ export default function BreathingPage() {
                 setCurrentInstructionIndex((prevIndex) => prevIndex + 1);
                 setTimeLeft(60); 
             } else {
-                // Detener la sesión si se ha llegado al final de las instrucciones
-                stopMeditation();
+                stopAromatherapy();
             }
         }
     }, [isRunning, timeLeft, currentInstructionIndex]);
 
-    const startMeditation = () => {
+    const startAromatherapy = () => {
         setIsRunning(true);
         setIsPaused(false); 
         setTimeLeft(60); 
-        setMeditationStarted(true); 
+        setAromatherapyStarted(true); 
     };
 
-    const pauseMeditation = () => {
+    const pauseAromatherapy = () => {
         setIsRunning(false); 
         setIsPaused(true); 
     };
 
-    const continueMeditation = () => {
+    const continueAromatherapy = () => {
         setIsRunning(true); 
         setIsPaused(false); 
     };
 
-    const stopMeditation = () => {
+    const stopAromatherapy = () => {
         setIsRunning(false); 
         setCurrentInstructionIndex(0); 
         setTimeLeft(60); 
-        setMeditationStarted(false); 
+        setAromatherapyStarted(false); 
         setIsPaused(false); 
     };
 
@@ -84,7 +72,7 @@ export default function BreathingPage() {
                 return nextIndex;
             });
         } else {
-            stopMeditation(); // Detener si es la última instrucción
+            stopAromatherapy(); 
         }
     };
 
@@ -92,50 +80,45 @@ export default function BreathingPage() {
         <div className="flex flex-col min-h-screen bg-gray-100">
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
+                <script src="https://cdn.tailwindcss.com"></script>
             </div>
-            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Ejercicios de Respiración Consciente
+                    Aromaterapia
                 </h1>
                 <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Descubre la tranquilidad a través del poder de tu respiración.
+                    Usa aceites esenciales para promover la relajación y el bienestar emocional.
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> Dedica entre 5 y 10 minutos a estas prácticas diarias.</li>
-                        <li><strong>Postura:</strong> Mantén una posición cómoda y relajada, pero erguida.</li>
-                        <li><strong>Foco:</strong> Si tu mente divaga, simplemente regresa a tu respiración.</li>
+                        <li><strong>Duración:</strong> La aromaterapia puede durar entre 15 y 30 minutos dependiendo de tu preferencia.</li>
+                        <li><strong>Ambiente:</strong> Asegúrate de estar en un lugar tranquilo y cómodo para disfrutar de la experiencia.</li>
+                        <li><strong>Aceites recomendados:</strong> La lavanda es ideal para la relajación, mientras que la menta puede revitalizarte.</li>
                     </ul>
 
-                   
+                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Aromaterapia Guiada</h2>
                     
-                    {meditationStarted ? (
+                    {aromatherapyStarted ? (
                         <>
                             <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
-                            <img 
-                                src={images[currentInstructionIndex]} 
-                                alt={`Instrucción ${currentInstructionIndex + 1}`} 
-                                className="w-80 h-80 object-cover rounded-lg mb-4"
-                            />
 
-                            <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">Tiempo Restante</h3>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
                             <p className="text-center text-lg">{timeLeft} segundos</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
-                                    onClick={pauseMeditation} 
+                                    onClick={pauseAromatherapy} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
                                     Pausar
                                 </button>
                                 <button 
-                                    onClick={stopMeditation} 
+                                    onClick={stopAromatherapy} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
                                     Detener
@@ -148,7 +131,7 @@ export default function BreathingPage() {
                                 </button>
                                 {isPaused && (
                                     <button 
-                                        onClick={continueMeditation} 
+                                        onClick={continueAromatherapy} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
                                         Continuar
@@ -158,12 +141,27 @@ export default function BreathingPage() {
                         </>
                     ) : (
                         <button 
-                            onClick={startMeditation} 
+                            onClick={startAromatherapy} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
                             Iniciar
                         </button>
                     )}
+
+                    {/* Sección de información sobre los olores */}
+                    <div className="mt-6 bg-gray-50 p-6 rounded-lg shadow-xl">
+                        <h3 className="text-xl font-bold text-green-600 mb-4 text-center">Información sobre los Aceites Esenciales</h3>
+                        <p className="text-lg mb-4">
+                            Los aceites esenciales son conocidos por sus propiedades terapéuticas, ayudando a reducir el estrés, mejorar el ánimo y promover la relajación. Aquí tienes algunos de los más populares y sus beneficios:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2">
+                            <li><strong>Lavanda:</strong> Ideal para la relajación, ayuda a reducir la ansiedad y mejorar el sueño.</li>
+                            <li><strong>Mentol (Menta):</strong> Energizante y refrescante, puede aliviar dolores de cabeza y mejorar la concentración.</li>
+                            <li><strong>Rosa Mosqueta:</strong> Promueve la calma y el bienestar emocional, ideal para el estrés.</li>
+                            <li><strong>Citronela:</strong> Ayuda a limpiar la mente y a liberar energías negativas.</li>
+                            <li><strong>Eucalipto:</strong> Perfecto para mejorar la respiración y reducir la tensión muscular.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <Footer />
