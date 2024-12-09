@@ -401,7 +401,7 @@ i18next
 
           //chat bot
           write_your:"Write your message...",
-          send_to:"Send to",
+          send_to:"Send",
           close_chat:"Close Chat",
           open_chat:"Open Chat",
           help_you:'How can I help you?',
