@@ -8,13 +8,13 @@ export default function BreathingPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Siéntate en una postura cómoda, con la espalda recta y los pies en el suelo.",
-        "Instrucción 2: Respira por la nariz durante 4 segundos, llenando tus pulmones.",
-        "Instrucción 3: Sostén la respiración por 7 segundos, enfocándote en la calma.",
-        "Instrucción 4: Suelta el aire por la boca durante 8 segundos. Imagina que eliminas toda tensión.",
-        "Instrucción 5: Mantén un patrón constante de 4-7-8 y siente cómo se relaja tu cuerpo.",
-        "Instrucción 6: Mientras respiras, imagina una luz cálida recorriendo tu cuerpo, llenándote de paz.",
-        "Cierre de la sesión: Termina con tres respiraciones profundas y una sonrisa, sintiéndote renovado."
+        t('intruction_one_breathing'),
+        t('intruction_two_breathing'),
+        t('intruction_theer_breathing'),
+        t('intruction_four_breathing'),
+        t('intruction_five_breathing'),
+        t('intruction_six_breathing'),
+        t('intruction_conclusion_breathing')
     ];
 
     const images = [
@@ -95,19 +95,19 @@ export default function BreathingPage() {
             </div>
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Ejercicios de Respiración Consciente
+                <h1 suppressHydrationWarning={true}  className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('conscious_breathing')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Descubre la tranquilidad a través del poder de tu respiración.
+                <p suppressHydrationWarning={true}  className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                    {t('intoconscious_breathing')}
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
+                <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>{t('duration')}</strong> Dedica entre 5 y 10 minutos a estas prácticas diarias.</li>
-                        <li><strong>Postura:</strong> Mantén una posición cómoda y relajada, pero erguida.</li>
-                        <li><strong>Foco:</strong> Si tu mente divaga, simplemente regresa a tu respiración.</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('duration')}</strong> {t('daily_practices')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('posture')}</strong> {t('maintain')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('focus')}</strong> {t('wanders')}</li>
                     </ul>
 
                    

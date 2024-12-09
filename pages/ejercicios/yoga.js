@@ -119,44 +119,51 @@ export default function YogaPage() {
                                 className="w-100 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 
+                            suppressHydrationWarning={true} className="text-xl font-bold text-blue-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p 
+                            suppressHydrationWarning={true} className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={pauseMeditation}
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={stopMeditation}
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                   {t('stop')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={nextInstruction}
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                   {t('next')}
                                 </button>
                                 {isPaused && (
                                     <button
+                                    suppressHydrationWarning={true} 
                                         onClick={continueMeditation}
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button
+                        suppressHydrationWarning={true} 
                             onClick={startMeditation}
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>
