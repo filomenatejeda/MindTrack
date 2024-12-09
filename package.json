@@ -21,6 +21,7 @@
     "express": "^4.21.2",
     "i18next": "^23.16.4",
     "jsonwebtoken": "^9.0.2",
+    "luxon": "^3.5.0",
     "mongoose": "^8.7.3",
     "next": "^15.0.2",
     "next-i18next": "^15.3.1",

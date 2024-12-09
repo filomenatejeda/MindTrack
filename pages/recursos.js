@@ -47,7 +47,7 @@ const EducationResourcesPage = () => {
                 </p>
 
                 {/* Sección de Artículos */}
-                <div className="mt-10 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
+                <div className="mt-4 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl">
                     <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-4 text-teal-500">{t('articles')}</h2>
                     <div className="flex flex-col space-y-4">
                         {articles.slice(0, showMoreArticles ? articles.length : 2).map((article, index) => (
