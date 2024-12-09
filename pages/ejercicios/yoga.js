@@ -92,24 +92,24 @@ export default function YogaPage() {
             </div>
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Práctica de Yoga Guiada
+            <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('guided_yoga')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Conecta cuerpo y mente a través del movimiento y la quietud.
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                    {t('intoguided_yoga')}
                 </p>
-
+                
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
-                    <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> Dedica al menos 15 minutos para cada sesión.</li>
-                        <li><strong>Ambiente:</strong> Crea un espacio tranquilo y libre de distracciones.</li>
-                        <li><strong>Conexión:</strong> Mantén tu respiración fluida y acompasada con los movimientos.</li>
+                <h3 suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
+                    <ul className="list-disc list-inside space-y-2 mb-5">
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('duration')}</strong> {t('spend_least')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('environment')}</strong> {t('create_quiet')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('connection')}</strong> {t('keep_breating')}</li>
                     </ul>
 
                     {meditationStarted ? (
                         <>
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Postura Actual</h3>
+                            <h3  suppressHydrationWarning={true}className="text-xl font-bold text-green-600 mb-2 text-center">{t('current_position')}</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>

@@ -398,6 +398,15 @@ i18next
           intruction_six_breathing:"Instruction 6: As you breathe, imagine a warm light coursing through your body, filling you with peace.",
           intruction_conclusion_breathing:"Closing the session: end with three deep breaths and a smile, feeling refreshed.",
 
+          guided_yoga:"Guided Yoga Practice",
+          intoguided_yoga:"Connect body and mind through movement and stillness.",
+          spend_least:"Spend at least 15 minutes for each session.",
+          environment:"Environment: ",
+          create_quiet:"Create a quiet space free of distractions.",
+          connection:"Connection:",
+          keep_breating:"Keep your breathing fluid and in rhythm with the movements.",
+          current_position:'Current Position',
+
           relaxingmusic:"Relaxing Music",
           playlist:"Playlist",
 
@@ -798,7 +807,14 @@ i18next
           relaxingmusic:"Música Relajante",
           playlist:"Lista de Reproducción",
 
-
+          guided_yoga:"Práctica de Yoga Guiada",
+          intoguided_yoga:"Conecta cuerpo y mente a través del movimiento y la quietud.",
+          spend_least:"Dedica al menos 15 minutos para cada sesión.",
+          environment:"Ambiente:",
+          create_quiet:"Crea un espacio tranquilo y libre de distracciones.",
+          connection:"Conexión:",
+          keep_breating:"Mantén tu respiración fluida y acompasada con los movimientos.",
+          current_position:'Postura Actual',
 
 
           //Chat bot
