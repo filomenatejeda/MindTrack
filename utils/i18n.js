@@ -381,6 +381,21 @@ i18next
           intruction_six_meditation:"Instruction 6: Observe your thoughts: Imagine that your thoughts are passing clouds. Don't judge them or cling to them.",
           intruction_conclusion_meditation:"Closing the session: End with three deep breaths and gently open your eyes when you are ready.",
 
+          conscious_breathing:'Conscious Breathing Exercises',
+          intoconscious_breathing:'Discover tranquility through the power of your breath.',
+          daily_practices:'Dedicate 5 to 10 minutes to these daily practices.',
+          posture:'Posture:',
+          maintain:'Maintain a comfortable, relaxed, yet upright posture.',
+          focus:'Focus: ',
+          wanders:'If your mind wanders, simply return to your breath.',
+          intruction_one_breathing:"Instruction 1: Sit in a comfortable posture, with your back straight and your feet on the floor.",
+          intruction_two_breathing:"Instruction 2: Breathe through your nose for 4 seconds, filling your lungs.",
+          intruction_theer_breathing:"Instruction 3: Hold the breath for 7 seconds, focusing on calmness.",
+          intruction_four_breathing:"Instruction 4: Breathe out through your mouth for 8 seconds. Imagine that you are eliminating all tension.",
+          intruction_five_breathing:"Instruction 5: Maintain a steady pattern of 4-7-8 and feel your body relax.",
+          intruction_six_breathing:"Instruction 6: As you breathe, imagine a warm light coursing through your body, filling you with peace.",
+          intruction_conclusion_breathing:"Closing the session: end with three deep breaths and a smile, feeling refreshed.",
+
           relaxingmusic:"Relaxing Music",
           playlist:"Playlist",
 
@@ -759,8 +774,27 @@ i18next
           intruction_six_meditation:"Instrucción 6: Observa tus pensamientos: Imagina que tus pensamientos son nubes que pasan. No los juzgues ni te aferres a ellos.",
           intruction_conclusion_meditation:"Cierre de la sesión: Termina con tres respiraciones profundas y abre los ojos suavemente cuando estés listo.",
 
+          conscious_breathing:'Ejercicios de Respiración Consciente',
+          intoconscious_breathing:'Descubre la tranquilidad a través del poder de tu respiración.',
+          daily_practices:'Dedica entre 5 y 10 minutos a estas prácticas diarias.',
+          posture:'Postura: ',
+          maintain:'Mantén una posición cómoda y relajada, pero erguida.',
+          focus:'Foco: ',
+          wanders:'Si tu mente divaga, simplemente regresa a tu respiración.',
+
+          intruction_one_breathing:"Instrucción 1: Siéntate en una postura cómoda, con la espalda recta y los pies en el suelo.",
+          intruction_two_breathing:"Instrucción 2: Respira por la nariz durante 4 segundos, llenando tus pulmones.",
+          intruction_theer_breathing:"Instrucción 3: Sostén la respiración por 7 segundos, enfocándote en la calma.",
+          intruction_four_breathing:"Instrucción 4: Suelta el aire por la boca durante 8 segundos. Imagina que eliminas toda tensión.",
+          intruction_five_breathing:"Instrucción 5: Mantén un patrón constante de 4-7-8 y siente cómo se relaja tu cuerpo.",
+          intruction_six_breathing:"Instrucción 6: Mientras respiras, imagina una luz cálida recorriendo tu cuerpo, llenándote de paz.",
+          intruction_conclusion_breathing:"Cierre de la sesión: Termina con tres respiraciones profundas y una sonrisa, sintiéndote renovado.",
+
           relaxingmusic:"Música Relajante",
           playlist:"Lista de Reproducción",
+
+
+
 
           //Chat bot
           write_your:"Escribe tu mensaje...",
