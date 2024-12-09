@@ -46,7 +46,7 @@ export default function Chatbot() {
         {chatMessages.map((msg, index) => (
           <div
             key={index}
-            className={`message p-2 rounded-lg ${msg.role === "user" ? "bg-blue-500 text-white self-end" : "bg-gray-300 text-black self-start"}`}
+            className={`message p-2 rounded-lg ${msg.role === "user" ? "bg-green-300 text-white self-end" : "bg-gray-300 text-black self-start"}`}
           >
             <strong className="font-semibold">{msg.role === "user" ? "Tú" : "Bot"}:</strong>
             <p>{msg.content}</p>
