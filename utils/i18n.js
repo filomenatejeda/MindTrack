@@ -276,6 +276,8 @@ i18next
             talking_friends:"Talking to friends or family members can be a great source of emotional support.",
             seek_professional:"Seek professional help:  ",
             burnout_persists:"If burnout persists, consider talking to a therapist or counselor.",
+
+            dealing_depression:'Dealing with depression',
           
           listen_more:"Listen more",
          
@@ -351,6 +353,34 @@ i18next
           task: "Tasks of",
           completed:"Completed",
           complete:"Complete",
+
+          meditation_relaxation:"Meditation and Relaxation",
+          intomeditation_relaxation:"Welcome to your meditation space",
+          additional:"Additional Tips",
+          duration:"Duration:",
+          start_meditation:"Start with 5 to 10 minutes of meditation and gradually increase.",
+          frequency:"Frequency:",
+          practicing_mindfulness:"Practicing mindfulness daily can improve your well-being.",
+          patience:"Patience:",
+          get_distractes:"If you get distracted, don't worry. Learn to redirect your attention calmly.",
+          mindfulness_guided:"Mindfulness Guided Meditation Exercise",
+          current:"Current Instruction",
+          time_remaining:"Time Remaining",
+          seconds:"seconds",
+          pause:"Pause",
+          stop:"Stop",
+          next:"Next",
+          continue:"Continue",
+          start:"Start",
+
+          intruction_one_meditation:"Instruction 1: Find a quiet space: Find a comfortable place where you can sit or lie down without distractions.",
+          intruction_two_meditation:"Instruction 2: Relax your body: adjust your posture, relax your shoulders and place your hands on your knees or in your lap.",
+          intruction_theer_meditation:"Instruction 3: Breathe deeply: Inhale through your nose and exhale slowly through your mouth, focusing on the breath.",
+          intruction_four_meditation:"Instruction 4: Direct attention to the present: Bring your attention to the flow of air in your body. If you become distracted, simply return to the breath..",
+          intruction_five_meditation:"Instruction 5: Scan your body: Direct your attention from your feet to your head. Notice any tension and release it as you exhale.",
+          intruction_six_meditation:"Instruction 6: Observe your thoughts: Imagine that your thoughts are passing clouds. Don't judge them or cling to them.",
+          intruction_conclusion_meditation:"Closing the session: End with three deep breaths and gently open your eyes when you are ready.",
+
         },
       },
       es: {
@@ -608,6 +638,8 @@ i18next
             seek_professional:"Busca ayuda profesional: ",
             burnout_persists:"Si el agotamiento persiste, considera la posibilidad de hablar con un terapeuta o consejero.",
 
+            dealing_depression:'Cómo enfrentar la depresión',
+
           listen_more:"Escuchar más",
 
           PDF:"Haz clic en la portada para ver el PDF",
@@ -622,26 +654,26 @@ i18next
 
           // Techniques
           meditation: "Meditación",
-          meditationtechnique:"Una técnica que ayuda a calmar la mente y reducir el estrés a través de la atención plena.",
+          intomeditation:"Una técnica que ayuda a calmar la mente y reducir el estrés a través de la atención plena.",
 
           deepbreathing: "Respiración Profunda", 
-          breathingexercises: "Ejercicios de respiración para relajar el cuerpo y disminuir la ansiedad.",
+          intobreathing: "Ejercicios de respiración para relajar el cuerpo y disminuir la ansiedad.",
 
-          practiceyoga:"Una práctica que combina posturas físicas, respiración y meditación para mejorar el bienestar.",
+          intoyoga:"Una práctica que combina posturas físicas, respiración y meditación para mejorar el bienestar.",
 
           visualization:"Visualización",
-          visualizationtechnique: "Técnica que implica imaginar un lugar o situación tranquila para promover la relajación.",
+          intovisualization: "Técnica que implica imaginar un lugar o situación tranquila para promover la relajación.",
 
-          practicemindfulness:"Práctica de estar presente en el momento actual, sin juicio, para reducir la ansiedad y el estrés.",
+          intomindfulness:"Práctica de estar presente en el momento actual, sin juicio, para reducir la ansiedad y el estrés.",
 
           muscleprogression:"Progresión Muscular",
-          techniquemuscle:"Técnica que consiste en tensar y relajar diferentes grupos musculares para liberar tensión.",
+          intomuscle:"Técnica que consiste en tensar y relajar diferentes grupos musculares para liberar tensión.",
 
           musiclistening: "Escucha de Música",
-          usemusic:"Utilizar música relajante para mejorar el estado de ánimo y reducir el estrés.",
+          intomusic:"Utilizar música relajante para mejorar el estado de ánimo y reducir el estrés.",
 
           naturewalk:"Caminata en la Naturaleza",
-          walkoutdoors:"Salir a caminar al aire libre en un entorno natural para relajar la mente y el cuerpo.",
+          intowalk:"Salir a caminar al aire libre en un entorno natural para relajar la mente y el cuerpo.",
 
           relaxationtechnique:"Técnica de Relajación de 5-4-3-2-1",
           intorelaxation:"Método que utiliza los sentidos para reducir la ansiedad al identificar 5 cosas que ves, 4 que sientes, 3 que oyes, 2 que hueles y 1 que puedes saborear.",
@@ -689,6 +721,34 @@ i18next
           task: "Tareas de",
           completed:"Completado",
           complete:"Completar",
+
+          meditation_relaxation:"Meditación y Relajación",
+          intomeditation_relaxation:"Bienvenido a tu espacio de meditación",
+          additional:"Consejos Adicionales",
+          duration:"Duración:",
+          start_meditation:"Comienza con 5 a 10 minutos de meditación y aumenta gradualmente.",
+          frequency:"Frecuencia:",
+          practicing_mindfulness:"Practicar la atención plena diariamente puede mejorar tu bienestar.",
+          patience:"Paciencia:",
+          get_distractes:"Si te distraes, no te preocupes. Aprende a redirigir tu atención con calma.",
+          mindfulness_guided:"Ejercicio de Meditación Guiada de Atención Plena",
+          current:"Instrucción Actual",
+          time_remaining:"Tiempo Restante",
+          seconds:"segundos",
+          pause:"Pausar",
+          stop:"Detener",
+          next:"Siguiente",
+          continue:"Continuar",
+          start:"Iniciar",
+
+          intruction_one_meditation:"Instrucción 1: Encuentra un espacio tranquilo: Busca un lugar cómodo donde puedas sentarte o acostarte sin distracciones.",
+          intruction_two_meditation:"Instrucción 2: Relaja el cuerpo: Ajusta tu postura, relaja los hombros y coloca tus manos sobre tus rodillas o en tu regazo.",
+          intruction_theer_meditation:"Instrucción 3: Respira profundamente: Inhala por la nariz y exhala lentamente por la boca, enfocándote en la respiración.",
+          intruction_four_meditation:"Instrucción 4: Dirige la atención al presente: Lleva tu atención al flujo de aire en tu cuerpo. Si te distraes, simplemente regresa a la respiración.",
+          intruction_five_meditation:"Instrucción 5: Escanea tu cuerpo: Dirige tu atención desde los pies a la cabeza. Nota cualquier tensión y suéltala al exhalar.",
+          intruction_six_meditation:"Instrucción 6: Observa tus pensamientos: Imagina que tus pensamientos son nubes que pasan. No los juzgues ni te aferres a ellos.",
+          intruction_conclusion_meditation:"Cierre de la sesión: Termina con tres respiraciones profundas y abre los ojos suavemente cuando estés listo.",
+
 
         },
       },
