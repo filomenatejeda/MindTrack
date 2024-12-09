@@ -381,6 +381,9 @@ i18next
           intruction_six_meditation:"Instruction 6: Observe your thoughts: Imagine that your thoughts are passing clouds. Don't judge them or cling to them.",
           intruction_conclusion_meditation:"Closing the session: End with three deep breaths and gently open your eyes when you are ready.",
 
+          relaxingmusic:"Relaxing Music",
+          playlist:"Playlist",
+
         },
       },
       es: {
@@ -748,6 +751,9 @@ i18next
           intruction_five_meditation:"Instrucción 5: Escanea tu cuerpo: Dirige tu atención desde los pies a la cabeza. Nota cualquier tensión y suéltala al exhalar.",
           intruction_six_meditation:"Instrucción 6: Observa tus pensamientos: Imagina que tus pensamientos son nubes que pasan. No los juzgues ni te aferres a ellos.",
           intruction_conclusion_meditation:"Cierre de la sesión: Termina con tres respiraciones profundas y abre los ojos suavemente cuando estés listo.",
+
+          relaxingmusic:"Música Relajante",
+          playlist:"Lista de Reproducción",
 
 
         },

@@ -2,8 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import NavbarH from '/components/NavbarH';
 import Footer from '/components/Footer';
+import { useTranslation } from 'react-i18next';
 
 export default function RelaxingMusicPage() {
+    const { t } = useTranslation();
+
     const playlist = [
         { title: "So Many Years", audioSrc: "https://soundcloud.com/filomena-tejeda/calm-piano?in=filomena-tejeda/sets/relax&si=3984316360e44f1f8e5fc50d6fadcac9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
         { title: "Gentle Breeze", audioSrc: "https://soundcloud.com/relaxing-music-production/sets/piano-covers?si=4d92047baffb49f6b3d3a91a6e082794&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
@@ -12,12 +15,12 @@ export default function RelaxingMusicPage() {
         { title: "Meditation", audioSrc: "https://soundcloud.com/filomena-tejeda/meditation?si=300e5b5ce34248df8900c06b946f6193&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
     ];
 
-    const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+    const [currentTrackIndex, setCurrentTrackIndex] = useState(-1);  // Inicialmente no hay canción seleccionada
     const [isPlaying, setIsPlaying] = useState(false);
     const [player, setPlayer] = useState(null);
 
     useEffect(() => {
-        if (window.SC && playlist[currentTrackIndex]) {
+        if (window.SC && currentTrackIndex >= 0) {
             const widget = window.SC.Widget(document.getElementById('soundcloud-iframe'));
             setPlayer(widget);
         }
@@ -38,13 +41,14 @@ export default function RelaxingMusicPage() {
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
             </div>
+            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Música Relajante
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('relaxingmusic')}
                 </h1>
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl">
-                    <h2 className="text-2xl font-semibold text-teal-700 mb-4 text-center">
-                        Lista de Reproducción
+                    <h2 suppressHydrationWarning={true}  className="text-2xl font-semibold text-teal-700 mb-4 text-center">
+                        {t('playlist')}
                     </h2>
                     <ul className="space-y-4">
                         {playlist.map((track, index) => (
@@ -62,16 +66,18 @@ export default function RelaxingMusicPage() {
 
                     <div className="mt-6 rounded-lg overflow-hidden">
                         {/* Reproductor de SoundCloud con un diseño más minimalista */}
-                        <iframe
-                            id="soundcloud-iframe"
-                            width="100%"
-                            height="166"
-                            scrolling="no"
-                            frameBorder="no"
-                            allow="autoplay"
-                            className="rounded-lg shadow-lg"
-                            src={`https://w.soundcloud.com/player/?url=${playlist[currentTrackIndex].audioSrc}&color=ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false`}
-                        ></iframe>
+                        {currentTrackIndex >= 0 && (
+                            <iframe
+                                id="soundcloud-iframe"
+                                width="100%"
+                                height="166"
+                                scrolling="no"
+                                frameBorder="no"
+                                allow="autoplay"
+                                className="rounded-lg shadow-lg"
+                                src={`https://w.soundcloud.com/player/?url=${playlist[currentTrackIndex].audioSrc}&color=ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false`}
+                            ></iframe>
+                        )}
                     </div>
                 </div>
             </div>
