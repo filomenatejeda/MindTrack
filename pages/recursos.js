@@ -31,6 +31,7 @@ const EducationResourcesPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-100">
+            <title>{t('educational_resources')}</title>
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>

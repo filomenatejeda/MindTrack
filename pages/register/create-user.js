@@ -40,6 +40,7 @@ export default function CreateUser() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 relative">
+      <title>{t('register')}</title>
        <div className="absolute inset-0 bg-[url('https://img.freepik.com/vector-gratis/fondo-plano-dia-mundial-salud-mental_23-2149671209.jpg')] bg-cover bg-center opacity-30"></div>
       {/* Navbar fija en la parte superior */}
       <div className="w-full fixed top-0 z-50">

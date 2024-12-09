@@ -75,6 +75,7 @@ const Techniques = () => {
 
   return (
     <div>
+      <title>{t('techniques')}</title>
       <div className="fixed top-0 w-full z-50">
       <NavbarH />
       </div>

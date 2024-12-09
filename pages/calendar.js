@@ -85,7 +85,11 @@ const CalendarPage = () => {
     const emojiStatistics = calculateEmojiStatistics();
 
     return (
+        
         <div suppressHydrationWarning={true} className="min-h-screen flex flex-col bg-gradient-to-r from-green-300 to-blue-300">
+       
+            <title>{t('emotions_calendar')}</title>
+    
             <NavbarH />
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex flex-row items-start justify-center flex-grow p-6">

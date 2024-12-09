@@ -41,6 +41,7 @@ export default function ContactProfessionals() {
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-100">
+            <title>{t('contact_professionals')}</title>
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
                 <script src="https://cdn.tailwindcss.com"></script>

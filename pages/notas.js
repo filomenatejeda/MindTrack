@@ -24,6 +24,8 @@ const NotasPage = () => {
   };
 
   return (
+    <div>
+      <title>{t('notess')}</title>
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-green-200">
       <NavbarH />
       <script src="https://cdn.tailwindcss.com"></script>
@@ -44,6 +46,7 @@ const NotasPage = () => {
         
       </div>
       <Footer />
+    </div>
     </div>
   );
 };

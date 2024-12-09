@@ -20,7 +20,13 @@ function NavbarH() {
           </div>
         </Link> {/* Texto en verde oscuro */}
       <div className="flex space-x-4 items-center">
-      <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+      <Link href="/recursos" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+          {t("resoursess")} 
+        </Link>
+      <Link href="/profesionales" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
+          {t("cconextion")} 
+        </Link>
+      <Link href="/habits" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
           {t("hhabits")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
       <Link href="/techniques" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
@@ -30,7 +36,7 @@ function NavbarH() {
           {t("calendar")} {/* Usa traducción para "Iniciar Sesión" */}
         </Link>
       <Link href="/notas" suppressHydrationWarning={true} className="text-green-100 hover:text-green-900"> {/* Hover para un efecto más pronunciado */}
-          {t("notess")} {/* Usa traducción para "Iniciar Sesión" */}
+          {t("notess")} 
         </Link>
         
           {/* Componente de Selección de Idioma */}

@@ -76,6 +76,7 @@ const ProgressChart = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
+            <title>{t('habits')}</title>
             <div className="fixed top-0 w-full z-50">
       <NavbarH />
       </div>

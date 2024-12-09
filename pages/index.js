@@ -21,7 +21,7 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-b from-green-50 via-green-100 to-blue-50 pt-16"> {/* Fondo degradado */}
         <script src="https://cdn.tailwindcss.com"></script>
         <Navbar />
-        
+        <title>MindTrack</title>
         <div className='mt-4 mb-6'> {/* Carrusel de imágenes */}
           <ImageCarousel />
         </div>

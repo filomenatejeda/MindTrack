@@ -53,6 +53,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-gray-100">
+            <title>MindTrack</title>
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
             </div>
