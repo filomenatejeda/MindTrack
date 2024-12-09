@@ -64,7 +64,7 @@ export default function Home() {
           <h2 suppressHydrationWarning={true}className="text-3xl font-semibold text-teal-600 drop-shadow-lg">{t('resourses')}</h2>
           <p suppressHydrationWarning={true}className="text-gray-700 mt-4 max-w-xl mx-auto">{t('descriptionresourses')}</p>
           <div suppressHydrationWarning={true}className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {['articles', 'videos', 'podcast', 'resoursesin', 'communities', 'recommendations'].map((resource, index) => (
+            {['articles', 'videos', 'podcast', 'resoursesin'].map((resource, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105">
                 <h3 suppressHydrationWarning={true}className="text-xl font-bold text-green-600">{t(resource)}</h3>
                 <p suppressHydrationWarning={true}className="text-gray-600 mt-2">{t(`description${resource}`)}</p>
