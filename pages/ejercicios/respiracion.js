@@ -103,9 +103,9 @@ export default function BreathingPage() {
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> Dedica entre 5 y 10 minutos a estas prácticas diarias.</li>
+                        <li><strong>{t('duration')}</strong> Dedica entre 5 y 10 minutos a estas prácticas diarias.</li>
                         <li><strong>Postura:</strong> Mantén una posición cómoda y relajada, pero erguida.</li>
                         <li><strong>Foco:</strong> Si tu mente divaga, simplemente regresa a tu respiración.</li>
                     </ul>
@@ -114,7 +114,7 @@ export default function BreathingPage() {
                     
                     {meditationStarted ? (
                         <>
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
+                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-2 text-center">{t('current')}</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
@@ -124,44 +124,49 @@ export default function BreathingPage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-blue-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p suppressHydrationWarning={true}  className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
+                                suppressHydrationWarning={true} 
                                     onClick={pauseMeditation} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
                                 <button 
+                                suppressHydrationWarning={true} 
                                     onClick={stopMeditation} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
                                 <button 
+                                suppressHydrationWarning={true} 
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
                                     <button 
+                                    suppressHydrationWarning={true} 
                                         onClick={continueMeditation} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button 
+                        suppressHydrationWarning={true} 
                             onClick={startMeditation} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>

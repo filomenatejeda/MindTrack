@@ -107,7 +107,7 @@ export default function MeditationPage() {
                     <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
                         <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('duration')}</strong> {t('start_meditation')}</li>
-                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('frequency')}</strong> {t('practicing_mindfulness:')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('frequency')}</strong> {t('practicing_mindfulness')}</li>
                         <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('patience')}</strong> {t('get_distractes')}</li>
                     </ul>
 

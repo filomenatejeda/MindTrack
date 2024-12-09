@@ -104,16 +104,17 @@ export default function Home() {
                 </div>
             </div>
             <button
+            suppressHydrationWarning={true}
                 className="fixed bottom-4 right-4 bg-teal-500 text-white p-3 rounded-full shadow-lg hover:bg-teal-600 transition duration-300"
                 onClick={() => setIsChatOpen(!isChatOpen)}
             >
-                {isChatOpen ? 'Cerrar Chat' : 'Abrir Chat'}
+                {isChatOpen ? t('close_chat') : t('open_chat')}
             </button>
 
             {/* Contenedor del chatbot */}
             {isChatOpen && (
                 <div className="fixed bottom-16 right-4 w-80 h-96 bg-white shadow-lg rounded-lg p-4">
-                    <h2 className="text-lg font-bold">¿En que te puedo ayudar?</h2>
+                    <h2  suppressHydrationWarning={true} className="text-lg font-bold"> {t('help_you')} </h2>
                     <div className="h-full overflow-y-auto">
                     <ChatBox />
                     </div>
