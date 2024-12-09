@@ -1,45 +1,36 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavbarH from '/components/NavbarH';
 import Footer from '/components/Footer';
 
 export default function RelaxingMusicPage() {
     const playlist = [
-        { title: "So Many Years", audioSrc: "/music/calm-piano.mp3" },
-        { title: "Gentle Breeze", audioSrc: "/music/music-piano.mp3" },
-        { title: "Ocean Waves", audioSrc: "/music/relaxing-piano.mp3" },
-        { title: "Soft piano", audioSrc: "/music/soft-piano.mp3" },
-        { title: "Meditation", audioSrc: "/music/meditation.mp3" },
+        { title: "So Many Years", audioSrc: "https://soundcloud.com/filomena-tejeda/calm-piano?in=filomena-tejeda/sets/relax&si=3984316360e44f1f8e5fc50d6fadcac9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+        { title: "Gentle Breeze", audioSrc: "https://soundcloud.com/relaxing-music-production/sets/piano-covers?si=4d92047baffb49f6b3d3a91a6e082794&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+        { title: "Ocean Waves", audioSrc: "https://soundcloud.com/filomena-tejeda/relaxing-piano?in=filomena-tejeda/sets/relax&si=f80b4d0b18434003a7a50347e5e9b052&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+        { title: "Soft piano", audioSrc: "https://soundcloud.com/filomena-tejeda/soft-piano?si=c39a29e45ffb482493a54994d4565c1a&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
+        { title: "Meditation", audioSrc: "https://soundcloud.com/filomena-tejeda/meditation?si=300e5b5ce34248df8900c06b946f6193&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" },
     ];
 
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [player, setPlayer] = useState(null);
+
+    useEffect(() => {
+        if (window.SC && playlist[currentTrackIndex]) {
+            const widget = window.SC.Widget(document.getElementById('soundcloud-iframe'));
+            setPlayer(widget);
+        }
+    }, [currentTrackIndex]);
 
     const playTrack = (index) => {
         setCurrentTrackIndex(index);
         setIsPlaying(true);
-        const audio = document.getElementById('audioPlayer');
-        audio.src = playlist[index].audioSrc;
-        audio.play();
-    };
-
-    const togglePlayPause = () => {
-        const audio = document.getElementById('audioPlayer');
-        if (isPlaying) {
-            audio.pause();
-        } else {
-            audio.play();
-        }
-        setIsPlaying(!isPlaying);
     };
 
     const handleSongEnd = () => {
-        const nextTrackIndex = (currentTrackIndex + 1) % playlist.length; // Avanza al siguiente track o vuelve al primero.
+        const nextTrackIndex = (currentTrackIndex + 1) % playlist.length; // Avanza al siguiente track o vuelve al primero
         setCurrentTrackIndex(nextTrackIndex);
-        setIsPlaying(true);
-        const audio = document.getElementById('audioPlayer');
-        audio.src = playlist[nextTrackIndex].audioSrc;
-        audio.play();
     };
 
     return (
@@ -47,33 +38,21 @@ export default function RelaxingMusicPage() {
             <div className="fixed top-0 w-full z-50">
                 <NavbarH />
             </div>
-            <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
                     Música Relajante
                 </h1>
-                <p className="mt-4 text-gray-700 text-lg p-2 text-center italic">
-                    Encuentra tu calma escuchando nuestra selección de pistas relajantes.
-                </p>
-
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl">
                     <h2 className="text-2xl font-semibold text-teal-700 mb-4 text-center">
                         Lista de Reproducción
                     </h2>
                     <ul className="space-y-4">
                         {playlist.map((track, index) => (
-                            <li
-                                key={index}
-                                className={`flex items-center justify-between p-3 rounded-lg transition-colors ${
-                                    currentTrackIndex === index ? 'bg-teal-100' : 'hover:bg-gray-100'
-                                }`}
-                            >
-                                <span className="text-lg font-medium text-teal-800">
-                                    {track.title}
-                                </span>
+                            <li key={index} className={`flex items-center justify-between p-3 rounded-lg ${currentTrackIndex === index ? 'bg-teal-200' : ''} hover:bg-teal-100 transition-all duration-200`}>
+                                <span className="text-lg font-medium text-teal-800">{track.title}</span>
                                 <button
                                     onClick={() => playTrack(index)}
-                                    className="bg-teal-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-teal-600"
+                                    className={`bg-teal-500 text-white px-4 py-2 rounded-lg transition-all duration-300 ${currentTrackIndex === index && isPlaying ? 'bg-teal-600' : ''}`}
                                 >
                                     {currentTrackIndex === index && isPlaying ? 'Reproduciendo' : 'Reproducir'}
                                 </button>
@@ -81,24 +60,18 @@ export default function RelaxingMusicPage() {
                         ))}
                     </ul>
 
-                    <div className="mt-6">
-                        <audio
-                            id="audioPlayer"
-                            controls
-                            className="w-full border border-teal-500 rounded-lg p-0 shadow-lg"
-                            onEnded={handleSongEnd} // Maneja el evento al terminar la canción
-                        >
-                            <source src={playlist[currentTrackIndex]?.audioSrc} type="audio/mp3" />
-                            Tu navegador no soporta el reproductor de audio.
-                        </audio>
-                        <button
-                            onClick={togglePlayPause}
-                            className={`mt-4 w-full px-4 py-2 rounded-lg shadow-md transition ${
-                                isPlaying ? 'bg-red-400 hover:bg-red-500' : 'bg-blue-400 hover:bg-blue-500'
-                            } text-white font-medium`}
-                        >
-                            {isPlaying ? 'Pausar' : 'Reproducir'}
-                        </button>
+                    <div className="mt-6 rounded-lg overflow-hidden">
+                        {/* Reproductor de SoundCloud con un diseño más minimalista */}
+                        <iframe
+                            id="soundcloud-iframe"
+                            width="100%"
+                            height="166"
+                            scrolling="no"
+                            frameBorder="no"
+                            allow="autoplay"
+                            className="rounded-lg shadow-lg"
+                            src={`https://w.soundcloud.com/player/?url=${playlist[currentTrackIndex].audioSrc}&color=ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false`}
+                        ></iframe>
                     </div>
                 </div>
             </div>
