@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns-tz'; // Asegúrate de tener esta importación
 import { useEmojiContext } from '../context/EmojiContext';
 import Footer from '../components/Footer';
+import ChatBox from '../components/Chatbot.js';
 
 export default function Home() {
     const { user } = useAuth();
@@ -16,6 +17,7 @@ export default function Home() {
     const [hiddenNotes, setHiddenNotes] = useState([]);
     const { t } = useTranslation();
     const { emojiData, addEmoji, removeEmoji } = useEmojiContext();
+    const [isChatOpen, setIsChatOpen] = useState(false); // Estado para controlar el chatbot
 
     // Obtener la fecha de hoy en formato yyyy-MM-dd
     const todayString = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Santiago' });
@@ -64,10 +66,10 @@ export default function Home() {
                 </p>
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl transition-shadow hover:shadow-2xl flex flex-col items-center">
                     <div className="flex flex-col w-full md:w-1/2 mb-4 items-center">
-                        <h2 suppressHydrationWarning={true} className="text-2xl font-semibold mb-2 text-teal-500 text-center">{t('feeling')}</h2>
+                        <h2  suppressHydrationWarning={true} className="text-2xl font-semibold mb-2 text-teal-500 text-center">{t('feeling')}</h2>
                         <EmojiIcons selectedEmoji={selectedEmoji} onEmojiSelect={handleEmojiSelect} />
                         <Link href="/calendar">
-                            <button  suppressHydrationWarning={true} className="bg-gradient-to-r from-emerald-300 to-emerald-500 text-white py-2 px-5 rounded-full hover:bg-emerald-600 transition duration-200 transform hover:scale-105 mt-2">
+                            <button suppressHydrationWarning={true} className="bg-gradient-to-r from-emerald-300 to-emerald-500 text-white py-2 px-5 rounded-full hover:bg-emerald-600 transition duration-200 transform hover:scale-105 mt-2">
                                 {t('days')}
                             </button>
                         </Link>
@@ -101,6 +103,22 @@ export default function Home() {
                 <ButtonContainer onAddNote={handleAddNote} />
                 </div>
             </div>
+            <button
+                className="fixed bottom-4 right-4 bg-teal-500 text-white p-3 rounded-full shadow-lg hover:bg-teal-600 transition duration-300"
+                onClick={() => setIsChatOpen(!isChatOpen)}
+            >
+                {isChatOpen ? 'Cerrar Chat' : 'Abrir Chat'}
+            </button>
+
+            {/* Contenedor del chatbot */}
+            {isChatOpen && (
+                <div className="fixed bottom-16 right-4 w-80 h-96 bg-white shadow-lg rounded-lg p-4">
+                    <h2 className="text-lg font-bold">¿En que te puedo ayudar?</h2>
+                    <div className="h-full overflow-y-auto">
+                    <ChatBox />
+                    </div>
+                </div>
+            )}
             <Footer />
         </div>
     );
