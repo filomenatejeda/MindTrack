@@ -483,7 +483,7 @@ i18next
 
           walk: "Nature Walk",
           introwalk: "Go for a walk and connect with nature to relax your body and mind.",
-          start: "Start with a 10- to 20-minute walk and gradually increase.",
+          
           useclothes: "Wear comfortable clothing and shoes to walk without discomfort.",
           attetionp:"Mindfulness:",
           giveyour: "Give your attention to the present moment, without external distractions.",
@@ -998,7 +998,7 @@ i18next
 
           walk: "Caminata en la Naturaleza",
           introwalk: "Sal a caminar y conecta con la naturaleza para relajar cuerpo y mente.",
-          start: "Comienza con una caminata de 10 a 20 minutos y aumenta gradualmente.",
+          
           useclothes: "Usa ropa y calzado cómodo para caminar sin molestias.",
           attetionp:"Atención plena:",
           giveyour: "Concédele atención al momento presente, sin distracciones externas.",
