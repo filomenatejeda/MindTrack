@@ -57,7 +57,7 @@ const SelfEsteemPage = () => {
                             <strong suppressHydrationWarning={true}>{t('devolep_personal')}</strong> {t('engage_activities')}
                         </li>
                         <li suppressHydrationWarning={true}>
-                            <strong suppressHydrationWarning={true}>{t('avoid_comparing')}</strong> {t('Rremember_everyones')}
+                            <strong suppressHydrationWarning={true}>{t('avoid_comparing')}</strong> {t('remember_everyones')}
                         </li>
                         <li suppressHydrationWarning={true}>
                             <strong suppressHydrationWarning={true}>{t('set_achievable')}</strong> {t('setting_realistic')}
