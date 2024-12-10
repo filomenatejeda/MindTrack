@@ -40,8 +40,13 @@ export default function Login() {
     if (response.ok) {
       const data = await response.json();
       localStorage.setItem('token', data.token);
-      window.location.href = '/home';
-    } else {
+      router.push('/home').then(() => {
+        window.location.href = '/home'; // Recarga la página /home
+      });
+    }
+    
+    
+    else {
       const data = await response.json();
       setError(data.message);
     }
