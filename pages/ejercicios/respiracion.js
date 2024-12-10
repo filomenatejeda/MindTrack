@@ -8,13 +8,13 @@ export default function BreathingPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        t('intruction_one_breathing'),
-        t('intruction_two_breathing'),
-        t('intruction_theer_breathing'),
-        t('intruction_four_breathing'),
-        t('intruction_five_breathing'),
-        t('intruction_six_breathing'),
-        t('intruction_conclusion_breathing')
+        t('instruction_one_breathing'),
+        t('instruction_two_breathing'),
+        t('instruction_three_breathing'),
+        t('instruction_four_breathing'),
+        t('instruction_five_breathing'),
+        t('instruction_six_breathing'),
+        t('instruction_conclusion_breathing')
     ];
 
     const images = [

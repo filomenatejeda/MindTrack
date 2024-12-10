@@ -8,12 +8,12 @@ export default function YogaPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Adopta la postura del niño (Balasana) para relajar la espalda y concentrarte en tu respiración.",
-        "Instrucción 2: Realiza la postura del perro mirando hacia abajo (Adho Mukha Svanasana), estirando tu espalda y piernas.",
-        "Instrucción 3: Transita a la postura del guerrero I (Virabhadrasana I), sintiendo la fuerza en tus piernas y equilibrio.",
-        "Instrucción 4: Pasa a la postura del triángulo (Trikonasana), estirando tus costados y fortaleciendo tu núcleo.",
-        "Instrucción 5: Siéntate en la postura del loto (Padmasana) para meditar y enfocar tu mente.",
-        "Instrucción 6: Finaliza en la postura del cadáver (Savasana), permitiendo que tu cuerpo y mente se relajen por completo."
+        t('instruction_one_yoga'),
+        t('instruction_two_yoga'),
+        t('instruction_three_yoga'),
+        t('instruction_four_yoga'),
+        t('instruction_five_yoga'),
+        t('instruction_six_yoga'),
     ];
 
     const images = [

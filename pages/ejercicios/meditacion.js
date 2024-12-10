@@ -8,13 +8,13 @@ export default function MeditationPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        t('intruction_one_meditation'),
-        t('intruction_two_meditation'),
-        t('intruction_theer_meditation'),
-        t('intruction_four_meditation'),
-        t('intruction_five_meditation'),
-        t('intruction_six_meditation'),
-        t('intruction_conclusion_meditation')
+        t('instruction_one_meditation'),
+        t('instruction_two_meditation'),
+        t('instruction_three_meditation'),
+        t('instruction_four_meditation'),
+        t('instruction_five_meditation'),
+        t('instruction_six_meditation'),
+        t('instruction_conclusion_meditation')
     ];
 
     const images = [
