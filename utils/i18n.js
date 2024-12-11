@@ -513,7 +513,7 @@ i18next
           instruction_conclusion_54321:"Closing the session: Relax, breathe deeply once more and feel your body release tension.",
 
           aromatherapy: "Aromatherapy",
-          introaromatherapy: "Usa aceites esenciales para promover la relajación y el bienestar emocional.",
+          introaromatherapy: "Use essential oils to promote relaxation and emotional well-being.",
           aromatime: "Aromatherapy can last between 15 and 30 minutes depending on your preference.",
           makesurearoma: "Make sure you are in a quiet and comfortable place to enjoy the experience.",
           oil: "Recommended oils:",
