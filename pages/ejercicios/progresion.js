@@ -8,13 +8,13 @@ export default function ProgressiveMusclePage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Encuentra un lugar cómodo y tranquilo donde puedas acostarte sin distracciones.",
-        "Instrucción 2: Comienza con los pies: Tensa los músculos de los pies durante 5 segundos, luego relájalos durante 10 segundos.",
-        "Instrucción 3: Continúa con las piernas: Tensa los músculos de las piernas durante 5 segundos, luego relájalos durante 10 segundos.",
-        "Instrucción 4: Tensa los músculos de los glúteos: Mantén la tensión durante 5 segundos, luego relájalos.",
-        "Instrucción 5: Sube por el cuerpo: Tensa los músculos de los abdominales, pecho, hombros y brazos, relajándolos después de cada uno.",
-        "Instrucción 6: Relaja tu cara: Tensa los músculos de la cara (fruncir el ceño, apretar los ojos) y luego relájalos.",
-        "Cierre de la sesión: Termina con una respiración profunda y siente cómo tu cuerpo se siente más relajado."
+        t('instruction_one_progession'),
+        t('instruction_two_progession'),
+        t('instruction_three_progession'),
+        t('instruction_four_progession'),
+        t('instruction_five_progession'),
+        t('instruction_six_progession'),
+        t('instruction_conclusion_progession'),
     ];
 
     const images = [
@@ -91,21 +91,21 @@ export default function ProgressiveMusclePage() {
             </div>
             <div className="flex-grow pt-20 p-4">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Progresión Muscular
+                    {t('progression')}
                 </h1>
                 <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Técnica de relajación a través de la tensión y liberación muscular.
+                   {t('introprogression')}
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> Realiza la práctica entre 10 a 20 minutos, según tu disponibilidad.</li>
-                        <li><strong>Comodidad:</strong> Asegúrate de estar en un lugar cómodo y libre de distracciones.</li>
-                        <li><strong>Atención:</strong> Concéntrate en los cambios de tensión y relajación de cada grupo muscular.</li>
+                        <li><strong>Duración:</strong> {t('do')}</li>
+                        <li><strong>{t('comfort')}</strong> {t('make_sure')}</li>
+                        <li><strong>{t('attetion')}</strong> {t('focus')}</li>
                     </ul>
 
-                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Progresión Muscular Guiada</h2>
+                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('exercise_progression')}</h2>
                     
                     {progressStarted ? (
                         <>
@@ -119,34 +119,34 @@ export default function ProgressiveMusclePage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
                                     onClick={pauseProgression} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                   {t('pause')}
                                 </button>
                                 <button 
                                     onClick={stopProgression} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
                                 <button 
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
                                     <button 
                                         onClick={continueProgression} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
@@ -156,7 +156,7 @@ export default function ProgressiveMusclePage() {
                             onClick={startProgression} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>
