@@ -8,12 +8,12 @@ export default function MindfulnessPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Cierra los ojos y enfócate en tu respiración. Nota cómo el aire entra y sale por tu nariz, sin intentar cambiarlo.",
-        "Instrucción 2: Lleva tu atención a tu cuerpo. Escanea mentalmente desde la cabeza hasta los pies, observando cualquier sensación sin juicio.",
-        "Instrucción 3: Escucha los sonidos a tu alrededor. Nota los sonidos cercanos y lejanos, dejando que vayan y vengan.",
-        "Instrucción 4: Enfócate en el presente. Nota cómo se siente tu cuerpo en contacto con la superficie en la que estás sentado o acostado.",
-        "Instrucción 5: Trae tu atención a tus emociones. Observa lo que estás sintiendo sin intentar cambiarlo, solo acepta lo que está presente.",
-        "Instrucción 6: Visualiza una palabra positiva, como 'calma' o 'paz'. Repite esta palabra mentalmente mientras continúas respirando."
+        t('instruction_one_mindfulness'),
+        t('instruction_two_mindfulness'),
+        t('instruction_three_mindfulness'),
+        t('instruction_four_mindfulness'),
+        t('instruction_five_mindfulness'),
+        t('instruction_six_mindfulness'),
     ];
 
     const [currentInstructionIndex, setCurrentInstructionIndex] = useState(0);
@@ -83,19 +83,19 @@ export default function MindfulnessPage() {
             </div>
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Práctica de Mindfulness Guiada
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('mindfulness')}
                 </h1>
-                <p className="mt-4 text-indigo-500 text-lg p-2 text-center italic">
-                    Encuentra calma y claridad conectando con el momento presente.
+                <p suppressHydrationWarning={true} className="mt-4 text-indigo-500 text-lg p-2 text-center italic">
+                    {t('intromindfulness')}
                 </p>
 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos para la Práctica</h3>
+                    <h3 suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('advise')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Espacio:</strong> Encuentra un lugar tranquilo y cómodo donde no te interrumpan.</li>
-                        <li><strong>Postura:</strong> Siéntate derecho pero relajado, o recuéstate si prefieres.</li>
-                        <li><strong>Actitud:</strong> Sé amable contigo mismo. Si tu mente divaga, tráela suavemente al presente.</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('space')}</strong> {t('find_quiet')}</li>
+                        <li suppressHydrationWarning={true}><strong>Postura: </strong>{t('sit')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('attitude')}</strong> {t('be_kind')}</li>
                     </ul>
 
                     {mindfulnessStarted ? (
@@ -105,44 +105,51 @@ export default function MindfulnessPage() {
                                 {instructions[currentInstructionIndex]}
                             </p>
 
-                            <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 
+                            suppressHydrationWarning={true}className="text-xl font-bold text-blue-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p 
+                            suppressHydrationWarning={true}className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button
+                                suppressHydrationWarning={true}
                                     onClick={pauseMindfulness}
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true}
                                     onClick={stopMindfulness}
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true}
                                     onClick={nextInstruction}
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
                                     <button
+                                    suppressHydrationWarning={true}
                                         onClick={continueMindfulness}
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button
+                        suppressHydrationWarning={true}
                             onClick={startMindfulness}
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>

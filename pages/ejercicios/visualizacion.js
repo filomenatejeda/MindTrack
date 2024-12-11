@@ -8,12 +8,12 @@ export default function VisualizationPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Cierra los ojos y visualiza un bosque tranquilo. Imagina el sonido del viento entre los árboles y el canto de los pájaros.",
-        "Instrucción 2: Visualiza una playa al atardecer. Siente la brisa del mar en tu rostro y el sonido relajante de las olas.",
-        "Instrucción 3: Imagina que estás sentado junto a un río cristalino en las montañas. Escucha el agua fluir y siente el frescor del ambiente.",
-        "Instrucción 4: Visualiza un prado lleno de flores de colores brillantes. Siente el calor del sol y huele el aroma de las flores.",
-        "Instrucción 5: Imagina un cielo estrellado en una noche despejada. Siente la inmensidad del universo y conecta con la calma interior.",
-        "Instrucción 6: Visualiza que flotas sobre una nube suave. Siente cómo te envuelve la tranquilidad y la ligereza del momento."
+        t('instruction_one_visualization'),
+        t('instruction_two_visualization'),
+        t('instruction_three_visualization'),
+        t('instruction_four_visualization'),
+        t('instruction_five_visualization'),
+        t('instruction_six_visualization'),
     ];
 
     const images = [
@@ -92,24 +92,24 @@ export default function VisualizationPage() {
             </div>
             <script src="https://cdn.tailwindcss.com"></script>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Visualización Guiada para la Relajación
+                <h1 suppressHydrationWarning={true}  className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('visualization')}
                 </h1>
-                <p className="mt-4 text-purple-500 text-lg p-2 text-center italic">
-                    Conecta con tu interior a través de la imaginación y la calma.
+                <p suppressHydrationWarning={true}  className="mt-4 text-purple-500 text-lg p-2 text-center italic">
+                   {t('introvisualization')}
                 </p>
 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                    <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Ambiente:</strong> Encuentra un lugar tranquilo y cómodo.</li>
-                        <li><strong>Respiración:</strong> Mantén una respiración profunda y constante durante la práctica.</li>
-                        <li><strong>Conexión:</strong> Permite que cada visualización te envuelva completamente.</li>
+                        <li suppressHydrationWarning={true} ><strong>Ambiente:</strong> {t('find_place')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('respiration')}</strong> {t('keep')}</li>
+                        <li suppressHydrationWarning={true} ><strong>Conexión:</strong> {t('permit')}</li>
                     </ul>
 
                     {visualizationStarted ? (
                         <>
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Visualización Actual</h3>
+                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">{t('visualnow')}</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
@@ -119,44 +119,51 @@ export default function VisualizationPage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 
+                            suppressHydrationWarning={true} className="text-xl font-bold text-blue-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p 
+                            suppressHydrationWarning={true} className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={pauseVisualization}
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={stopVisualization}
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
                                 <button
+                                suppressHydrationWarning={true} 
                                     onClick={nextInstruction}
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
                                     <button
+                                    suppressHydrationWarning={true} 
                                         onClick={continueVisualization}
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
                         <button
+                        suppressHydrationWarning={true} 
                             onClick={startVisualization}
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>
