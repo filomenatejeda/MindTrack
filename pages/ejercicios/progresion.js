@@ -90,22 +90,22 @@ export default function ProgressiveMusclePage() {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
                     {t('progression')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                <p suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center italic">
                    {t('introprogression')}
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
+                    <h3 suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> {t('do')}</li>
-                        <li><strong>{t('comfort')}</strong> {t('make_sure')}</li>
-                        <li><strong>{t('attetion')}</strong> {t('focus')}</li>
+                        <li suppressHydrationWarning={true}><strong>Duración:</strong> {t('do')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('comfort')}</strong> {t('make_sure')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('attetion')}</strong> {t('focus')}</li>
                     </ul>
 
-                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('exercise_progression')}</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('exercise_progression')}</h2>
                     
                     {progressStarted ? (
                         <>
@@ -119,23 +119,26 @@ export default function ProgressiveMusclePage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
-                            <p className="text-center text-lg">{timeLeft} {t('seconds')}</p>
+                            <h3  suppressHydrationWarning={true}className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p suppressHydrationWarning={true}className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
+                                suppressHydrationWarning={true}
                                     onClick={pauseProgression} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
                                    {t('pause')}
                                 </button>
                                 <button 
+                                suppressHydrationWarning={true}
                                     onClick={stopProgression} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
                                     {t('stop')}
                                 </button>
                                 <button 
+                                suppressHydrationWarning={true}
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
@@ -143,6 +146,7 @@ export default function ProgressiveMusclePage() {
                                 </button>
                                 {isPaused && (
                                     <button 
+                                    suppressHydrationWarning={true}
                                         onClick={continueProgression} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
@@ -153,6 +157,7 @@ export default function ProgressiveMusclePage() {
                         </>
                     ) : (
                         <button 
+                        suppressHydrationWarning={true}
                             onClick={startProgression} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >

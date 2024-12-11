@@ -8,13 +8,12 @@ export default function NatureWalkPage() {
     const { t } = useTranslation();
 
     const instructions = [
-        "Instrucción 1: Encuentra un lugar natural y tranquilo: Busca un parque, bosque o sendero donde puedas caminar libremente.",
-        "Instrucción 2: Respira profundamente: Inhala el aire fresco profundamente por la nariz y exhala por la boca, sintiendo cómo el aire entra y sale.",
-        "Instrucción 3: Siente la tierra bajo tus pies: Concédele atención a cada paso que das, siente el suelo, la hierba o las hojas bajo tus pies.",
-        "Instrucción 4: Conéctate con los sonidos: Escucha los sonidos de la naturaleza: pájaros cantando, hojas moviéndose, el viento. Mantén tu mente en estos sonidos.",
-        "Instrucción 5: Observa los detalles a tu alrededor: Fíjate en los árboles, flores, rocas o cualquier elemento natural. Aprecia los colores, texturas y formas.",
-        "Instrucción 6: Relájate en movimiento: Permítete caminar a un ritmo cómodo y tranquilo, sin presiones, solo disfrutando del momento.",
-        "Cierre de la sesión: Cuando termines, haz una pausa, cierra los ojos un momento y reflexiona sobre cómo te sientes. Respira profundamente una vez más."
+        t('instruction_one_walk'),
+        t('instruction_two_walk'),
+        t('instruction_three_walk'),
+        t('instruction_four_walk'),
+        t('instruction_five_walk'),
+        t('instruction_six_walk'),
     ];
 
     const images = [
@@ -90,26 +89,26 @@ export default function NatureWalkPage() {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Caminata en la Naturaleza
+                <h1 suppressHydrationWarning={true} className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('walk')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Sal a caminar y conecta con la naturaleza para relajar cuerpo y mente.
+                <p  suppressHydrationWarning={true} className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                    {t('introwalk')}
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                    <h3 suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> Comienza con una caminata de 10 a 20 minutos y aumenta gradualmente.</li>
-                        <li><strong>Comodidad:</strong> Usa ropa y calzado cómodo para caminar sin molestias.</li>
-                        <li><strong>Atención plena:</strong> Concédele atención al momento presente, sin distracciones externas.</li>
+                        <li><strong suppressHydrationWarning={true}>{t('duration')}</strong> Comienza con una caminata de 10 a 20 minutos y aumenta gradualmente.</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('comfort')}</strong> {t('useclothes')}</li>
+                        <li suppressHydrationWarning={true}><strong suppressHydrationWarning={true}>{t('attetionp')}</strong> {t('giveyour')}</li>
                     </ul>
 
-                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Caminata Guiada en la Naturaleza</h2>
+                    <h2 suppressHydrationWarning={true} className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('excercisewalk')}</h2>
                     
                     {walkStarted ? (
                         <>
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
+                            <h3  suppressHydrationWarning={true}className="text-xl font-bold text-green-600 mb-2 text-center">{t('current')}</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
@@ -119,44 +118,44 @@ export default function NatureWalkPage() {
                                 className="w-80 h-80 object-cover rounded-lg mb-4"
                             />
 
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3  suppressHydrationWarning={true}className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p suppressHydrationWarning={true}className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
-                                <button 
+                                <button suppressHydrationWarning={true} 
                                     onClick={pauseWalk} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
-                                <button 
+                                <button suppressHydrationWarning={true}
                                     onClick={stopWalk} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
-                                <button 
+                                <button  suppressHydrationWarning={true}
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
-                                    <button 
+                                    <button suppressHydrationWarning={true} 
                                         onClick={continueWalk} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
-                        <button 
+                        <button suppressHydrationWarning={true}
                             onClick={startWalk} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
                 </div>
