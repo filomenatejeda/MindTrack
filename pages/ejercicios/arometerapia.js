@@ -83,83 +83,88 @@ export default function AromatherapyPage() {
                 <script src="https://cdn.tailwindcss.com"></script>
             </div>
             <div className="flex-grow pt-20 p-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
-                    Aromaterapia
+                <h1 suppressHydrationWarning={true}  className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 text-white p-6 rounded-lg shadow-lg text-center">
+                    {t('aromatherapy')}
                 </h1>
-                <p className="mt-4 text-teal-500 text-lg p-2 text-center italic">
-                    Usa aceites esenciales para promover la relajación y el bienestar emocional.
+                <p suppressHydrationWarning={true}  className="mt-4 text-teal-500 text-lg p-2 text-center italic">
+                {t('introaromatherapy')}
                 </p>
                 
                 <div className="mt-6 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <h3 className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">Consejos Adicionales</h3>
+                    <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mt-6 mb-2 text-center">{t('additional')}</h3>
                     <ul className="list-disc list-inside space-y-2">
-                        <li><strong>Duración:</strong> La aromaterapia puede durar entre 15 y 30 minutos dependiendo de tu preferencia.</li>
-                        <li><strong>Ambiente:</strong> Asegúrate de estar en un lugar tranquilo y cómodo para disfrutar de la experiencia.</li>
-                        <li><strong>Aceites recomendados:</strong> La lavanda es ideal para la relajación, mientras que la menta puede revitalizarte.</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('duration')}</strong> {t('aromatime')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('environment')}</strong> {t('makesurearoma')}</li>
+                        <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('oil')}</strong> {t('oils')}</li>
                     </ul>
 
-                    <h2 className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">Ejercicio de Aromaterapia Guiada</h2>
+                    <h2 suppressHydrationWarning={true}  className="text-2xl mt-5 font-semibold text-teal-500 text-center mb-4">{t('excercisearoma')}</h2>
                     
                     {aromatherapyStarted ? (
                         <>
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Instrucción Actual</h3>
+                            <h3 
+                            suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mb-2 text-center">{t('current')}</h3>
                             <p className="text-center mb-4 text-lg">
                                 {instructions[currentInstructionIndex]}
                             </p>
 
-                            <h3 className="text-xl font-bold text-green-600 mb-2 text-center">Tiempo Restante</h3>
-                            <p className="text-center text-lg">{timeLeft} segundos</p>
+                            <h3 suppressHydrationWarning={true} className="text-xl font-bold text-green-600 mb-2 text-center">{t('time_remaining')}</h3>
+                            <p className="text-center text-lg">{timeLeft} {t('seconds')}</p>
 
                             <div className="flex space-x-4 mt-4">
                                 <button 
+                                suppressHydrationWarning={true} 
                                     onClick={pauseAromatherapy} 
                                     className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
                                 >
-                                    Pausar
+                                    {t('pause')}
                                 </button>
                                 <button 
+                                suppressHydrationWarning={true} 
                                     onClick={stopAromatherapy} 
                                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600"
                                 >
-                                    Detener
+                                    {t('stop')}
                                 </button>
-                                <button 
+                                <button
+                                suppressHydrationWarning={true}  
                                     onClick={nextInstruction} 
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
                                 >
-                                    Siguiente
+                                    {t('next')}
                                 </button>
                                 {isPaused && (
-                                    <button 
+                                    <button
+                                    suppressHydrationWarning={true}  
                                         onClick={continueAromatherapy} 
                                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                                     >
-                                        Continuar
+                                        {t('continue')}
                                     </button>
                                 )}
                             </div>
                         </>
                     ) : (
-                        <button 
+                        <button suppressHydrationWarning={true} 
                             onClick={startAromatherapy} 
                             className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600"
                         >
-                            Iniciar
+                            {t('start')}
                         </button>
                     )}
 
                     {/* Sección de información sobre los olores */}
                     <div className="mt-6 bg-gray-50 p-6 rounded-lg shadow-xl">
-                        <h3 className="text-xl font-bold text-green-600 mb-4 text-center">Información sobre los Aceites Esenciales</h3>
-                        <p className="text-lg mb-4">
-                            Los aceites esenciales son conocidos por sus propiedades terapéuticas, ayudando a reducir el estrés, mejorar el ánimo y promover la relajación. Aquí tienes algunos de los más populares y sus beneficios:
+                        <h3 suppressHydrationWarning={true}  className="text-xl font-bold text-green-600 mb-4 text-center">{t('informationaroma')}</h3>
+                        <p suppressHydrationWarning={true}  className="text-lg mb-4">
+                            {t('descriptionaroma')}
                         </p>
                         <ul className="list-disc list-inside space-y-2">
-                            <li><strong>Lavanda:</strong> Ideal para la relajación, ayuda a reducir la ansiedad y mejorar el sueño.</li>
-                            <li><strong>Mentol (Menta):</strong> Energizante y refrescante, puede aliviar dolores de cabeza y mejorar la concentración.</li>
-                            <li><strong>Rosa Mosqueta:</strong> Promueve la calma y el bienestar emocional, ideal para el estrés.</li>
-                            <li><strong>Citronela:</strong> Ayuda a limpiar la mente y a liberar energías negativas.</li>
-                            <li><strong>Eucalipto:</strong> Perfecto para mejorar la respiración y reducir la tensión muscular.</li>
+                            <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('lavander')}</strong> {t('dlavander')}</li>
+                            <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('mint')}</strong> {t('dmint')}</li>
+                            <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('rosehip')}</strong> {t('drosehip')}</li>
+                            <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('citronella')}</strong> {t('dcitronella')}</li>
+                            <li suppressHydrationWarning={true} ><strong suppressHydrationWarning={true} >{t('eucalyptus')}</strong>{t('deucalyptus')}</li>
                         </ul>
                     </div>
                 </div>
